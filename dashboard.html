@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ClearView Windows</title>
+    <meta name="description"
+        content="Manage your ClearView Windows installation project, appointments, warranty and payments.">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body class="cv-dashboard">
+
+    <!-- Mobile Sidebar Overlay -->
+    <div class="cv-sidebar-overlay" id="cvSidebarOverlay"></div>
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="cv-sidebar" id="cvSidebar">
+
+        <div class="cv-sidebar-brand">
+            <a href="index.html" class="cv-dashboard-logo">
+                <img src="images/logo.png" alt="ClearView Windows">
+            </a>
+
+            <button class="cv-sidebar-close" id="cvSidebarClose" type="button" aria-label="Close sidebar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cv-sidebar-label">CLIENT PORTAL</div>
+
+        <nav class="cv-sidebar-nav" aria-label="Client dashboard navigation">
+            <a href="dashboard.html" class="cv-sidebar-link active" aria-current="page">
+                <i class="fa-solid fa-table-columns"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="d2.html" class="cv-sidebar-link">
+                <i class="fa-solid fa-house-circle-check"></i>
+                <span>Installation</span>
+            </a>
+
+            <a href="d3.html" class="cv-sidebar-link">
+                <i class="fa-regular fa-calendar-days"></i>
+                <span>Measurements</span>
+            </a>
+
+            <a href="d4.html" class="cv-sidebar-link">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Appointments</span>
+            </a>
+
+            <a href="d5.html" class="cv-sidebar-link">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Warranty</span>
+            </a>
+
+            <a href="d6.html" class="cv-sidebar-link">
+                <i class="fa-regular fa-credit-card"></i>
+                <span>Payments</span>
+            </a>
+        </nav>
+
+        <!-- Bottom Logout -->
+        <div class="cv-sidebar-bottom">
+
+            <a href="#" class="cv-logout-link" id="cvLogoutBtn">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+    <div class="cv-logout-overlay" id="cvLogoutOverlay" aria-hidden="true">
+
+        <div class="cv-logout-modal" role="dialog" aria-modal="true" aria-labelledby="cvLogoutTitle"
+            aria-describedby="cvLogoutDescription">
+
+            <div class="cv-logout-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+
+            <h2 id="cvLogoutTitle">Confirm Logout</h2>
+
+            <p id="cvLogoutDescription">
+                Are you sure you want to log out of your account?
+            </p>
+
+            <div class="cv-logout-actions">
+                <button type="button" class="cv-logout-no" id="cvLogoutNo">
+                    No, Stay
+                </button>
+
+                <button type="button" class="cv-logout-yes" id="cvLogoutYes">
+                    Yes, Logout
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <!-- =============== END SIDEBAR =============== -->
+
+
+    <!-- ================= MAIN AREA ================= -->
+    <div class="cv-main-wrapper" id="cvMainWrapper">
+
+        <!-- Fixed Header -->
+        <header class="cv-dashboard-header">
+
+            <div class="cv-header-left">
+                <button class="cv-sidebar-toggle" id="cvSidebarToggle" type="button" aria-label="Open sidebar"
+                    aria-controls="cvSidebar" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="cv-header-heading">
+                    <h1>Dashboard</h1>
+                    <p>Welcome back! Here's your project summary.</p>
+                </div>
+            </div>
+
+            <div class="cv-header-actions">
+
+                <!-- Notifications -->
+                <div class="cv-notification-wrap">
+                    <button class="cv-header-icon-btn" id="cvNotificationToggle" type="button"
+                        aria-label="Notifications, 3 unread" aria-expanded="false">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="cv-notification-badge">3</span>
+                    </button>
+
+                    <div class="cv-notification-panel" id="cvNotificationPanel" hidden>
+                        <div class="cv-notification-title">
+                            <strong>Notifications</strong>
+                            <span>3 new</span>
+                        </div>
+
+                        <div class="cv-notification-item">
+                            <i class="fa-regular fa-calendar-check"></i>
+                            <div>
+                                <strong>Measurement appointment</strong>
+                                <p>Review your upcoming appointment.</p>
+                            </div>
+                        </div>
+
+                        <div class="cv-notification-item">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <div>
+                                <strong>Payment reminder</strong>
+                                <p>Check your installment schedule.</p>
+                            </div>
+                        </div>
+
+                        <div class="cv-notification-item">
+                            <i class="fa-solid fa-house"></i>
+                            <div>
+                                <strong>Project update</strong>
+                                <p>Your installation status is available.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dark Mode -->
+                <button class="cv-header-icon-btn" id="cvDashboardTheme" type="button" aria-label="Enable dark mode"
+                    aria-pressed="false" title="Dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <!-- RTL Mode -->
+                <button class="cv-header-icon-btn cv-rtl-btn" id="cvDashboardRTL" type="button"
+                    aria-label="Enable RTL mode" aria-pressed="false" title="RTL mode">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <!-- Client Profile -->
+                <button class="cv-client-profile" type="button" aria-label="Client profile">
+
+                    <img src="images/client-profile.jpg" alt="John Davis profile" class="cv-profile-avatar">
+
+                    <span class="cv-profile-info">
+                        <strong>John Davis</strong>
+                        <small>Client</small>
+                    </span>
+                </button>
+
+            </div>
+        </header>
+        <!-- =============== END HEADER =============== -->
+
+
+        <main class="cv-dashboard-content">
+
+            <!-- Welcome Heading -->
+            <div class="cv-dashboard-intro">
+                <div>
+                    <span class="cv-page-eyebrow">CLIENT DASHBOARD</span>
+                    <h2>Welcome back, John!</h2>
+                    <p>Here's an update on your window replacement project.</p>
+                </div>
+
+                <span class="cv-project-status">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Project in progress
+                </span>
+            </div>
+
+
+            <!-- SECTION 1: INSTALLATION PROJECT OVERVIEW -->
+            <section class="cv-project-section" aria-labelledby="cvProjectHeading">
+
+                <div class="cv-section-heading">
+                    <div>
+                        <span class="cv-section-kicker">YOUR PROJECT</span>
+                        <h3 id="cvProjectHeading">Installation Overview</h3>
+                    </div>
+
+                    <a href="d2.html" class="cv-section-link">
+                        View Project
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="cv-project-card">
+
+                    <div class="cv-project-top">
+                        <div class="cv-project-icon">
+                            <i class="fa-solid fa-house-chimney-window"></i>
+                        </div>
+
+                        <div class="cv-project-details">
+                            <span class="cv-detail-label">PROJECT ID</span>
+                            <h4>CVW-2026-0148</h4>
+                            <p>Energy-Efficient Window Replacement</p>
+                        </div>
+
+                        <span class="cv-status-pill">
+                            <span></span>
+                            In Progress
+                        </span>
+                    </div>
+
+                    <div class="cv-project-divider"></div>
+
+                    <div class="cv-progress-heading">
+                        <div>
+                            <span class="cv-detail-label">INSTALLATION PROGRESS</span>
+                            <h4>Measurements &amp; Preparation</h4>
+                        </div>
+
+                        <strong class="cv-progress-number">60%</strong>
+                    </div>
+
+                    <div class="cv-progress-track" role="progressbar" aria-label="Installation project progress"
+                        aria-valuemin="0" aria-valuemax="100" aria-valuenow="60">
+                        <div class="cv-progress-fill"></div>
+                    </div>
+
+                    <div class="cv-progress-labels">
+                        <span>Project started</span>
+                        <span>60% completed</span>
+                    </div>
+
+                    <div class="cv-project-meta">
+
+                        <div class="cv-meta-item">
+                            <span class="cv-meta-icon">
+                                <i class="fa-regular fa-calendar"></i>
+                            </span>
+                            <div>
+                                <span class="cv-detail-label">ESTIMATED COMPLETION</span>
+                                <strong>October 28, 2026</strong>
+                            </div>
+                        </div>
+
+                        <div class="cv-meta-item">
+                            <span class="cv-meta-icon">
+                                <i class="fa-solid fa-window-maximize"></i>
+                            </span>
+                            <div>
+                                <span class="cv-detail-label">WINDOWS SELECTED</span>
+                                <strong>8 Energy-Efficient Windows</strong>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a href="d2.html" class="cv-primary-action">
+                        Track Installation
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+            </section>
+
+
+            <!-- SECTION 2: UPCOMING APPOINTMENTS -->
+            <section class="cv-appointments-section" aria-labelledby="cvAppointmentsHeading">
+
+                <div class="cv-section-heading">
+                    <div>
+                        <span class="cv-section-kicker">PLAN AHEAD</span>
+                        <h3 id="cvAppointmentsHeading">Upcoming Appointments</h3>
+                    </div>
+
+                    <a href="d4.html" class="cv-section-link">
+                        View All
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="cv-appointments-card">
+
+                    <div class="cv-appointment-date">
+                        <span>OCT</span>
+                        <strong>16</strong>
+                        <small>FRI</small>
+                    </div>
+
+                    <div class="cv-appointment-info">
+                        <span class="cv-appointment-type">
+                            <i class="fa-solid fa-ruler-combined"></i>
+                            MEASUREMENT VISIT
+                        </span>
+
+                        <h4>Window Measurement Appointment</h4>
+
+                        <p>
+                            <i class="fa-regular fa-clock"></i>
+                            10:00 AM – 11:00 AM
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Your registered property address
+                        </p>
+
+                        <span class="cv-appointment-confirmed">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Scheduled
+                        </span>
+                    </div>
+
+                    <div class="cv-appointment-actions">
+                        <a href="d3.html" class="cv-secondary-action">
+                            Schedule Measurement
+                        </a>
+
+                        <a href="d4.html" class="cv-text-action">
+                            Manage Appointments
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="cv-appointment-note">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <p>
+                        Need to change your visit? Manage your appointment
+                        before the scheduled date.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- SECTION 3: PAYMENTS & WARRANTY -->
+            <section class="cv-financial-section" aria-labelledby="cvFinancialHeading">
+
+                <div class="cv-section-heading">
+                    <div>
+                        <span class="cv-section-kicker">ACCOUNT SUMMARY</span>
+                        <h3 id="cvFinancialHeading">Payments &amp; Warranty</h3>
+                    </div>
+                </div>
+
+                <div class="cv-financial-grid">
+
+                    <!-- Payments Card -->
+                    <article class="cv-financial-card cv-payment-card">
+
+                        <div class="cv-financial-card-top">
+                            <div class="cv-financial-icon">
+                                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4.75 6.75h13.5A2.75 2.75 0 0 1 21 9.5v8.75A2.75 2.75 0 0 1 18.25 21h-12.5A2.75 2.75 0 0 1 3 18.25V5.75A2.75 2.75 0 0 1 5.75 3H18"/><path d="M21 10h-5.25a2.5 2.5 0 0 0 0 5H21"/><path d="M16 12.5h.01"/></svg>
+                            </div>
+
+                            <span class="cv-financial-tag">
+                                Payment Summary
+                            </span>
+                        </div>
+
+                        <span class="cv-detail-label">TOTAL PROJECT COST</span>
+                        <h4 class="cv-project-amount">$8,400.00</h4>
+
+                        <div class="cv-payment-breakdown">
+                            <div>
+                                <span>Amount paid</span>
+                                <strong>$5,040.00</strong>
+                            </div>
+
+                            <div>
+                                <span>Remaining balance</span>
+                                <strong>$3,360.00</strong>
+                            </div>
+                        </div>
+
+                        <div class="cv-payment-progress">
+                            <div class="cv-payment-progress-fill"></div>
+                        </div>
+
+                        <div class="cv-payment-progress-labels">
+                            <span>60% paid</span>
+                            <span>40% remaining</span>
+                        </div>
+
+                        <div class="cv-installment-reminder">
+                            <i class="fa-regular fa-calendar-check"></i>
+                            <div>
+                                <span>NEXT INSTALLMENT</span>
+                                <strong>$1,680.00</strong>
+                                <small>Due October 20, 2026</small>
+                            </div>
+                        </div>
+
+                        <a href="d6.html" class="cv-primary-action">
+                            View Payment Details
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+                    <!-- Warranty Card -->
+                    <article class="cv-financial-card cv-warranty-card">
+
+                        <div class="cv-financial-card-top">
+                            <div class="cv-financial-icon cv-warranty-icon">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+
+                            <span class="cv-warranty-badge">
+                                <i class="fa-solid fa-check"></i>
+                                Protection
+                            </span>
+                        </div>
+
+                        <span class="cv-detail-label">YOUR COVERAGE</span>
+                        <h4 class="cv-warranty-title">Window Warranty</h4>
+
+                        <p class="cv-warranty-description">
+                            Keep your product warranty and installation
+                            documents accessible in one place.
+                        </p>
+
+                        <div class="cv-warranty-document">
+                            <div class="cv-document-icon">
+                                <i class="fa-solid fa-file-pdf"></i>
+                            </div>
+
+                            <div class="cv-document-info">
+                                <strong>Warranty Documentation</strong>
+                                <span>Warranty details and coverage</span>
+                            </div>
+
+                            <i class="fa-solid fa-lock cv-document-lock" title="Client portal access"></i>
+                        </div>
+
+                        <div class="cv-warranty-note">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span>
+                                Access your available warranty documents
+                                through the client portal.
+                            </span>
+                        </div>
+
+                        <a href="d5.html" class="cv-secondary-action">
+                            View Warranty Documents
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

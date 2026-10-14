@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ClearView Windows</title>
+    <meta name="description"
+        content="Manage your ClearView Windows installation project, appointments, warranty and payments.">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body class="cv-dashboard">
+
+    <!-- Mobile Sidebar Overlay -->
+    <div class="cv-sidebar-overlay" id="cvSidebarOverlay"></div>
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="cv-sidebar" id="cvSidebar">
+
+        <div class="cv-sidebar-brand">
+            <a href="index.html" class="cv-dashboard-logo">
+                <img src="images/logo.png" alt="ClearView Windows">
+            </a>
+
+            <button class="cv-sidebar-close" id="cvSidebarClose" type="button" aria-label="Close sidebar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cv-sidebar-label">CLIENT PORTAL</div>
+
+        <nav class="cv-sidebar-nav" aria-label="Client dashboard navigation">
+            <a href="dashboard.html" class="cv-sidebar-link active" aria-current="page">
+                <i class="fa-solid fa-table-columns"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="d2.html" class="cv-sidebar-link">
+                <i class="fa-solid fa-house-circle-check"></i>
+                <span>Installation</span>
+            </a>
+
+            <a href="d3.html" class="cv-sidebar-link">
+                <i class="fa-regular fa-calendar-days"></i>
+                <span>Measurements</span>
+            </a>
+
+            <a href="d4.html" class="cv-sidebar-link">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Appointments</span>
+            </a>
+
+            <a href="d5.html" class="cv-sidebar-link">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Warranty</span>
+            </a>
+
+            <a href="d6.html" class="cv-sidebar-link">
+                <i class="fa-regular fa-credit-card"></i>
+                <span>Payments</span>
+            </a>
+        </nav>
+
+        <!-- Bottom Logout -->
+        <div class="cv-sidebar-bottom">
+
+            <a href="#" class="cv-logout-link" id="cvLogoutBtn">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+    <div class="cv-logout-overlay" id="cvLogoutOverlay" aria-hidden="true">
+
+        <div class="cv-logout-modal" role="dialog" aria-modal="true" aria-labelledby="cvLogoutTitle"
+            aria-describedby="cvLogoutDescription">
+
+            <div class="cv-logout-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+
+            <h2 id="cvLogoutTitle">Confirm Logout</h2>
+
+            <p id="cvLogoutDescription">
+                Are you sure you want to log out of your account?
+            </p>
+
+            <div class="cv-logout-actions">
+                <button type="button" class="cv-logout-no" id="cvLogoutNo">
+                    No, Stay
+                </button>
+
+                <button type="button" class="cv-logout-yes" id="cvLogoutYes">
+                    Yes, Logout
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <!-- =============== END SIDEBAR =============== -->
+
+
+    <!-- ================= MAIN AREA ================= -->
+    <div class="cv-main-wrapper" id="cvMainWrapper">
+
+        <!-- Fixed Header -->
+        <header class="cv-dashboard-header">
+
+            <div class="cv-header-left">
+                <button class="cv-sidebar-toggle" id="cvSidebarToggle" type="button" aria-label="Open sidebar"
+                    aria-controls="cvSidebar" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="cv-header-heading">
+                    <h1>Installation</h1>
+                </div>
+            </div>
+
+            <div class="cv-header-actions">
+
+                <!-- Notifications -->
+                <div class="cv-notification-wrap">
+                    <button class="cv-header-icon-btn" id="cvNotificationToggle" type="button"
+                        aria-label="Notifications, 3 unread" aria-expanded="false">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="cv-notification-badge">3</span>
+                    </button>
+
+                    <div class="cv-notification-panel" id="cvNotificationPanel" hidden>
+                        <div class="cv-notification-title">
+                            <strong>Notifications</strong>
+                            <span>3 new</span>
+                        </div>
+
+                        <div class="cv-notification-item">
+                            <i class="fa-regular fa-calendar-check"></i>
+                            <div>
+                                <strong>Measurement appointment</strong>
+                                <p>Review your upcoming appointment.</p>
+                            </div>
+                        </div>
+
+                        <div class="cv-notification-item">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <div>
+                                <strong>Payment reminder</strong>
+                                <p>Check your installment schedule.</p>
+                            </div>
+                        </div>
+
+                        <div class="cv-notification-item">
+                            <i class="fa-solid fa-house"></i>
+                            <div>
+                                <strong>Project update</strong>
+                                <p>Your installation status is available.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dark Mode -->
+                <button class="cv-header-icon-btn" id="cvDashboardTheme" type="button" aria-label="Enable dark mode"
+                    aria-pressed="false" title="Dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <!-- RTL Mode -->
+                <button class="cv-header-icon-btn cv-rtl-btn" id="cvDashboardRTL" type="button"
+                    aria-label="Enable RTL mode" aria-pressed="false" title="RTL mode">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <!-- Client Profile -->
+                <button class="cv-client-profile" type="button" aria-label="Client profile">
+
+                    <img src="images/client-profile.jpg" alt="John Davis profile" class="cv-profile-avatar">
+
+                    <span class="cv-profile-info">
+                        <strong>John Davis</strong>
+                        <small>Client</small>
+                    </span>
+                </button>
+
+            </div>
+        </header>
+        <!-- =============== END HEADER =============== -->
+
+
+        <main class="cv-dashboard-content">
+
+            <!-- PAGE INTRO -->
+            <section class="cv-install-intro">
+                <div>
+                    <span class="cv-install-eyebrow">PROJECT MANAGEMENT</span>
+                    <h1>Installation Project Status</h1>
+                    <p>Track your window installation progress, upcoming schedule, and project updates.</p>
+                </div>
+
+                <div class="cv-install-project-id">
+                    <span>Project ID</span>
+                    <strong>CVW-2026-0148</strong>
+                </div>
+            </section>
+
+            <!-- SECTION 1: PROJECT PROGRESS -->
+            <section class="cv-install-section">
+                <div class="cv-install-section-heading">
+                    <div>
+                        <span class="cv-install-step">01 / PROJECT OVERVIEW</span>
+                        <h2>Your Project Progress</h2>
+                        <p>Stay informed about each stage of your installation.</p>
+                    </div>
+                    <span class="cv-install-status">In Progress</span>
+                </div>
+
+                <div class="cv-install-progress-card">
+                    <div class="cv-install-progress-top">
+                        <div>
+                            <span class="cv-install-muted">Overall Completion</span>
+                            <h3>60% Completed</h3>
+                        </div>
+                        <div class="cv-install-progress-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                    </div>
+
+                    <div class="cv-install-progress-track">
+                        <div class="cv-install-progress-fill"></div>
+                    </div>
+
+                    <div class="cv-install-progress-labels">
+                        <span>Project started</span>
+                        <span>60% complete</span>
+                        <span>Final handover</span>
+                    </div>
+
+                    <div class="cv-install-milestones">
+                        <div class="cv-install-milestone completed">
+                            <span class="cv-install-milestone-icon">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <div>
+                                <strong>Initial Consultation</strong>
+                                <p>Project requirements confirmed</p>
+                            </div>
+                            <span class="cv-install-milestone-state">Completed</span>
+                        </div>
+
+                        <div class="cv-install-milestone completed">
+                            <span class="cv-install-milestone-icon">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <div>
+                                <strong>Window Measurements</strong>
+                                <p>Measurements reviewed and recorded</p>
+                            </div>
+                            <span class="cv-install-milestone-state">Completed</span>
+                        </div>
+
+                        <div class="cv-install-milestone active">
+                            <span class="cv-install-milestone-icon">
+                                <i class="fa-solid fa-hammer"></i>
+                            </span>
+                            <div>
+                                <strong>Window Preparation</strong>
+                                <p>Custom window units being prepared</p>
+                            </div>
+                            <span class="cv-install-milestone-state">In Progress</span>
+                        </div>
+
+                        <div class="cv-install-milestone">
+                            <span class="cv-install-milestone-icon">
+                                <i class="fa-solid fa-house"></i>
+                            </span>
+                            <div>
+                                <strong>Installation & Inspection</strong>
+                                <p>Installation and final quality checks</p>
+                            </div>
+                            <span class="cv-install-milestone-state">Upcoming</span>
+                        </div>
+                    </div>
+
+                    <div class="cv-install-next-milestone">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <div>
+                            <span>Next Project Milestone</span>
+                            <strong>Installation Preparation Review</strong>
+                            <p>Estimated: October 16, 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: INSTALLATION SCHEDULE -->
+            <section class="cv-install-section">
+                <div class="cv-install-section-heading">
+                    <div>
+                        <span class="cv-install-step">02 / SCHEDULE</span>
+                        <h2>Installation Schedule</h2>
+                        <p>Know when the team is expected to arrive and what to prepare.</p>
+                    </div>
+                </div>
+
+                <div class="cv-install-schedule-card">
+                    <div class="cv-install-date-block">
+                        <span>OCT</span>
+                        <strong>20</strong>
+                        <small>2026</small>
+                    </div>
+
+                    <div class="cv-install-schedule-details">
+                        <span class="cv-install-schedule-tag">PLANNED INSTALLATION</span>
+                        <h3>Energy-Efficient Window Installation</h3>
+                        <div class="cv-install-detail-row">
+                            <i class="fa-regular fa-clock"></i>
+                            <span>Estimated duration: 1–2 days</span>
+                        </div>
+                        <div class="cv-install-detail-row">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Your registered installation address</span>
+                        </div>
+                        <div class="cv-install-detail-row">
+                            <i class="fa-solid fa-user-gear"></i>
+                            <span>Assigned installation team</span>
+                        </div>
+                        <p class="cv-install-schedule-note">
+                            Your team will confirm the arrival time before the scheduled visit.
+                        </p>
+                    </div>
+
+                    <div class="cv-install-schedule-status">
+                        <span>Upcoming</span>
+                    </div>
+                </div>
+
+                <div class="cv-install-preparation">
+                    <div class="cv-install-preparation-heading">
+                        <div class="cv-install-prep-icon">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+                        <div>
+                            <h3>Before the Installation</h3>
+                            <p>Help the installation team work safely and efficiently.</p>
+                        </div>
+                    </div>
+
+                    <ul class="cv-install-prep-list">
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <span>Move furniture away from the windows.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <span>Remove curtains, blinds, and nearby decorations.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <span>Keep the installation area accessible.</span>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-circle"></i>
+                            <span>Secure pets and clear the work area on installation day.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- SECTION 3: UPDATES & QUALITY CHECKLIST -->
+            <section class="cv-install-section">
+                <div class="cv-install-section-heading">
+                    <div>
+                        <span class="cv-install-step">03 / UPDATES</span>
+                        <h2>Installation Updates & Checklist</h2>
+                        <p>Follow project updates and review the final quality checks.</p>
+                    </div>
+                </div>
+
+                <div class="cv-install-updates-grid">
+                    <div class="cv-install-updates-card">
+                        <h3>
+                            <i class="fa-regular fa-bell"></i>
+                            Recent Project Updates
+                        </h3>
+
+                        <div class="cv-install-update-item">
+                            <span class="cv-install-update-dot"></span>
+                            <div>
+                                <strong>Window measurements confirmed</strong>
+                                <p>Measurements have been recorded for your project.</p>
+                                <small>October 10, 2026</small>
+                            </div>
+                        </div>
+
+                        <div class="cv-install-update-item">
+                            <span class="cv-install-update-dot"></span>
+                            <div>
+                                <strong>Preparation stage started</strong>
+                                <p>Your project has moved to the preparation stage.</p>
+                                <small>October 12, 2026</small>
+                            </div>
+                        </div>
+
+                        <div class="cv-install-update-note">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span>Updates shown here are sample project information.</span>
+                        </div>
+                    </div>
+
+                    <div class="cv-install-quality-card">
+                        <h3>
+                            <i class="fa-solid fa-shield-halved"></i>
+                            Quality & Handover Checklist
+                        </h3>
+                        <p>Items the team should verify before project completion.</p>
+
+                        <div class="cv-install-quality-item">
+                            <span class="cv-install-quality-symbol">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <div>
+                                <strong>Window fit and alignment</strong>
+                                <small>To be verified during installation</small>
+                            </div>
+                        </div>
+
+                        <div class="cv-install-quality-item">
+                            <span class="cv-install-quality-symbol">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <div>
+                                <strong>Opening and locking mechanism</strong>
+                                <small>Functional check pending</small>
+                            </div>
+                        </div>
+
+                        <div class="cv-install-quality-item">
+                            <span class="cv-install-quality-symbol">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <div>
+                                <strong>Sealing and finishing</strong>
+                                <small>Final inspection pending</small>
+                            </div>
+                        </div>
+
+                        <div class="cv-install-quality-item">
+                            <span class="cv-install-quality-symbol">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <div>
+                                <strong>Warranty and handover documents</strong>
+                                <small>Provided at project handover</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

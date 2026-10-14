@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ClearView Windows</title>
+
+    <meta name="description"
+        content="Explore energy-efficient window replacement solutions, window styles, energy savings and pricing with ClearView Windows.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Fonts: Manrope + DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+    <header class="cv-header" id="cvHeader">
+        <div class="cv-header-container">
+
+            <!-- Logo - Left Edge -->
+            <a href="index.html" class="cv-logo" aria-label="ClearView Windows Home">
+                <img src="images/logo.png" alt="ClearView Windows">
+            </a>
+
+            <!-- Desktop Navigation - Center -->
+            <nav class="cv-desktop-nav" aria-label="Main navigation">
+                <ul class="cv-nav-list">
+
+                    <li class="cv-nav-item cv-home-dropdown">
+                        <a href="index.html" class="cv-nav-link">
+                            <span class="cv-nav-label">Home</span>
+                            <i class="fa-solid fa-chevron-down cv-dropdown-icon"></i>
+                        </a>
+
+                        <ul class="cv-dropdown-menu">
+                            <li><a href="index.html"><span class="cv-nav-label">Home 1</span></a></li>
+                            <li><a href="home-2.html"><span class="cv-nav-label">Home 2</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="about.html" class="cv-nav-link"><span class="cv-nav-label">About</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="products.html" class="cv-nav-link"><span class="cv-nav-label">Products</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="energy-savings-calculator.html" class="cv-nav-link"><span class="cv-nav-label">Energy
+                                Savings</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="pricing-guide.html" class="cv-nav-link">
+                            <span class="cv-nav-label">Pricing Guide</span>
+                        </a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="contact.html" class="cv-nav-link"><span class="cv-nav-label">Contact</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="dashboard.html" class="cv-nav-link"><span class="cv-nav-label">Dashboard</span></a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- Desktop Controls - Right Edge -->
+            <div class="cv-desktop-controls">
+
+                <button class="cv-icon-toggle" id="cvDesktopTheme" type="button" aria-label="Enable dark mode"
+                    aria-pressed="false" title="Dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button class="cv-icon-toggle" id="cvDesktopRTL" type="button" aria-label="Enable RTL mode"
+                    aria-pressed="false" title="RTL mode">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <a href="login.html" class="cv-login-btn">Login</a>
+
+            </div>
+
+            <!-- Mobile / Tablet Menu Toggle -->
+            <button class="cv-menu-toggle" id="cvMenuToggle" type="button" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="cvMobilePanel">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <!-- Mobile / Tablet Navigation Panel -->
+        <div class="cv-mobile-panel" id="cvMobilePanel">
+
+            <nav class="cv-mobile-nav" aria-label="Mobile navigation">
+                <ul class="cv-mobile-nav-list">
+
+                    <li class="cv-mobile-home">
+                        <div class="cv-mobile-home-row">
+                            <a href="index.html"><span class="cv-nav-label">Home</span></a>
+
+                            <button class="cv-submenu-toggle" id="cvSubmenuToggle" type="button"
+                                aria-label="Toggle Home submenu" aria-expanded="false">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <ul class="cv-mobile-submenu" id="cvHomeSubmenu">
+                            <li><a href="index.html"><span class="cv-nav-label">Home 1</span></a></li>
+                            <li><a href="home-2.html"><span class="cv-nav-label">Home 2</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="about.html"><span class="cv-nav-label">About</span></a></li>
+                    <li><a href="products.html"><span class="cv-nav-label">Products</span></a></li>
+                    <li>
+                        <a href="energy-savings-calculator.html">
+                            <span class="cv-nav-label">Energy Savings Calculator</span>
+                        </a>
+                    </li>
+                    <li><a href="pricing-guide.html"><span class="cv-nav-label">Pricing Guide</span></a></li>
+                    <li><a href="contact.html"><span class="cv-nav-label">Contact</span></a></li>
+                    <li><a href="dashboard.html"><span class="cv-nav-label">Dashboard</span></a></li>
+
+                </ul>
+            </nav>
+
+            <!-- Mobile Controls Inside Menu -->
+            <div class="cv-mobile-controls">
+
+                <button class="cv-mobile-control-btn" id="cvMobileTheme" type="button" aria-pressed="false">
+                    <i class="fa-solid fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+
+                <button class="cv-mobile-control-btn" id="cvMobileRTL" type="button" aria-pressed="false">
+                    <i class="fa-solid fa-right-left"></i>
+                    <span>RTL Mode</span>
+                </button>
+
+                <a href="login.html" class="cv-mobile-login-btn">
+                    <i class="fa-solid fa-user"></i>
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- ==========================
+     ABOUT PAGE HERO
+=========================== -->
+    <section class="cv-inner-hero cv-products-hero">
+        <div class="cv-inner-hero-overlay"></div>
+
+        <div class="cv-inner-hero-content">
+            <span class="cv-inner-hero-label">
+                OUR WINDOW COLLECTION
+            </span>
+
+            <h1>Find the Right Windows<br> for Your Space</h1>
+
+            <p>
+                Explore thoughtfully designed window styles, materials, and finishes to find the right fit for your
+                home.
+            </p>
+        </div>
+    </section>
+
+    <main>
+        <section class="cv-products-catalog-section" aria-labelledby="cvProductsTitle">
+            <header class="cv-products-catalog-heading">
+                <div><span class="cv-products-catalog-eyebrow">OUR WINDOW COLLECTION</span>
+                    <h2 id="cvProductsTitle">Explore Our Windows</h2>
+                </div>
+                <p>Find a thoughtful fit for your home with considered styles, materials, glazing, and finishes.</p>
+            </header>
+            <div class="cv-products-layout">
+                <aside class="cv-products-sidebar" aria-label="Product filters">
+                    <div class="cv-products-filter-title">
+                        <h3>Filter collection</h3><button type="button" data-clear>Clear all</button>
+                    </div>
+                    <div id="cvProductFilters"></div>
+                    <section class="cv-products-facet cv-products-price">
+                        <h3><i class="fa-solid fa-tag"></i> Price range</h3>
+                        <div class="cv-products-range"><span id="cvPriceMinLabel"></span><span
+                                id="cvPriceMaxLabel"></span></div><input id="cvPriceRange" type="range" min="500"
+                            max="5000" step="100" value="5000" aria-label="Maximum sample price">
+                    </section>
+                </aside>
+                <div>
+                    <div class="cv-products-toolbar">
+                        <label class="cv-products-search"><i class="fa-solid fa-magnifying-glass"></i><input
+                                id="cvProductSearch" type="search" placeholder="Search windows"
+                                aria-label="Search products"></label>
+                        <label class="cv-products-sort">Sort by <select id="cvProductSort">
+                                <option value="featured">Featured</option>
+                                <option value="name">Name A-Z</option>
+                                <option value="low">Price Low to High</option>
+                                <option value="high">Price High to Low</option>
+                            </select></label>
+                        <div class="cv-products-view" aria-label="Catalogue view"><button type="button"
+                                class="is-active" data-view="grid" aria-label="Grid view"><i
+                                    class="fa-solid fa-grip"></i></button><button type="button" data-view="list"
+                                aria-label="List view"><i class="fa-solid fa-list"></i></button></div>
+                        <button type="button" class="cv-products-clear" data-clear>Clear all filters</button>
+                    </div>
+                    <div class="cv-products-quick" id="cvQuickFilters"></div>
+                    <div class="cv-products-summary"><strong id="cvProductCount" aria-live="polite">24 products</strong>
+                        <div id="cvActiveFilters" class="cv-products-active"></div>
+                    </div>
+                    <div id="cvProductGrid" class="cv-products-catalog-grid"></div>
+                    <div id="cvProductsEmpty" class="cv-products-empty" hidden><i class="fa-regular fa-face-meh"></i>
+                        <h3>No matching products found</h3>
+                        <p>Adjust your filters or clear them to browse the full collection.</p><button type="button"
+                            data-clear>Clear all filters</button>
+                    </div>
+                </div>
+            </div>
+            <p class="cv-products-disclaimer">Product specifications and prices are sample information for comparison.
+                Request a quote for your chosen configuration.</p>
+        </section>
+    </main>
+    <div class="cv-products-modal" id="cvProductModal" role="dialog" aria-modal="true" aria-labelledby="cvModalTitle"
+        hidden>
+        <div class="cv-products-modal-backdrop" data-close></div>
+        <div class="cv-products-modal-card"><button class="cv-products-modal-close" type="button" data-close
+                aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            <div id="cvProductModalBody"></div>
+        </div>
+    </div>
+
+    <!-- SECTION 3: COMPARE WINDOW TYPES -->
+    <section class="cv-products-compare" id="cv-window-comparison">
+        <div class="cv-products-compare-container">
+
+            <!-- Section Heading -->
+            <div class="cv-products-compare-heading">
+                <span class="cv-products-compare-label">MAKE THE RIGHT CHOICE</span>
+                <h2>Find the Window That Fits Your Lifestyle</h2>
+                <p>
+                    Every space is different. Compare our popular window styles
+                    to find the right balance of ventilation, natural light,
+                    privacy, and design.
+                </p>
+            </div>
+
+            <!-- Comparison Cards -->
+            <div class="cv-products-compare-grid">
+
+                <!-- Casement Windows -->
+                <article class="cv-products-compare-card">
+                    <div class="cv-products-compare-image">
+                        <img src="images/compare-casement.jpg" alt="Modern casement windows in a residential home"
+                            loading="lazy">
+                        <span class="cv-products-compare-number">01</span>
+                    </div>
+
+                    <div class="cv-products-compare-content">
+                        <span class="cv-products-compare-tag">VERSATILE DESIGN</span>
+                        <h3>Casement Windows</h3>
+                        <p>
+                            Hinged windows that open outward to welcome fresh air
+                            and provide a clear, unobstructed view.
+                        </p>
+
+                        <div class="cv-products-compare-specs">
+                            <div>
+                                <span class="cv-products-compare-spec-label">Ventilation</span>
+                                <strong>Excellent</strong>
+                            </div>
+                            <div>
+                                <span class="cv-products-compare-spec-label">Natural Light</span>
+                                <strong>Excellent</strong>
+                            </div>
+                            <div>
+                                <span class="cv-products-compare-spec-label">Best For</span>
+                                <strong>Bedrooms & Living Rooms</strong>
+                            </div>
+                        </div>
+
+                        <button class="cv-products-compare-link" type="button" data-window-type="Casement Windows">
+                            Explore Casement
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Sliding Windows -->
+                <article class="cv-products-compare-card">
+                    <div class="cv-products-compare-image">
+                        <img src="images/compare-sliding.jpg" alt="Contemporary sliding windows with slim frames"
+                            loading="lazy">
+                        <span class="cv-products-compare-number">02</span>
+                    </div>
+
+                    <div class="cv-products-compare-content">
+                        <span class="cv-products-compare-tag">SPACE-SAVING</span>
+                        <h3>Sliding Windows</h3>
+                        <p>
+                            Smooth-sliding panels create a clean, contemporary
+                            look without needing extra opening space.
+                        </p>
+
+                        <div class="cv-products-compare-specs">
+                            <div>
+                                <span class="cv-products-compare-spec-label">Ventilation</span>
+                                <strong>Good</strong>
+                            </div>
+                            <div>
+                                <span class="cv-products-compare-spec-label">Natural Light</span>
+                                <strong>Excellent</strong>
+                            </div>
+                            <div>
+                                <span class="cv-products-compare-spec-label">Best For</span>
+                                <strong>Compact Spaces</strong>
+                            </div>
+                        </div>
+
+                        <button class="cv-products-compare-link" type="button" data-window-type="Sliding Windows">
+                            Explore Sliding
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Awning Windows -->
+                <article class="cv-products-compare-card">
+                    <div class="cv-products-compare-image">
+                        <img src="images/compare-awning.jpg" alt="Modern awning window above a kitchen counter"
+                            loading="lazy">
+                        <span class="cv-products-compare-number">03</span>
+                    </div>
+
+                    <div class="cv-products-compare-content">
+                        <span class="cv-products-compare-tag">EVERYDAY COMFORT</span>
+                        <h3>Awning Windows</h3>
+                        <p>
+                            Top-hinged windows that open outward, helping provide
+                            ventilation while offering some protection from light rain.
+                        </p>
+
+                        <div class="cv-products-compare-specs">
+                            <div>
+                                <span class="cv-products-compare-spec-label">Ventilation</span>
+                                <strong>Very Good</strong>
+                            </div>
+                            <div>
+                                <span class="cv-products-compare-spec-label">Natural Light</span>
+                                <strong>Good</strong>
+                            </div>
+                            <div>
+                                <span class="cv-products-compare-spec-label">Best For</span>
+                                <strong>Kitchens & Bathrooms</strong>
+                            </div>
+                        </div>
+
+                        <button class="cv-products-compare-link" type="button" data-window-type="Awning Windows">
+                            Explore Awning
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Picture Windows -->
+                <article class="cv-products-compare-card">
+                    <div class="cv-products-compare-image">
+                        <img src="images/compare-picture.jpg" alt="Large picture window framing an outdoor view"
+                            loading="lazy">
+                        <span class="cv-products-compare-number">04</span>
+                    </div>
+
+                    <div class="cv-products-compare-content">
+                        <span class="cv-products-compare-tag">MAXIMUM VIEWS</span>
+                        <h3>Picture Windows</h3>
+                        <p>
+                            Fixed glass panels designed to frame outdoor views
+                            and bring abundant natural light indoors.
+                        </p>
+
+                        <div class="cv-products-compare-specs">
+                            <div>
+                                <span class="cv-products-compare-spec-label">Ventilation</span>
+                                <strong>Not Openable</strong>
+                            </div>
+                            <div>
+                                <span class="cv-products-compare-spec-label">Natural Light</span>
+                                <strong>Excellent</strong>
+                            </div>
+                            <div>
+                                <span class="cv-products-compare-spec-label">Best For</span>
+                                <strong>Scenic Views</strong>
+                            </div>
+                        </div>
+
+                        <button class="cv-products-compare-link" type="button" data-window-type="Picture Windows">
+                            Explore Picture
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="cv-products-compare-bottom">
+                <div class="cv-products-compare-bottom-text">
+                    <h3>Still deciding which window is right for you?</h3>
+                    <p>Explore our complete collection to discover more styles and options.</p>
+                </div>
+
+                <a href="#cv-products-catalogue" class="cv-products-compare-cta">
+                    Browse All Windows
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: FRAME MATERIALS -->
+    <section class="cv-products-materials" id="cv-products-materials">
+        <div class="cv-products-materials-container">
+
+            <div class="cv-products-materials-heading">
+                <span class="cv-products-materials-label">
+                    MATERIALS THAT MATTER
+                </span>
+
+                <h2>Choose Your Perfect Frame Material</h2>
+
+                <p>
+                    The right frame makes a difference. Explore materials
+                    designed to complement your home, lifestyle, and
+                    long-term needs.
+                </p>
+            </div>
+
+            <div class="cv-products-materials-layout">
+
+                <!-- Featured Material -->
+                <article class="cv-products-materials-featured">
+                    <img src="images/material-aluminium.jpg" alt="Modern home featuring slim aluminium window frames"
+                        loading="lazy">
+
+                    <div class="cv-products-materials-featured-overlay"></div>
+
+                    <div class="cv-products-materials-featured-content">
+                        <span>01 / FEATURED MATERIAL</span>
+                        <h3>Aluminium</h3>
+
+                        <p>
+                            Clean lines, slim profiles, and a contemporary
+                            appearance for modern architectural spaces.
+                        </p>
+
+                        <button class="cv-products-materials-link" type="button" data-material="Aluminium">
+                            Explore Aluminium
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Other Materials -->
+                <div class="cv-products-materials-list">
+
+                    <article class="cv-products-material-card">
+                        <div class="cv-products-material-card-image">
+                            <img src="images/material-upvc.jpg" alt="White uPVC window frame" loading="lazy">
+                        </div>
+
+                        <div class="cv-products-material-card-content">
+                            <span>02 / PRACTICAL COMFORT</span>
+                            <h3>uPVC</h3>
+
+                            <p>
+                                A low-maintenance option with versatile
+                                styling for everyday residential spaces.
+                            </p>
+
+                            <button class="cv-products-material-card-link" type="button" data-material="uPVC">
+                                Explore uPVC
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="cv-products-material-card">
+                        <div class="cv-products-material-card-image">
+                            <img src="images/material-wood.jpg" alt="Natural wood window frame detail" loading="lazy">
+                        </div>
+
+                        <div class="cv-products-material-card-content">
+                            <span>03 / TIMELESS CHARACTER</span>
+                            <h3>Wood</h3>
+
+                            <p>
+                                Natural warmth and traditional character
+                                for classic and contemporary interiors.
+                            </p>
+
+                            <button class="cv-products-material-card-link" type="button" data-material="Wood">
+                                Explore Wood
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="cv-products-material-card">
+                        <div class="cv-products-material-card-image">
+                            <img src="images/material-fibreglass.jpg" alt="Contemporary fibreglass window frame"
+                                loading="lazy">
+                        </div>
+
+                        <div class="cv-products-material-card-content">
+                            <span>04 / BUILT FOR PERFORMANCE</span>
+                            <h3>Fibreglass</h3>
+
+                            <p>
+                                A durable frame option designed for
+                                long-term performance and everyday use.
+                            </p>
+
+                            <button class="cv-products-material-card-link" type="button" data-material="Fibreglass">
+                                Explore Fibreglass
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Composite Material Card -->
+                    <article class="cv-products-material-card">
+                        <div class="cv-products-material-card-image">
+                            <img src="images/material-composite.jpg" alt="Modern composite window frame detail"
+                                loading="lazy">
+                        </div>
+
+                        <div class="cv-products-material-card-content">
+                            <span>05 / ADVANCED MATERIALS</span>
+
+                            <h3>Composite</h3>
+
+                            <p>
+                                A combination of materials designed to balance
+                                durability, stability, and contemporary style.
+                            </p>
+
+                            <button class="cv-products-material-card-link" type="button" data-material="Composite">
+                                Explore Composite
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="cv-products-materials-bottom">
+                <div>
+                    <h3>Not sure which material suits your home?</h3>
+                    <p>
+                        Compare available options and find the right
+                        combination for your window requirements.
+                    </p>
+                </div>
+
+                <a href="#cv-products-catalogue" class="cv-products-materials-cta">
+                    Find Your Windows
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 5: WINDOW PERFORMANCE & BENEFITS -->
+    <section class="cv-products-benefits" id="cv-products-benefits">
+        <div class="cv-products-benefits-container">
+
+            <!-- Section Heading -->
+            <div class="cv-products-benefits-heading">
+                <span class="cv-products-benefits-label">
+                    DESIGNED FOR BETTER LIVING
+                </span>
+
+                <h2>More Than a View. Better Everyday Living.</h2>
+
+                <p>
+                    The right windows can help create brighter, quieter,
+                    more comfortable spaces while complementing your home's
+                    architectural style.
+                </p>
+            </div>
+
+            <!-- Benefits Layout -->
+            <div class="cv-products-benefits-layout">
+
+                <!-- Featured Benefit -->
+                <article class="cv-products-benefit-featured">
+                    <div class="cv-products-benefit-featured-image">
+                        <img src="images/benefit-energy-efficiency.jpg"
+                            alt="Sunlit modern home with energy-efficient windows" loading="lazy">
+                    </div>
+
+                    <div class="cv-products-benefit-featured-content">
+                        <span class="cv-products-benefit-number">01</span>
+
+                        <div>
+                            <span class="cv-products-benefit-eyebrow">
+                                COMFORT THAT LASTS
+                            </span>
+
+                            <h3>Energy Efficiency</h3>
+
+                            <p>
+                                Explore glazing and frame options designed
+                                to help manage heat transfer and support
+                                a more comfortable indoor environment.
+                            </p>
+
+                            <a href="#cv-products-catalogue" class="cv-products-benefit-link"
+                                data-benefit-filter="Energy Efficient">
+                                Explore Efficient Windows
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Supporting Benefits -->
+                <div class="cv-products-benefits-grid">
+
+                    <!-- Noise Reduction -->
+                    <article class="cv-products-benefit-card">
+                        <div class="cv-products-benefit-icon">
+                            <i class="fa-solid fa-volume-low"></i>
+                        </div>
+
+                        <span class="cv-products-benefit-card-number">02</span>
+
+                        <h3>Noise Reduction</h3>
+
+                        <p>
+                            Explore suitable glazing and window systems
+                            designed to help reduce unwanted outdoor noise.
+                        </p>
+
+                        <a href="#cv-products-catalogue" class="cv-products-benefit-card-link"
+                            data-benefit-filter="Noise Reduction">
+                            Discover Options
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- Weather Protection -->
+                    <article class="cv-products-benefit-card">
+                        <div class="cv-products-benefit-icon">
+                            <i class="fa-solid fa-cloud-rain"></i>
+                        </div>
+
+                        <span class="cv-products-benefit-card-number">03</span>
+
+                        <h3>Weather Protection</h3>
+
+                        <p>
+                            Choose appropriate window designs and sealing
+                            options for your local weather conditions.
+                        </p>
+
+                        <a href="#cv-products-catalogue" class="cv-products-benefit-card-link"
+                            data-benefit-filter="Weather Resistant">
+                            Explore Options
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- Natural Light -->
+                    <article class="cv-products-benefit-card">
+                        <div class="cv-products-benefit-icon">
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+
+                        <span class="cv-products-benefit-card-number">04</span>
+
+                        <h3>Natural Light</h3>
+
+                        <p>
+                            Discover window styles that bring daylight
+                            indoors and create a more open visual feel.
+                        </p>
+
+                        <a href="#cv-products-catalogue" class="cv-products-benefit-card-link"
+                            data-benefit-filter="Natural Light">
+                            Find Your Style
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- Low Maintenance Benefit Card -->
+                    <article class="cv-products-benefit-card">
+                        <div class="cv-products-benefit-icon">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+
+                        <span class="cv-products-benefit-card-number">05</span>
+
+                        <h3>Low Maintenance</h3>
+
+                        <p>
+                            Discover window materials and finishes designed
+                            for easier cleaning and everyday upkeep.
+                        </p>
+
+                        <a href="#cv-products-catalogue" class="cv-products-benefit-card-link"
+                            data-benefit-filter="Low Maintenance">
+                            Explore Easy-Care Windows
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- Bottom Note -->
+            <div class="cv-products-benefits-note">
+                <i class="fa-solid fa-circle-info"></i>
+
+                <p>
+                    Actual performance depends on the selected frame,
+                    glazing specification, installation quality, and
+                    building conditions. Check individual product details
+                    before choosing a window.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PRODUCTS FINAL CTA -->
+    <section class="cv-products-catalog-cta" id="cv-products-cta">
+        <div class="cv-products-cta-overlay"></div>
+
+        <div class="cv-products-cta-content">
+            <span class="cv-products-cta-label">
+                LET'S FIND YOUR PERFECT FIT
+            </span>
+
+            <h2>
+                The Right Windows.<br>
+                A Better View of Home.
+            </h2>
+
+            <p>
+                Discover windows that complement your space, suit your needs,
+                and bring your vision of home to life.
+            </p>
+
+            <div class="cv-products-cta-actions">
+                <a href="contact.html" class="cv-products-cta-primary">
+                    Request a Quote
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#cv-products-catalogue" class="cv-products-cta-secondary">
+                    Explore Collection
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="cv-footer">
+
+        <div class="cv-footer-main">
+            <div class="cv-footer-container">
+
+                <!-- Brand -->
+                <div class="cv-footer-brand">
+                    <a href="index.html" class="cv-footer-logo">
+                        <img src="images/logo-white.png" alt="ClearView Windows">
+                    </a>
+
+                    <p class="cv-footer-description">
+                        Discover energy-efficient window solutions
+                        designed to improve indoor comfort and help
+                        reduce your home's energy consumption.
+                    </p>
+
+                    <div class="cv-footer-socials">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="cv-footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Our Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div class="cv-footer-column">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li>
+                            <a href="energy-savings-calculator.html">
+                                Energy Savings Calculator
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pricing-guide.html">Pricing Guide</a>
+                        </li>
+                        <li>
+                            <a href="dashboard.html">Client Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Client Login</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="cv-footer-column cv-footer-contact">
+                    <h3>Get in Touch</h3>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+10000000000">+91 9876543210</a>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:info@example.com">
+                            clearview12@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Contact us for appointment availability.</span>
+                    </p>
+
+                    <a href="contact.html" class="cv-footer-cta">
+                        Get a Quote
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="cv-footer-bottom">
+            <div class="cv-footer-bottom-container">
+
+                <p>
+                    &copy; <span id="cvCopyrightYear"></span>
+                    ClearView Windows. All rights reserved.
+                </p>
+
+                <div class="cv-footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+    <!-- =============== END FOOTER =============== -->
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

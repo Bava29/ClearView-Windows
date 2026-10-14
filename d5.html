@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ClearView Windows</title>
+    <meta name="description"
+        content="Manage your ClearView Windows installation project, appointments, warranty and payments.">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body class="cv-dashboard">
+
+    <!-- Mobile Sidebar Overlay -->
+    <div class="cv-sidebar-overlay" id="cvSidebarOverlay"></div>
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="cv-sidebar" id="cvSidebar">
+
+        <div class="cv-sidebar-brand">
+            <a href="index.html" class="cv-dashboard-logo">
+                <img src="images/logo.png" alt="ClearView Windows">
+            </a>
+
+            <button class="cv-sidebar-close" id="cvSidebarClose" type="button" aria-label="Close sidebar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cv-sidebar-label">CLIENT PORTAL</div>
+
+        <nav class="cv-sidebar-nav" aria-label="Client dashboard navigation">
+            <a href="dashboard.html" class="cv-sidebar-link active" aria-current="page">
+                <i class="fa-solid fa-table-columns"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="d2.html" class="cv-sidebar-link">
+                <i class="fa-solid fa-house-circle-check"></i>
+                <span>Installation</span>
+            </a>
+
+            <a href="d3.html" class="cv-sidebar-link">
+                <i class="fa-regular fa-calendar-days"></i>
+                <span>Measurements</span>
+            </a>
+
+            <a href="d4.html" class="cv-sidebar-link">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Appointments</span>
+            </a>
+
+            <a href="d5.html" class="cv-sidebar-link">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Warranty</span>
+            </a>
+
+            <a href="d6.html" class="cv-sidebar-link">
+                <i class="fa-regular fa-credit-card"></i>
+                <span>Payments</span>
+            </a>
+        </nav>
+
+        <!-- Bottom Logout -->
+        <div class="cv-sidebar-bottom">
+
+            <a href="#" class="cv-logout-link" id="cvLogoutBtn">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+    <div class="cv-logout-overlay" id="cvLogoutOverlay" aria-hidden="true">
+
+        <div class="cv-logout-modal" role="dialog" aria-modal="true" aria-labelledby="cvLogoutTitle"
+            aria-describedby="cvLogoutDescription">
+
+            <div class="cv-logout-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+
+            <h2 id="cvLogoutTitle">Confirm Logout</h2>
+
+            <p id="cvLogoutDescription">
+                Are you sure you want to log out of your account?
+            </p>
+
+            <div class="cv-logout-actions">
+                <button type="button" class="cv-logout-no" id="cvLogoutNo">
+                    No, Stay
+                </button>
+
+                <button type="button" class="cv-logout-yes" id="cvLogoutYes">
+                    Yes, Logout
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <!-- =============== END SIDEBAR =============== -->
+
+
+    <!-- ================= MAIN AREA ================= -->
+    <div class="cv-main-wrapper" id="cvMainWrapper">
+
+        <!-- Fixed Header -->
+        <header class="cv-dashboard-header">
+
+            <div class="cv-header-left">
+                <button class="cv-sidebar-toggle" id="cvSidebarToggle" type="button" aria-label="Open sidebar"
+                    aria-controls="cvSidebar" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="cv-header-heading">
+                    <h1>Warranty</h1>
+                </div>
+            </div>
+
+            <div class="cv-header-actions">
+
+                <!-- Notifications -->
+                <div class="cv-notification-wrap">
+                    <button class="cv-header-icon-btn" id="cvNotificationToggle" type="button"
+                        aria-label="Notifications, 3 unread" aria-expanded="false">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="cv-notification-badge">3</span>
+                    </button>
+
+                    <div class="cv-notification-panel" id="cvNotificationPanel" hidden>
+                        <div class="cv-notification-title">
+                            <strong>Notifications</strong>
+                            <span>3 new</span>
+                        </div>
+
+                        <div class="cv-notification-item">
+                            <i class="fa-regular fa-calendar-check"></i>
+                            <div>
+                                <strong>Measurement appointment</strong>
+                                <p>Review your upcoming appointment.</p>
+                            </div>
+                        </div>
+
+                        <div class="cv-notification-item">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <div>
+                                <strong>Payment reminder</strong>
+                                <p>Check your installment schedule.</p>
+                            </div>
+                        </div>
+
+                        <div class="cv-notification-item">
+                            <i class="fa-solid fa-house"></i>
+                            <div>
+                                <strong>Project update</strong>
+                                <p>Your installation status is available.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dark Mode -->
+                <button class="cv-header-icon-btn" id="cvDashboardTheme" type="button" aria-label="Enable dark mode"
+                    aria-pressed="false" title="Dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <!-- RTL Mode -->
+                <button class="cv-header-icon-btn cv-rtl-btn" id="cvDashboardRTL" type="button"
+                    aria-label="Enable RTL mode" aria-pressed="false" title="RTL mode">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <!-- Client Profile -->
+                <button class="cv-client-profile" type="button" aria-label="Client profile">
+
+                    <img src="images/client-profile.jpg" alt="John Davis profile" class="cv-profile-avatar">
+
+                    <span class="cv-profile-info">
+                        <strong>John Davis</strong>
+                        <small>Client</small>
+                    </span>
+                </button>
+
+            </div>
+        </header>
+        <!-- =============== END HEADER =============== -->
+
+
+        <main class="cv-dashboard-content">
+
+            <!-- PAGE INTRO -->
+            <section class="cv-war-intro">
+                <div>
+                    <span class="cv-war-eyebrow">PROTECTION & SUPPORT</span>
+                    <h1>Warranty & Protection</h1>
+                    <p>Review your warranty information and learn how to request assistance.</p>
+                </div>
+
+                <div class="cv-war-project-id">
+                    <span>Project ID</span>
+                    <strong>CVW-2026-0148</strong>
+                </div>
+            </section>
+
+            <!-- SECTION 1: WARRANTY OVERVIEW -->
+            <section class="cv-war-section">
+                <div class="cv-war-heading">
+                    <div>
+                        <span class="cv-war-step">01 / YOUR COVERAGE</span>
+                        <h2>Warranty Overview</h2>
+                        <p>Your project warranty information in one place.</p>
+                    </div>
+
+                    <span class="cv-war-status">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Details to Be Confirmed
+                    </span>
+                </div>
+
+                <div class="cv-war-overview-card">
+                    <div class="cv-war-overview-main">
+                        <div class="cv-war-document-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <div>
+                            <span class="cv-war-small-label">YOUR PROJECT</span>
+                            <h3>Energy-Efficient Window Replacement</h3>
+                            <p>Project ID: CVW-2026-0148</p>
+                        </div>
+                    </div>
+
+                    <div class="cv-war-overview-divider"></div>
+
+                    <div class="cv-war-details-grid">
+                        <div class="cv-war-detail">
+                            <span>Warranty Status</span>
+                            <strong>Pending Activation</strong>
+                        </div>
+
+                        <div class="cv-war-detail">
+                            <span>Coverage Start Date</span>
+                            <strong>After Confirmation</strong>
+                        </div>
+
+                        <div class="cv-war-detail">
+                            <span>Coverage Duration</span>
+                            <strong>See Warranty Terms</strong>
+                        </div>
+
+                        <div class="cv-war-detail">
+                            <span>Warranty Document</span>
+                            <strong>Request from Project Team</strong>
+                        </div>
+                    </div>
+
+                    <div class="cv-war-notice">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <p>
+                            Your exact warranty period, start date, and eligibility depend
+                            on your signed warranty terms. Confirm these details with
+                            ClearView Windows before relying on coverage.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: COVERAGE AND EXCLUSIONS -->
+            <section class="cv-war-section">
+                <div class="cv-war-heading">
+                    <div>
+                        <span class="cv-war-step">02 / COVERAGE DETAILS</span>
+                        <h2>What's Covered?</h2>
+                        <p>Understand the types of protection to check in your warranty agreement.</p>
+                    </div>
+                </div>
+
+                <div class="cv-war-coverage-grid">
+
+                    <article class="cv-war-coverage-card">
+                        <div class="cv-war-coverage-icon">
+                            <i class="fa-regular fa-window-maximize"></i>
+                        </div>
+
+                        <h3>Window Components</h3>
+                        <p>
+                            Check whether your warranty covers eligible window frames,
+                            glass units, hardware, and other supplied components.
+                        </p>
+
+                        <span class="cv-war-coverage-label">
+                            Subject to warranty terms
+                        </span>
+                    </article>
+
+                    <article class="cv-war-coverage-card">
+                        <div class="cv-war-coverage-icon">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+
+                        <h3>Installation Workmanship</h3>
+                        <p>
+                            Review the terms for installation-related defects and
+                            the process for requesting a workmanship inspection.
+                        </p>
+
+                        <span class="cv-war-coverage-label">
+                            Subject to warranty terms
+                        </span>
+                    </article>
+
+                    <article class="cv-war-coverage-card">
+                        <div class="cv-war-coverage-icon">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+
+                        <h3>Seals & Weatherproofing</h3>
+                        <p>
+                            Check the agreement for eligible sealing, weatherproofing,
+                            and related performance issues.
+                        </p>
+
+                        <span class="cv-war-coverage-label">
+                            Subject to warranty terms
+                        </span>
+                    </article>
+
+                    <article class="cv-war-coverage-card">
+                        <div class="cv-war-coverage-icon">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+
+                        <h3>Exclusions to Review</h3>
+                        <p>
+                            Ask about accidental damage, improper maintenance,
+                            unauthorized alterations, and normal wear.
+                        </p>
+
+                        <span class="cv-war-exclusion-label">
+                            Check exclusions carefully
+                        </span>
+                    </article>
+
+                </div>
+
+                <div class="cv-war-terms-note">
+                    <div class="cv-war-terms-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+
+                    <div>
+                        <strong>Always refer to your official warranty terms</strong>
+                        <p>
+                            These categories are guidance only, not a confirmation
+                            that any particular item is covered or excluded.
+                            Your signed warranty document takes precedence.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: CLAIM AND SUPPORT -->
+            <section class="cv-war-section">
+                <div class="cv-war-heading">
+                    <div>
+                        <span class="cv-war-step">03 / SERVICE SUPPORT</span>
+                        <h2>Warranty Claim & Assistance</h2>
+                        <p>Know what to do if you notice a problem with your windows.</p>
+                    </div>
+                </div>
+
+                <div class="cv-war-claim-layout">
+
+                    <div class="cv-war-claim-card">
+                        <div class="cv-war-claim-title">
+                            <div class="cv-war-claim-icon">
+                                <i class="fa-solid fa-file-circle-exclamation"></i>
+                            </div>
+
+                            <div>
+                                <h3>How to Request Warranty Service</h3>
+                                <p>Follow these steps when reporting a potential issue.</p>
+                            </div>
+                        </div>
+
+                        <div class="cv-war-claim-step">
+                            <span class="cv-war-claim-number">01</span>
+                            <div>
+                                <strong>Identify the Issue</strong>
+                                <p>Note the affected window, the problem, and when it started.</p>
+                            </div>
+                        </div>
+
+                        <div class="cv-war-claim-step">
+                            <span class="cv-war-claim-number">02</span>
+                            <div>
+                                <strong>Gather Supporting Details</strong>
+                                <p>Keep photos, your project ID, and purchase or installation records ready.</p>
+                            </div>
+                        </div>
+
+                        <div class="cv-war-claim-step">
+                            <span class="cv-war-claim-number">03</span>
+                            <div>
+                                <strong>Contact the Project Team</strong>
+                                <p>Submit your concern for review and follow the instructions provided.</p>
+                            </div>
+                        </div>
+
+                        <div class="cv-war-claim-step">
+                            <span class="cv-war-claim-number">04</span>
+                            <div>
+                                <strong>Track the Service Request</strong>
+                                <p>Keep any reference number and confirm the next steps with support.</p>
+                            </div>
+                        </div>
+
+                        <a href="d7.html" class="cv-war-primary-btn">
+                            Contact Project Team
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <aside class="cv-war-help-card">
+                        <div class="cv-war-help-icon">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+
+                        <h3>Need Help with Your Warranty?</h3>
+                        <p>
+                            Contact the ClearView Windows team to clarify your coverage,
+                            request your warranty document, or report a possible issue.
+                        </p>
+
+                        <div class="cv-war-help-detail">
+                            <i class="fa-solid fa-hashtag"></i>
+                            <div>
+                                <span>Project Reference</span>
+                                <strong>CVW-2026-0148</strong>
+                            </div>
+                        </div>
+
+                        <div class="cv-war-help-detail">
+                            <i class="fa-regular fa-file-lines"></i>
+                            <div>
+                                <span>Keep Available</span>
+                                <strong>Invoice & Warranty Terms</strong>
+                            </div>
+                        </div>
+
+                        <a href="d7.html" class="cv-war-secondary-btn">
+                            Get Warranty Support
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                        <p class="cv-war-help-footnote">
+                            A service request does not automatically mean that
+                            the reported issue is covered by warranty.
+                        </p>
+                    </aside>
+
+                </div>
+            </section>
+
+        </main>
+
+
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ClearView Windows</title>
+
+    <meta name="description"
+        content="Explore energy-efficient window replacement solutions, window styles, energy savings and pricing with ClearView Windows.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Fonts: Manrope + DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+    <header class="cv-header" id="cvHeader">
+        <div class="cv-header-container">
+
+            <!-- Logo - Left Edge -->
+            <a href="index.html" class="cv-logo" aria-label="ClearView Windows Home">
+                <img src="images/logo.png" alt="ClearView Windows">
+            </a>
+
+            <!-- Desktop Navigation - Center -->
+            <nav class="cv-desktop-nav" aria-label="Main navigation">
+                <ul class="cv-nav-list">
+
+                    <li class="cv-nav-item cv-home-dropdown">
+                        <a href="index.html" class="cv-nav-link">
+                            <span class="cv-nav-label">Home</span>
+                            <i class="fa-solid fa-chevron-down cv-dropdown-icon"></i>
+                        </a>
+
+                        <ul class="cv-dropdown-menu">
+                            <li><a href="index.html"><span class="cv-nav-label">Home 1</span></a></li>
+                            <li><a href="home-2.html"><span class="cv-nav-label">Home 2</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="about.html" class="cv-nav-link"><span class="cv-nav-label">About</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="products.html" class="cv-nav-link"><span class="cv-nav-label">Products</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="energy-savings-calculator.html" class="cv-nav-link"><span class="cv-nav-label">Energy
+                                Savings</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="pricing-guide.html" class="cv-nav-link">
+                            <span class="cv-nav-label">Pricing Guide</span>
+                        </a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="contact.html" class="cv-nav-link"><span class="cv-nav-label">Contact</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="dashboard.html" class="cv-nav-link"><span class="cv-nav-label">Dashboard</span></a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- Desktop Controls - Right Edge -->
+            <div class="cv-desktop-controls">
+
+                <button class="cv-icon-toggle" id="cvDesktopTheme" type="button" aria-label="Enable dark mode"
+                    aria-pressed="false" title="Dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button class="cv-icon-toggle" id="cvDesktopRTL" type="button" aria-label="Enable RTL mode"
+                    aria-pressed="false" title="RTL mode">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <a href="login.html" class="cv-login-btn">Login</a>
+
+            </div>
+
+            <!-- Mobile / Tablet Menu Toggle -->
+            <button class="cv-menu-toggle" id="cvMenuToggle" type="button" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="cvMobilePanel">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <!-- Mobile / Tablet Navigation Panel -->
+        <div class="cv-mobile-panel" id="cvMobilePanel">
+
+            <nav class="cv-mobile-nav" aria-label="Mobile navigation">
+                <ul class="cv-mobile-nav-list">
+
+                    <li class="cv-mobile-home">
+                        <div class="cv-mobile-home-row">
+                            <a href="index.html"><span class="cv-nav-label">Home</span></a>
+
+                            <button class="cv-submenu-toggle" id="cvSubmenuToggle" type="button"
+                                aria-label="Toggle Home submenu" aria-expanded="false">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <ul class="cv-mobile-submenu" id="cvHomeSubmenu">
+                            <li><a href="index.html"><span class="cv-nav-label">Home 1</span></a></li>
+                            <li><a href="home-2.html"><span class="cv-nav-label">Home 2</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="about.html"><span class="cv-nav-label">About</span></a></li>
+                    <li><a href="products.html"><span class="cv-nav-label">Products</span></a></li>
+                    <li>
+                        <a href="energy-savings-calculator.html">
+                            <span class="cv-nav-label">Energy Savings Calculator</span>
+                        </a>
+                    </li>
+                    <li><a href="pricing-guide.html"><span class="cv-nav-label">Pricing Guide</span></a></li>
+                    <li><a href="contact.html"><span class="cv-nav-label">Contact</span></a></li>
+                    <li><a href="dashboard.html"><span class="cv-nav-label">Dashboard</span></a></li>
+
+                </ul>
+            </nav>
+
+            <!-- Mobile Controls Inside Menu -->
+            <div class="cv-mobile-controls">
+
+                <button class="cv-mobile-control-btn" id="cvMobileTheme" type="button" aria-pressed="false">
+                    <i class="fa-solid fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+
+                <button class="cv-mobile-control-btn" id="cvMobileRTL" type="button" aria-pressed="false">
+                    <i class="fa-solid fa-right-left"></i>
+                    <span>RTL Mode</span>
+                </button>
+
+                <a href="login.html" class="cv-mobile-login-btn">
+                    <i class="fa-solid fa-user"></i>
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- ==========================
+     ABOUT PAGE HERO
+=========================== -->
+    <section class="cv-inner-hero cv-pricing-hero">
+        <div class="cv-inner-hero-overlay"></div>
+
+        <div class="cv-inner-hero-content">
+            <span class="cv-inner-hero-label">
+                PRICING GUIDE
+            </span>
+
+            <h1>Window Replacement <br> Pricing Guide</h1>
+
+            <p>
+                Understand the factors that influence window replacement costs, compare options, and plan your budget
+                with confidence.
+            </p>
+        </div>
+    </section>
+
+    <!-- Pricing Factors Section -->
+    <section class="cv-pricing-factors" id="pricing-factors">
+        <div class="cv-pricing-factors-container">
+
+            <div class="cv-pricing-factors-heading">
+                <span class="cv-pricing-eyebrow">
+                    UNDERSTANDING YOUR INVESTMENT
+                </span>
+
+                <h2>What Affects Window Pricing?</h2>
+
+                <p>
+                    Every home is different. Understanding these key factors
+                    helps you choose the right windows for your needs and budget.
+                </p>
+            </div>
+
+            <div class="cv-pricing-factors-grid">
+
+                <!-- Card 1 -->
+                <article class="cv-pricing-factor-card">
+                    <div class="cv-pricing-factor-image">
+                        <img src="images/pricing-window-type.jpg" alt="Different window styles for modern homes"
+                            loading="lazy">
+                        <span class="cv-pricing-factor-number">01</span>
+                    </div>
+
+                    <div class="cv-pricing-factor-content">
+                        <div class="cv-pricing-factor-icon">
+                            <i class="fas fa-border-all"></i>
+                        </div>
+
+                        <h3>Window Type & Design</h3>
+
+                        <p>
+                            Casement, sliding, awning and picture windows
+                            have different designs, operating mechanisms
+                            and hardware requirements.
+                        </p>
+
+                        <span class="cv-pricing-factor-note">
+                            Style and functionality
+                        </span>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="cv-pricing-factor-card">
+                    <div class="cv-pricing-factor-image">
+                        <img src="images/pricing-frame-material.jpg" alt="Window frame material and finish options"
+                            loading="lazy">
+                        <span class="cv-pricing-factor-number">02</span>
+                    </div>
+
+                    <div class="cv-pricing-factor-content">
+                        <div class="cv-pricing-factor-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+
+                        <h3>Frame Material</h3>
+
+                        <p>
+                            Aluminium, uPVC, timber and composite frames
+                            differ in appearance, durability, maintenance
+                            needs and overall cost.
+                        </p>
+
+                        <span class="cv-pricing-factor-note">
+                            Material and finish
+                        </span>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="cv-pricing-factor-card">
+                    <div class="cv-pricing-factor-image">
+                        <img src="images/pricing-glass-options.jpg" alt="Modern double glazed window glass"
+                            loading="lazy">
+                        <span class="cv-pricing-factor-number">03</span>
+                    </div>
+
+                    <div class="cv-pricing-factor-content">
+                        <div class="cv-pricing-factor-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+
+                        <h3>Glass & Energy Performance</h3>
+
+                        <p>
+                            Double or triple glazing, low-E coatings,
+                            acoustic glass and other performance features
+                            can influence the final price.
+                        </p>
+
+                        <span class="cv-pricing-factor-note">
+                            Comfort and efficiency
+                        </span>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="cv-pricing-factor-card">
+                    <div class="cv-pricing-factor-image">
+                        <img src="images/pricing-window-size.jpg" alt="Large custom-sized residential windows"
+                            loading="lazy">
+                        <span class="cv-pricing-factor-number">04</span>
+                    </div>
+
+                    <div class="cv-pricing-factor-content">
+                        <div class="cv-pricing-factor-icon">
+                            <i class="fas fa-ruler-combined"></i>
+                        </div>
+
+                        <h3>Size & Customisation</h3>
+
+                        <p>
+                            Larger windows, non-standard dimensions,
+                            special shapes and custom finishes may require
+                            additional materials or fabrication.
+                        </p>
+
+                        <span class="cv-pricing-factor-note">
+                            Dimensions and detailing
+                        </span>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="cv-pricing-factor-card">
+                    <div class="cv-pricing-factor-image">
+                        <img src="images/pricing-installation.jpg" alt="Professional window installation in a home"
+                            loading="lazy">
+                        <span class="cv-pricing-factor-number">05</span>
+                    </div>
+
+                    <div class="cv-pricing-factor-content">
+                        <div class="cv-pricing-factor-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+
+                        <h3>Installation Requirements</h3>
+
+                        <p>
+                            Removing old windows, repairing openings,
+                            site access and finishing work can affect
+                            the overall installation cost.
+                        </p>
+
+                        <span class="cv-pricing-factor-note">
+                            Labour and site conditions
+                        </span>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="cv-pricing-factors-bottom">
+                <div>
+                    <h3>Not sure which option fits your budget?</h3>
+                    <p>
+                        Our team can help you understand your options
+                        based on your home and requirements.
+                    </p>
+                </div>
+
+                <a href="contact.html" class="cv-pricing-factors-btn">
+                    Discuss Your Requirements
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pricing Guide - Window Comparison Section -->
+    <section class="cv-pricing-compare" id="window-comparison">
+        <div class="cv-pricing-compare-container">
+
+            <div class="cv-pricing-compare-heading">
+                <span class="cv-pricing-compare-eyebrow">
+                    FIND YOUR RIGHT FIT
+                </span>
+
+                <h2>Compare Window Options</h2>
+
+                <p>
+                    Explore popular window styles and understand their
+                    practical benefits before making your investment.
+                </p>
+            </div>
+
+            <div class="cv-pricing-compare-grid">
+
+                <!-- Casement Window -->
+                <article class="cv-pricing-compare-card">
+                    <div class="cv-pricing-compare-image">
+                        <img src="images/compare-casement.jpg" alt="Modern casement windows" loading="lazy">
+                        <span class="cv-pricing-compare-tag">
+                            Versatile Choice
+                        </span>
+                    </div>
+
+                    <div class="cv-pricing-compare-body">
+                        <h3>Casement Windows</h3>
+
+                        <p>
+                            Hinged windows that open outward to provide
+                            ventilation and a clear outdoor view.
+                        </p>
+
+                        <ul>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Excellent ventilation
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Tight closure when properly installed
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Multiple size options
+                            </li>
+                        </ul>
+
+                        <div class="cv-pricing-compare-footer">
+                            <span>Budget consideration</span>
+                            <strong>Hardware & opening size</strong>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sliding Window -->
+                <article class="cv-pricing-compare-card">
+                    <div class="cv-pricing-compare-image">
+                        <img src="images/compare-sliding.jpg" alt="Contemporary sliding windows" loading="lazy">
+                        <span class="cv-pricing-compare-tag">
+                            Space-Saving
+                        </span>
+                    </div>
+
+                    <div class="cv-pricing-compare-body">
+                        <h3>Sliding Windows</h3>
+
+                        <p>
+                            Smooth horizontal operation makes these windows
+                            practical for rooms with limited exterior space.
+                        </p>
+
+                        <ul>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Space-efficient operation
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Simple everyday use
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Suitable for wider openings
+                            </li>
+                        </ul>
+
+                        <div class="cv-pricing-compare-footer">
+                            <span>Budget consideration</span>
+                            <strong>Track & panel configuration</strong>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Awning Window -->
+                <article class="cv-pricing-compare-card">
+                    <div class="cv-pricing-compare-image">
+                        <img src="images/compare-awning.jpg" alt="Awning windows in a modern home" loading="lazy">
+                        <span class="cv-pricing-compare-tag">
+                            Ventilation
+                        </span>
+                    </div>
+
+                    <div class="cv-pricing-compare-body">
+                        <h3>Awning Windows</h3>
+
+                        <p>
+                            Top-hinged windows that open outward and can
+                            help provide ventilation during light rain,
+                            depending on conditions and design.
+                        </p>
+
+                        <ul>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Useful for ventilation
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Suitable for smaller openings
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Can complement other window styles
+                            </li>
+                        </ul>
+
+                        <div class="cv-pricing-compare-footer">
+                            <span>Budget consideration</span>
+                            <strong>Hinges & operating hardware</strong>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Picture Window -->
+                <article class="cv-pricing-compare-card">
+                    <div class="cv-pricing-compare-image">
+                        <img src="images/compare-picture.jpg" alt="Large fixed picture window" loading="lazy">
+                        <span class="cv-pricing-compare-tag">
+                            Maximum View
+                        </span>
+                    </div>
+
+                    <div class="cv-pricing-compare-body">
+                        <h3>Picture Windows</h3>
+
+                        <p>
+                            Fixed windows designed to bring in natural
+                            light and create uninterrupted outdoor views.
+                        </p>
+
+                        <ul>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Expansive outdoor views
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                No operating hardware
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Multiple glazing choices
+                            </li>
+                        </ul>
+
+                        <div class="cv-pricing-compare-footer">
+                            <span>Budget consideration</span>
+                            <strong>Glass size & specification</strong>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="cv-pricing-compare-note">
+                <i class="fas fa-info-circle"></i>
+                <p>
+                    Actual costs vary by dimensions, frame material, glass
+                    specification, hardware and installation requirements.
+                    Request a personalised quote for accurate pricing.
+                </p>
+            </div>
+
+            <div class="cv-pricing-compare-action">
+                <a href="contact.html" class="cv-pricing-compare-btn">
+                    Get a Personalised Quote
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pricing Guide - Quote Details Section -->
+    <section class="cv-pricing-quote" id="quote-details">
+        <div class="cv-pricing-quote-container">
+
+            <div class="cv-pricing-quote-heading">
+                <span class="cv-pricing-quote-eyebrow">
+                    PLAN WITH CONFIDENCE
+                </span>
+
+                <h2>What's Included in Your Window Quote?</h2>
+
+                <p>
+                    A clear quotation helps you understand the full project
+                    cost, compare options and avoid unexpected expenses.
+                </p>
+            </div>
+
+            <div class="cv-pricing-quote-layout">
+
+                <div class="cv-pricing-quote-list">
+
+                    <article class="cv-pricing-quote-item">
+                        <div class="cv-pricing-quote-icon">
+                            <i class="fas fa-window-maximize"></i>
+                        </div>
+
+                        <div class="cv-pricing-quote-text">
+                            <h3>Window Products</h3>
+                            <p>
+                                Check the quantity, dimensions, selected
+                                window styles, frame materials and finishes.
+                            </p>
+                        </div>
+
+                        <span class="cv-pricing-quote-check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                    </article>
+
+                    <article class="cv-pricing-quote-item">
+                        <div class="cv-pricing-quote-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+
+                        <div class="cv-pricing-quote-text">
+                            <h3>Glass & Performance Features</h3>
+                            <p>
+                                Confirm glazing type, energy-efficiency
+                                options, hardware and any selected upgrades.
+                            </p>
+                        </div>
+
+                        <span class="cv-pricing-quote-check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                    </article>
+
+                    <article class="cv-pricing-quote-item">
+                        <div class="cv-pricing-quote-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+
+                        <div class="cv-pricing-quote-text">
+                            <h3>Installation & Labour</h3>
+                            <p>
+                                Ask whether fitting, labour, sealing and
+                                installation-related work are included.
+                            </p>
+                        </div>
+
+                        <span class="cv-pricing-quote-check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                    </article>
+
+                    <article class="cv-pricing-quote-item">
+                        <div class="cv-pricing-quote-icon">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+
+                        <div class="cv-pricing-quote-text">
+                            <h3>Removal & Finishing</h3>
+                            <p>
+                                Verify charges for old window removal,
+                                disposal, opening repairs and finishing work.
+                            </p>
+                        </div>
+
+                        <span class="cv-pricing-quote-check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                    </article>
+
+                    <article class="cv-pricing-quote-item">
+                        <div class="cv-pricing-quote-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+
+                        <div class="cv-pricing-quote-text">
+                            <h3>Warranty & Payment Terms</h3>
+                            <p>
+                                Review warranty coverage, exclusions,
+                                payment schedule, taxes and project timelines.
+                            </p>
+                        </div>
+
+                        <span class="cv-pricing-quote-check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                    </article>
+
+                </div>
+
+                <aside class="cv-pricing-quote-sidebar">
+                    <div class="cv-pricing-quote-sidebar-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+
+                    <span class="cv-pricing-quote-sidebar-label">
+                        BEFORE YOU APPROVE
+                    </span>
+
+                    <h3>Know What You're Paying For</h3>
+
+                    <p>
+                        Ask for an itemised quotation so you can understand
+                        what's included and identify any additional charges
+                        before confirming your project.
+                    </p>
+
+                    <ul>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Confirm the final specifications
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Check for additional charges
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Review warranty conditions
+                        </li>
+                    </ul>
+
+                    <a href="contact.html" class="cv-pricing-quote-btn">
+                        Request a Detailed Quote
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <span class="cv-pricing-quote-disclaimer">
+                        Inclusions vary by supplier and project scope.
+                        Confirm all details in writing.
+                    </span>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Guide - Final CTA -->
+    <section class="cv-pricing-final-cta">
+        <div class="cv-pricing-final-overlay"></div>
+
+        <div class="cv-pricing-final-content">
+
+            <span class="cv-pricing-final-eyebrow">
+                YOUR HOME. YOUR REQUIREMENTS. YOUR QUOTE.
+            </span>
+
+            <h2>
+                Ready to Find the Right
+                <span>Windows for Your Budget?</span>
+            </h2>
+
+            <p>
+                Every home is different. Tell us about your window
+                requirements and let our team help you explore suitable
+                options with a personalised quotation.
+            </p>
+
+            <div class="cv-pricing-final-actions">
+                <a href="contact.html" class="cv-pricing-final-primary">
+                    Request a Quote
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <a href="products.html" class="cv-pricing-final-secondary">
+                    Explore Our Windows
+                </a>
+            </div>
+
+            <div class="cv-pricing-final-note">
+                <i class="fas fa-check-circle"></i>
+                <span>Clear options. Informed decisions. A quote tailored to your project.</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="cv-footer">
+
+        <div class="cv-footer-main">
+            <div class="cv-footer-container">
+
+                <!-- Brand -->
+                <div class="cv-footer-brand">
+                    <a href="index.html" class="cv-footer-logo">
+                        <img src="images/logo-white.png" alt="ClearView Windows">
+                    </a>
+
+                    <p class="cv-footer-description">
+                        Discover energy-efficient window solutions
+                        designed to improve indoor comfort and help
+                        reduce your home's energy consumption.
+                    </p>
+
+                    <div class="cv-footer-socials">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="cv-footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Our Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div class="cv-footer-column">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li>
+                            <a href="energy-savings-calculator.html">
+                                Energy Savings Calculator
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pricing-guide.html">Pricing Guide</a>
+                        </li>
+                        <li>
+                            <a href="dashboard.html">Client Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Client Login</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="cv-footer-column cv-footer-contact">
+                    <h3>Get in Touch</h3>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+10000000000">+91 9876543210</a>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:info@example.com">
+                            clearview12@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Contact us for appointment availability.</span>
+                    </p>
+
+                    <a href="contact.html" class="cv-footer-cta">
+                        Get a Quote
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="cv-footer-bottom">
+            <div class="cv-footer-bottom-container">
+
+                <p>
+                    &copy; <span id="cvCopyrightYear"></span>
+                    ClearView Windows. All rights reserved.
+                </p>
+
+                <div class="cv-footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+    <!-- =============== END FOOTER =============== -->
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

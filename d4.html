@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ClearView Windows</title>
+    <meta name="description"
+        content="Manage your ClearView Windows installation project, appointments, warranty and payments.">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body class="cv-dashboard">
+
+    <!-- Mobile Sidebar Overlay -->
+    <div class="cv-sidebar-overlay" id="cvSidebarOverlay"></div>
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="cv-sidebar" id="cvSidebar">
+
+        <div class="cv-sidebar-brand">
+            <a href="index.html" class="cv-dashboard-logo">
+                <img src="images/logo.png" alt="ClearView Windows">
+            </a>
+
+            <button class="cv-sidebar-close" id="cvSidebarClose" type="button" aria-label="Close sidebar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cv-sidebar-label">CLIENT PORTAL</div>
+
+        <nav class="cv-sidebar-nav" aria-label="Client dashboard navigation">
+            <a href="dashboard.html" class="cv-sidebar-link active" aria-current="page">
+                <i class="fa-solid fa-table-columns"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="d2.html" class="cv-sidebar-link">
+                <i class="fa-solid fa-house-circle-check"></i>
+                <span>Installation</span>
+            </a>
+
+            <a href="d3.html" class="cv-sidebar-link">
+                <i class="fa-regular fa-calendar-days"></i>
+                <span>Measurements</span>
+            </a>
+
+            <a href="d4.html" class="cv-sidebar-link">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Appointments</span>
+            </a>
+
+            <a href="d5.html" class="cv-sidebar-link">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Warranty</span>
+            </a>
+
+            <a href="d6.html" class="cv-sidebar-link">
+                <i class="fa-regular fa-credit-card"></i>
+                <span>Payments</span>
+            </a>
+        </nav>
+
+        <!-- Bottom Logout -->
+        <div class="cv-sidebar-bottom">
+
+            <a href="#" class="cv-logout-link" id="cvLogoutBtn">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+    <div class="cv-logout-overlay" id="cvLogoutOverlay" aria-hidden="true">
+
+        <div class="cv-logout-modal" role="dialog" aria-modal="true" aria-labelledby="cvLogoutTitle"
+            aria-describedby="cvLogoutDescription">
+
+            <div class="cv-logout-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+
+            <h2 id="cvLogoutTitle">Confirm Logout</h2>
+
+            <p id="cvLogoutDescription">
+                Are you sure you want to log out of your account?
+            </p>
+
+            <div class="cv-logout-actions">
+                <button type="button" class="cv-logout-no" id="cvLogoutNo">
+                    No, Stay
+                </button>
+
+                <button type="button" class="cv-logout-yes" id="cvLogoutYes">
+                    Yes, Logout
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <!-- =============== END SIDEBAR =============== -->
+
+
+    <!-- ================= MAIN AREA ================= -->
+    <div class="cv-main-wrapper" id="cvMainWrapper">
+
+        <!-- Fixed Header -->
+        <header class="cv-dashboard-header">
+
+            <div class="cv-header-left">
+                <button class="cv-sidebar-toggle" id="cvSidebarToggle" type="button" aria-label="Open sidebar"
+                    aria-controls="cvSidebar" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="cv-header-heading">
+                    <h1>Appointments</h1>
+                </div>
+            </div>
+
+            <div class="cv-header-actions">
+
+                <!-- Notifications -->
+                <div class="cv-notification-wrap">
+                    <button class="cv-header-icon-btn" id="cvNotificationToggle" type="button"
+                        aria-label="Notifications, 3 unread" aria-expanded="false">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="cv-notification-badge">3</span>
+                    </button>
+
+                    <div class="cv-notification-panel" id="cvNotificationPanel" hidden>
+                        <div class="cv-notification-title">
+                            <strong>Notifications</strong>
+                            <span>3 new</span>
+                        </div>
+
+                        <div class="cv-notification-item">
+                            <i class="fa-regular fa-calendar-check"></i>
+                            <div>
+                                <strong>Measurement appointment</strong>
+                                <p>Review your upcoming appointment.</p>
+                            </div>
+                        </div>
+
+                        <div class="cv-notification-item">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <div>
+                                <strong>Payment reminder</strong>
+                                <p>Check your installment schedule.</p>
+                            </div>
+                        </div>
+
+                        <div class="cv-notification-item">
+                            <i class="fa-solid fa-house"></i>
+                            <div>
+                                <strong>Project update</strong>
+                                <p>Your installation status is available.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dark Mode -->
+                <button class="cv-header-icon-btn" id="cvDashboardTheme" type="button" aria-label="Enable dark mode"
+                    aria-pressed="false" title="Dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <!-- RTL Mode -->
+                <button class="cv-header-icon-btn cv-rtl-btn" id="cvDashboardRTL" type="button"
+                    aria-label="Enable RTL mode" aria-pressed="false" title="RTL mode">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <!-- Client Profile -->
+                <button class="cv-client-profile" type="button" aria-label="Client profile">
+
+                    <img src="images/client-profile.jpg" alt="John Davis profile" class="cv-profile-avatar">
+
+                    <span class="cv-profile-info">
+                        <strong>John Davis</strong>
+                        <small>Client</small>
+                    </span>
+                </button>
+
+            </div>
+        </header>
+        <!-- =============== END HEADER =============== -->
+
+
+        <main class="cv-dashboard-content">
+
+            <!-- PAGE INTRO -->
+            <section class="cv-appt-intro">
+                <div>
+                    <span class="cv-appt-eyebrow">VISIT MANAGEMENT</span>
+                    <h1>My Appointments</h1>
+                    <p>Manage your scheduled visits and prepare for your window installation.</p>
+                </div>
+
+                <div class="cv-appt-project-id">
+                    <span>Project ID</span>
+                    <strong>CVW-2026-0148</strong>
+                </div>
+            </section>
+
+            <!-- SECTION 1: UPCOMING APPOINTMENT -->
+            <section class="cv-appt-section">
+                <div class="cv-appt-heading">
+                    <div>
+                        <span class="cv-appt-step">01 / NEXT VISIT</span>
+                        <h2>Upcoming Appointment</h2>
+                        <p>Your next scheduled visit with the ClearView Windows team.</p>
+                    </div>
+                    <span class="cv-appt-status">Confirmed</span>
+                </div>
+
+                <div class="cv-appt-feature-card">
+                    <div class="cv-appt-date">
+                        <span>OCT</span>
+                        <strong>16</strong>
+                        <small>2026</small>
+                    </div>
+
+                    <div class="cv-appt-feature-details">
+                        <span class="cv-appt-type">MEASUREMENT VISIT</span>
+                        <h3>Window Measurement & Verification</h3>
+
+                        <div class="cv-appt-detail">
+                            <i class="fa-regular fa-clock"></i>
+                            <span>10:00 AM – 11:00 AM</span>
+                        </div>
+
+                        <div class="cv-appt-detail">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Your registered installation address</span>
+                        </div>
+
+                        <div class="cv-appt-detail">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <span>ClearView Measurement Team</span>
+                        </div>
+
+                        <p class="cv-appt-description">
+                            The team will review window dimensions and verify
+                            measurements before the next project stage.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cv-appt-reminder">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <p>
+                        <strong>Before your visit:</strong>
+                        Keep the window areas accessible and have any questions
+                        about your window specifications ready.
+                    </p>
+                </div>
+            </section>
+
+            <!-- SECTION 2: APPOINTMENT SCHEDULE -->
+            <section class="cv-appt-section">
+                <div class="cv-appt-heading">
+                    <div>
+                        <span class="cv-appt-step">02 / YOUR SCHEDULE</span>
+                        <h2>Appointment History & Schedule</h2>
+                        <p>Review your project visits and upcoming milestones.</p>
+                    </div>
+                </div>
+
+                <div class="cv-appt-timeline">
+
+                    <article class="cv-appt-timeline-item completed">
+                        <div class="cv-appt-timeline-marker">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div class="cv-appt-timeline-content">
+                            <div class="cv-appt-timeline-top">
+                                <span class="cv-appt-timeline-category">COMPLETED VISIT</span>
+                                <span class="cv-appt-history-status">Completed</span>
+                            </div>
+
+                            <h3>Initial Project Consultation</h3>
+                            <p>Discussed project requirements and window replacement options.</p>
+
+                            <div class="cv-appt-timeline-meta">
+                                <span>
+                                    <i class="fa-regular fa-calendar"></i>
+                                    October 8, 2026
+                                </span>
+                                <span>
+                                    <i class="fa-regular fa-clock"></i>
+                                    10:00 AM
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cv-appt-timeline-item upcoming">
+                        <div class="cv-appt-timeline-marker">
+                            <i class="fa-regular fa-calendar"></i>
+                        </div>
+
+                        <div class="cv-appt-timeline-content">
+                            <div class="cv-appt-timeline-top">
+                                <span class="cv-appt-timeline-category">UPCOMING VISIT</span>
+                                <span class="cv-appt-history-status">Confirmed</span>
+                            </div>
+
+                            <h3>Window Measurement & Verification</h3>
+                            <p>Verify dimensions and confirm the window specifications.</p>
+
+                            <div class="cv-appt-timeline-meta">
+                                <span>
+                                    <i class="fa-regular fa-calendar"></i>
+                                    October 16, 2026
+                                </span>
+                                <span>
+                                    <i class="fa-regular fa-clock"></i>
+                                    10:00 AM – 11:00 AM
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cv-appt-timeline-item planned">
+                        <div class="cv-appt-timeline-marker">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+
+                        <div class="cv-appt-timeline-content">
+                            <div class="cv-appt-timeline-top">
+                                <span class="cv-appt-timeline-category">PLANNED MILESTONE</span>
+                                <span class="cv-appt-history-status">Estimated</span>
+                            </div>
+
+                            <h3>Window Installation</h3>
+                            <p>Installation of your energy-efficient replacement windows.</p>
+
+                            <div class="cv-appt-timeline-meta">
+                                <span>
+                                    <i class="fa-regular fa-calendar"></i>
+                                    October 20, 2026
+                                </span>
+                                <span>
+                                    <i class="fa-regular fa-clock"></i>
+                                    Time to be confirmed
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="cv-appt-schedule-note">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Installation is a planned milestone. The team will confirm the final appointment time
+                        separately.</span>
+                </div>
+            </section>
+
+            <!-- SECTION 3: PREPARATION & SUPPORT -->
+            <section class="cv-appt-section">
+                <div class="cv-appt-heading">
+                    <div>
+                        <span class="cv-appt-step">03 / PREPARATION</span>
+                        <h2>Get Ready for Your Appointment</h2>
+                        <p>A few simple steps to make your visit smooth and productive.</p>
+                    </div>
+                </div>
+
+                <div class="cv-appt-preparation-grid">
+
+                    <div class="cv-appt-prep-card">
+                        <div class="cv-appt-prep-icon">
+                            <i class="fa-solid fa-clipboard-list"></i>
+                        </div>
+
+                        <h3>Before the Visit</h3>
+                        <p>Prepare your home and information before the team arrives.</p>
+
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span>Keep window areas clear and accessible.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span>Note any concerns about window sizes.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span>Ensure someone can provide access to the property.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span>Keep your project details available.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-appt-prep-card">
+                        <div class="cv-appt-prep-icon">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+
+                        <h3>Need to Make a Change?</h3>
+                        <p>
+                            If you cannot attend the scheduled visit or need help,
+                            contact the project team in advance.
+                        </p>
+
+                        <div class="cv-appt-support-info">
+                            <i class="fa-regular fa-calendar-xmark"></i>
+                            <div>
+                                <strong>Reschedule a Visit</strong>
+                                <span>Request a different date or time through support.</span>
+                            </div>
+                        </div>
+
+                        <div class="cv-appt-support-info">
+                            <i class="fa-regular fa-comments"></i>
+                            <div>
+                                <strong>Appointment Questions</strong>
+                                <span>Ask about visit timing, access, or preparation.</span>
+                            </div>
+                        </div>
+
+                        <a href="d7.html" class="cv-appt-support-btn">
+                            Contact Project Team
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

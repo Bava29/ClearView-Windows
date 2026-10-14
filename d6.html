@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ClearView Windows</title>
+    <meta name="description"
+        content="Manage your ClearView Windows installation project, appointments, warranty and payments.">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body class="cv-dashboard">
+
+    <!-- Mobile Sidebar Overlay -->
+    <div class="cv-sidebar-overlay" id="cvSidebarOverlay"></div>
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="cv-sidebar" id="cvSidebar">
+
+        <div class="cv-sidebar-brand">
+            <a href="index.html" class="cv-dashboard-logo">
+                <img src="images/logo.png" alt="ClearView Windows">
+            </a>
+
+            <button class="cv-sidebar-close" id="cvSidebarClose" type="button" aria-label="Close sidebar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cv-sidebar-label">CLIENT PORTAL</div>
+
+        <nav class="cv-sidebar-nav" aria-label="Client dashboard navigation">
+            <a href="dashboard.html" class="cv-sidebar-link active" aria-current="page">
+                <i class="fa-solid fa-table-columns"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="d2.html" class="cv-sidebar-link">
+                <i class="fa-solid fa-house-circle-check"></i>
+                <span>Installation</span>
+            </a>
+
+            <a href="d3.html" class="cv-sidebar-link">
+                <i class="fa-regular fa-calendar-days"></i>
+                <span>Measurements</span>
+            </a>
+
+            <a href="d4.html" class="cv-sidebar-link">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Appointments</span>
+            </a>
+
+            <a href="d5.html" class="cv-sidebar-link">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Warranty</span>
+            </a>
+
+            <a href="d6.html" class="cv-sidebar-link">
+                <i class="fa-regular fa-credit-card"></i>
+                <span>Payments</span>
+            </a>
+        </nav>
+
+        <!-- Bottom Logout -->
+        <div class="cv-sidebar-bottom">
+
+            <a href="#" class="cv-logout-link" id="cvLogoutBtn">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+    <div class="cv-logout-overlay" id="cvLogoutOverlay" aria-hidden="true">
+
+        <div class="cv-logout-modal" role="dialog" aria-modal="true" aria-labelledby="cvLogoutTitle"
+            aria-describedby="cvLogoutDescription">
+
+            <div class="cv-logout-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+
+            <h2 id="cvLogoutTitle">Confirm Logout</h2>
+
+            <p id="cvLogoutDescription">
+                Are you sure you want to log out of your account?
+            </p>
+
+            <div class="cv-logout-actions">
+                <button type="button" class="cv-logout-no" id="cvLogoutNo">
+                    No, Stay
+                </button>
+
+                <button type="button" class="cv-logout-yes" id="cvLogoutYes">
+                    Yes, Logout
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <!-- =============== END SIDEBAR =============== -->
+
+
+    <!-- ================= MAIN AREA ================= -->
+    <div class="cv-main-wrapper" id="cvMainWrapper">
+
+        <!-- Fixed Header -->
+        <header class="cv-dashboard-header">
+
+            <div class="cv-header-left">
+                <button class="cv-sidebar-toggle" id="cvSidebarToggle" type="button" aria-label="Open sidebar"
+                    aria-controls="cvSidebar" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="cv-header-heading">
+                    <h1>Payments</h1>
+                </div>
+            </div>
+
+            <div class="cv-header-actions">
+
+                <!-- Notifications -->
+                <div class="cv-notification-wrap">
+                    <button class="cv-header-icon-btn" id="cvNotificationToggle" type="button"
+                        aria-label="Notifications, 3 unread" aria-expanded="false">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="cv-notification-badge">3</span>
+                    </button>
+
+                    <div class="cv-notification-panel" id="cvNotificationPanel" hidden>
+                        <div class="cv-notification-title">
+                            <strong>Notifications</strong>
+                            <span>3 new</span>
+                        </div>
+
+                        <div class="cv-notification-item">
+                            <i class="fa-regular fa-calendar-check"></i>
+                            <div>
+                                <strong>Measurement appointment</strong>
+                                <p>Review your upcoming appointment.</p>
+                            </div>
+                        </div>
+
+                        <div class="cv-notification-item">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <div>
+                                <strong>Payment reminder</strong>
+                                <p>Check your installment schedule.</p>
+                            </div>
+                        </div>
+
+                        <div class="cv-notification-item">
+                            <i class="fa-solid fa-house"></i>
+                            <div>
+                                <strong>Project update</strong>
+                                <p>Your installation status is available.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dark Mode -->
+                <button class="cv-header-icon-btn" id="cvDashboardTheme" type="button" aria-label="Enable dark mode"
+                    aria-pressed="false" title="Dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <!-- RTL Mode -->
+                <button class="cv-header-icon-btn cv-rtl-btn" id="cvDashboardRTL" type="button"
+                    aria-label="Enable RTL mode" aria-pressed="false" title="RTL mode">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <!-- Client Profile -->
+                <button class="cv-client-profile" type="button" aria-label="Client profile">
+
+                    <img src="images/client-profile.jpg" alt="John Davis profile" class="cv-profile-avatar">
+
+                    <span class="cv-profile-info">
+                        <strong>John Davis</strong>
+                        <small>Client</small>
+                    </span>
+                </button>
+
+            </div>
+        </header>
+        <!-- =============== END HEADER =============== -->
+
+
+        <main class="cv-dashboard-content">
+
+            <!-- PAGE INTRO -->
+            <section class="cv-pay-intro">
+                <div>
+                    <span class="cv-pay-eyebrow">BILLING & FINANCE</span>
+                    <h1>Payments & Billing</h1>
+                    <p>Track your project payments, review upcoming installments, and view your payment history.</p>
+                </div>
+
+                <div class="cv-pay-project-id">
+                    <span>Project ID</span>
+                    <strong>CVW-2026-0148</strong>
+                </div>
+            </section>
+
+            <!-- SECTION 1: PAYMENT OVERVIEW -->
+            <section class="cv-pay-section">
+                <div class="cv-pay-heading">
+                    <div>
+                        <span class="cv-pay-step">01 / FINANCIAL SUMMARY</span>
+                        <h2>Payment Overview</h2>
+                        <p>A clear breakdown of your window replacement project cost.</p>
+                    </div>
+                    <span class="cv-pay-status">Payment in Progress</span>
+                </div>
+
+                <div class="cv-pay-total-card">
+                    <div class="cv-pay-total-info">
+                        <span>Total Project Cost</span>
+                        <h3>$8,400.00</h3>
+                        <p>Project CVW-2026-0148</p>
+                    </div>
+
+                    <div class="cv-pay-total-icon">
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4.75 6.75h13.5A2.75 2.75 0 0 1 21 9.5v8.75A2.75 2.75 0 0 1 18.25 21h-12.5A2.75 2.75 0 0 1 3 18.25V5.75A2.75 2.75 0 0 1 5.75 3H18"/><path d="M21 10h-5.25a2.5 2.5 0 0 0 0 5H21"/><path d="M16 12.5h.01"/></svg>
+                    </div>
+
+                    <div class="cv-pay-progress-area">
+                        <div class="cv-pay-progress-label">
+                            <span>Payment Progress</span>
+                            <strong>60%</strong>
+                        </div>
+
+                        <div class="cv-pay-progress-track">
+                            <div class="cv-pay-progress-fill"></div>
+                        </div>
+
+                        <div class="cv-pay-progress-caption">
+                            <span>$5,040 paid</span>
+                            <span>$3,360 remaining</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-pay-summary-grid">
+                    <article class="cv-pay-summary-card">
+                        <div class="cv-pay-summary-icon">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <span>Total Paid</span>
+                        <strong>$5,040.00</strong>
+                        <small>60% of project cost</small>
+                    </article>
+
+                    <article class="cv-pay-summary-card">
+                        <div class="cv-pay-summary-icon">
+                            <i class="fa-solid fa-hourglass-half"></i>
+                        </div>
+                        <span>Outstanding Balance</span>
+                        <strong>$3,360.00</strong>
+                        <small>Remaining project amount</small>
+                    </article>
+
+                    <article class="cv-pay-summary-card">
+                        <div class="cv-pay-summary-icon">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+                        <span>Next Installment</span>
+                        <strong>$1,680.00</strong>
+                        <small>Due October 20, 2026</small>
+                    </article>
+                </div>
+            </section>
+
+            <!-- SECTION 2: PAYMENT PLAN -->
+            <section class="cv-pay-section">
+                <div class="cv-pay-heading">
+                    <div>
+                        <span class="cv-pay-step">02 / PAYMENT SCHEDULE</span>
+                        <h2>Upcoming Payment & Payment Plan</h2>
+                        <p>Review your next installment and planned payment milestones.</p>
+                    </div>
+                </div>
+
+                <div class="cv-pay-upcoming-card">
+                    <div class="cv-pay-upcoming-icon">
+                        <i class="fa-regular fa-calendar-check"></i>
+                    </div>
+
+                    <div class="cv-pay-upcoming-info">
+                        <span>NEXT INSTALLMENT</span>
+                        <h3>$1,680.00</h3>
+                        <p>Due October 20, 2026</p>
+                        <small>Please confirm the due date against your signed payment agreement.</small>
+                    </div>
+
+                    <span class="cv-pay-due-badge">Upcoming</span>
+                </div>
+
+                <div class="cv-pay-plan-card">
+                    <h3>
+                        <i class="fa-solid fa-list-check"></i>
+                        Project Payment Breakdown
+                    </h3>
+
+                    <div class="cv-pay-plan-row">
+                        <div class="cv-pay-plan-number completed">01</div>
+                        <div class="cv-pay-plan-info">
+                            <strong>Initial Payment</strong>
+                            <span>Recorded payment</span>
+                        </div>
+                        <div class="cv-pay-plan-amount">
+                            <strong>$2,520.00</strong>
+                            <span class="cv-pay-plan-paid">Paid</span>
+                        </div>
+                    </div>
+
+                    <div class="cv-pay-plan-row">
+                        <div class="cv-pay-plan-number completed">02</div>
+                        <div class="cv-pay-plan-info">
+                            <strong>Progress Payment</strong>
+                            <span>Recorded payment</span>
+                        </div>
+                        <div class="cv-pay-plan-amount">
+                            <strong>$2,520.00</strong>
+                            <span class="cv-pay-plan-paid">Paid</span>
+                        </div>
+                    </div>
+
+                    <div class="cv-pay-plan-row">
+                        <div class="cv-pay-plan-number upcoming">03</div>
+                        <div class="cv-pay-plan-info">
+                            <strong>Next Installment</strong>
+                            <span>Due October 20, 2026</span>
+                        </div>
+                        <div class="cv-pay-plan-amount">
+                            <strong>$1,680.00</strong>
+                            <span class="cv-pay-plan-upcoming">Upcoming</span>
+                        </div>
+                    </div>
+
+                    <div class="cv-pay-plan-row">
+                        <div class="cv-pay-plan-number pending">04</div>
+                        <div class="cv-pay-plan-info">
+                            <strong>Final Balance</strong>
+                            <span>Due as per payment agreement</span>
+                        </div>
+                        <div class="cv-pay-plan-amount">
+                            <strong>$1,680.00</strong>
+                            <span class="cv-pay-plan-pending">Pending</span>
+                        </div>
+                    </div>
+
+                    <div class="cv-pay-plan-total">
+                        <span>Total Project Cost</span>
+                        <strong>$8,400.00</strong>
+                    </div>
+                </div>
+
+                <div class="cv-pay-instructions">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <p>
+                        <strong>Payment reminder:</strong>
+                        Follow the due dates and payment methods listed in your official
+                        agreement. Contact the project team if you need clarification
+                        about an installment.
+                    </p>
+                </div>
+            </section>
+
+            <!-- SECTION 3: PAYMENT HISTORY -->
+            <section class="cv-pay-section">
+                <div class="cv-pay-heading">
+                    <div>
+                        <span class="cv-pay-step">03 / TRANSACTION RECORDS</span>
+                        <h2>Payment History & Receipts</h2>
+                        <p>Review previously recorded payments and their reference details.</p>
+                    </div>
+                </div>
+
+                <div class="cv-pay-history-summary">
+                    <div>
+                        <span>Recorded Transactions</span>
+                        <strong>2 Payments</strong>
+                    </div>
+                    <div>
+                        <span>Recorded Amount</span>
+                        <strong>$5,040.00</strong>
+                    </div>
+                </div>
+
+                <div class="cv-pay-table-wrap">
+                    <table class="cv-pay-table">
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>Payment Date</th>
+                                <th>Description</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Receipt</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><strong>CVW-PAY-001</strong></td>
+                                <td>Oct 08, 2026</td>
+                                <td>Initial Payment</td>
+                                <td>$2,520.00</td>
+                                <td>
+                                    <span class="cv-pay-history-paid">Paid</span>
+                                </td>
+                                <td>
+                                    <span class="cv-pay-receipt-unavailable">Not uploaded</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>CVW-PAY-002</strong></td>
+                                <td>Oct 10, 2026</td>
+                                <td>Progress Payment</td>
+                                <td>$2,520.00</td>
+                                <td>
+                                    <span class="cv-pay-history-paid">Paid</span>
+                                </td>
+                                <td>
+                                    <span class="cv-pay-receipt-unavailable">Not uploaded</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cv-pay-history-note">
+                    <div class="cv-pay-history-note-icon">
+                        <i class="fa-solid fa-file-invoice"></i>
+                    </div>
+
+                    <div>
+                        <strong>Need a receipt or payment clarification?</strong>
+                        <p>
+                            Contact the project team with your project ID and transaction
+                            reference to request a receipt or resolve a billing question.
+                        </p>
+                    </div>
+
+                    <a href="d7.html" class="cv-pay-contact-btn">
+                        Contact Support
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

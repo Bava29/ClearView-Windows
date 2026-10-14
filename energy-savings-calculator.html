@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ClearView Windows</title>
+
+    <meta name="description"
+        content="Explore energy-efficient window replacement solutions, window styles, energy savings and pricing with ClearView Windows.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Fonts: Manrope + DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+    <header class="cv-header" id="cvHeader">
+        <div class="cv-header-container">
+
+            <!-- Logo - Left Edge -->
+            <a href="index.html" class="cv-logo" aria-label="ClearView Windows Home">
+                <img src="images/logo.png" alt="ClearView Windows">
+            </a>
+
+            <!-- Desktop Navigation - Center -->
+            <nav class="cv-desktop-nav" aria-label="Main navigation">
+                <ul class="cv-nav-list">
+
+                    <li class="cv-nav-item cv-home-dropdown">
+                        <a href="index.html" class="cv-nav-link">
+                            <span class="cv-nav-label">Home</span>
+                            <i class="fa-solid fa-chevron-down cv-dropdown-icon"></i>
+                        </a>
+
+                        <ul class="cv-dropdown-menu">
+                            <li><a href="index.html"><span class="cv-nav-label">Home 1</span></a></li>
+                            <li><a href="home-2.html"><span class="cv-nav-label">Home 2</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="about.html" class="cv-nav-link"><span class="cv-nav-label">About</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="products.html" class="cv-nav-link"><span class="cv-nav-label">Products</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="energy-savings-calculator.html" class="cv-nav-link"><span class="cv-nav-label">Energy
+                                Savings</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="pricing-guide.html" class="cv-nav-link">
+                            <span class="cv-nav-label">Pricing Guide</span>
+                        </a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="contact.html" class="cv-nav-link"><span class="cv-nav-label">Contact</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="dashboard.html" class="cv-nav-link"><span class="cv-nav-label">Dashboard</span></a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- Desktop Controls - Right Edge -->
+            <div class="cv-desktop-controls">
+
+                <button class="cv-icon-toggle" id="cvDesktopTheme" type="button" aria-label="Enable dark mode"
+                    aria-pressed="false" title="Dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button class="cv-icon-toggle" id="cvDesktopRTL" type="button" aria-label="Enable RTL mode"
+                    aria-pressed="false" title="RTL mode">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <a href="login.html" class="cv-login-btn">Login</a>
+
+            </div>
+
+            <!-- Mobile / Tablet Menu Toggle -->
+            <button class="cv-menu-toggle" id="cvMenuToggle" type="button" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="cvMobilePanel">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <!-- Mobile / Tablet Navigation Panel -->
+        <div class="cv-mobile-panel" id="cvMobilePanel">
+
+            <nav class="cv-mobile-nav" aria-label="Mobile navigation">
+                <ul class="cv-mobile-nav-list">
+
+                    <li class="cv-mobile-home">
+                        <div class="cv-mobile-home-row">
+                            <a href="index.html"><span class="cv-nav-label">Home</span></a>
+
+                            <button class="cv-submenu-toggle" id="cvSubmenuToggle" type="button"
+                                aria-label="Toggle Home submenu" aria-expanded="false">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <ul class="cv-mobile-submenu" id="cvHomeSubmenu">
+                            <li><a href="index.html"><span class="cv-nav-label">Home 1</span></a></li>
+                            <li><a href="home-2.html"><span class="cv-nav-label">Home 2</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="about.html"><span class="cv-nav-label">About</span></a></li>
+                    <li><a href="products.html"><span class="cv-nav-label">Products</span></a></li>
+                    <li>
+                        <a href="energy-savings-calculator.html">
+                            <span class="cv-nav-label">Energy Savings Calculator</span>
+                        </a>
+                    </li>
+                    <li><a href="pricing-guide.html"><span class="cv-nav-label">Pricing Guide</span></a></li>
+                    <li><a href="contact.html"><span class="cv-nav-label">Contact</span></a></li>
+                    <li><a href="dashboard.html"><span class="cv-nav-label">Dashboard</span></a></li>
+
+                </ul>
+            </nav>
+
+            <!-- Mobile Controls Inside Menu -->
+            <div class="cv-mobile-controls">
+
+                <button class="cv-mobile-control-btn" id="cvMobileTheme" type="button" aria-pressed="false">
+                    <i class="fa-solid fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+
+                <button class="cv-mobile-control-btn" id="cvMobileRTL" type="button" aria-pressed="false">
+                    <i class="fa-solid fa-right-left"></i>
+                    <span>RTL Mode</span>
+                </button>
+
+                <a href="login.html" class="cv-mobile-login-btn">
+                    <i class="fa-solid fa-user"></i>
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- ==========================
+     ABOUT PAGE HERO
+=========================== -->
+    <section class="cv-inner-hero cv-esc-hero">
+        <div class="cv-inner-hero-overlay"></div>
+
+        <div class="cv-inner-hero-content">
+            <span class="cv-inner-hero-label">
+                SMARTER WINDOWS. LOWER ENERGY COSTS.
+            </span>
+
+            <h1>Discover How Much Energy<br> Your Windows Could Save.</h1>
+
+            <p>
+                Find out how energy-efficient windows may improve your home's comfort and help reduce energy costs. Use
+                our savings calculator to explore the possibilities for your home.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- SECTION 2: ENERGY SAVINGS ESTIMATOR -->
+    <section class="cv-energy-estimator" id="cv-energy-estimator">
+        <div class="cv-energy-estimator-container">
+
+            <!-- Section Heading -->
+            <div class="cv-energy-estimator-heading">
+                <span class="cv-energy-estimator-label">
+                    PLAN YOUR ENERGY SAVINGS
+                </span>
+
+                <h2>Discover Your Potential Savings</h2>
+
+                <p>
+                    Share a few details about your home and current windows
+                    to explore how energy-efficient replacements may help
+                    reduce your annual energy costs.
+                </p>
+            </div>
+
+            <div class="cv-energy-estimator-layout">
+
+                <!-- Input Form -->
+                <div class="cv-energy-estimator-form-card">
+                    <div class="cv-energy-estimator-card-heading">
+                        <div class="cv-energy-estimator-icon">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+
+                        <div>
+                            <h3>Your Home Details</h3>
+                            <p>Adjust the options to match your home.</p>
+                        </div>
+                    </div>
+
+                    <form id="cvEnergySavingsForm">
+
+                        <div class="cv-energy-estimator-field">
+                            <label for="cvEnergyHomeType">Home Type</label>
+
+                            <select id="cvEnergyHomeType" required>
+                                <option value="1">Apartment</option>
+                                <option value="1.15">Independent House</option>
+                                <option value="1.3">Large House</option>
+                            </select>
+                        </div>
+
+                        <div class="cv-energy-estimator-field">
+                            <label for="cvEnergyWindowCount">
+                                Number of Windows
+                            </label>
+
+                            <div class="cv-energy-estimator-number">
+                                <button type="button" class="cv-energy-stepper" data-energy-step="-1"
+                                    aria-label="Decrease window count">
+                                    <i class="fa-solid fa-minus"></i>
+                                </button>
+
+                                <input type="number" id="cvEnergyWindowCount" min="1" max="100" value="10" required>
+
+                                <button type="button" class="cv-energy-stepper" data-energy-step="1"
+                                    aria-label="Increase window count">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="cv-energy-estimator-field">
+                            <label for="cvEnergyCurrentWindows">
+                                Current Window Type
+                            </label>
+
+                            <select id="cvEnergyCurrentWindows" required>
+                                <option value="1.2">Single-pane windows</option>
+                                <option value="1.1">Older double-pane windows</option>
+                                <option value="1">Relatively efficient windows</option>
+                            </select>
+                        </div>
+
+                        <div class="cv-energy-estimator-field">
+                            <label for="cvEnergyClimate">
+                                Local Climate
+                            </label>
+
+                            <select id="cvEnergyClimate" required>
+                                <option value="1.15">Hot climate</option>
+                                <option value="1">Mixed climate</option>
+                                <option value="0.9">Cold climate</option>
+                            </select>
+                        </div>
+
+                        <div class="cv-energy-estimator-field">
+                            <label for="cvEnergyMonthlyBill">
+                                Average Monthly Energy Bill (₹)
+                            </label>
+
+                            <input type="number" id="cvEnergyMonthlyBill" min="1" max="1000000" value="3000"
+                                placeholder="e.g. 3000" required>
+                        </div>
+
+                        <button type="submit" class="cv-energy-estimator-submit">
+                            Calculate My Savings
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                        <p class="cv-energy-estimator-disclaimer">
+                            This is an illustrative estimate, not a guaranteed
+                            energy or financial saving.
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Results Panel -->
+                <div class="cv-energy-estimator-result">
+
+                    <div class="cv-energy-result-top">
+                        <span class="cv-energy-result-label">
+                            YOUR ESTIMATED RESULTS
+                        </span>
+
+                        <div class="cv-energy-result-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                    </div>
+
+                    <h3>Make your home more energy conscious.</h3>
+
+                    <p class="cv-energy-result-description">
+                        Submit your home details to see an illustrative
+                        estimate based on the information provided.
+                    </p>
+
+                    <div class="cv-energy-result-highlight">
+                        <span>Potential Annual Savings</span>
+
+                        <strong id="cvEnergyAnnualSavings">₹0</strong>
+
+                        <small id="cvEnergySavingsRange">
+                            Estimated range will appear here
+                        </small>
+                    </div>
+
+                    <div class="cv-energy-result-metrics">
+                        <div class="cv-energy-result-metric">
+                            <span>Monthly Estimate</span>
+                            <strong id="cvEnergyMonthlySavings">₹0</strong>
+                        </div>
+
+                        <div class="cv-energy-result-metric">
+                            <span>Illustrative Savings Rate</span>
+                            <strong id="cvEnergySavingsPercent">0%</strong>
+                        </div>
+                    </div>
+
+                    <div class="cv-energy-result-note">
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        <p id="cvEnergyResultMessage" aria-live="polite">
+                            Enter your details and calculate to view your
+                            estimated savings.
+                        </p>
+                    </div>
+
+                    <a href="contact.html" class="cv-energy-result-cta">
+                        Discuss Your Window Options
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: ENERGY SAVINGS FACTORS -->
+    <section class="cv-energy-factors" id="cv-energy-factors">
+        <div class="cv-energy-factors-container">
+
+            <div class="cv-energy-factors-heading">
+                <span class="cv-energy-factors-label">
+                    UNDERSTAND YOUR HOME
+                </span>
+
+                <h2>What Influences Your Energy Savings?</h2>
+
+                <p>
+                    Your potential savings depend on more than the windows
+                    alone. These four factors help determine the right
+                    solution for your home.
+                </p>
+            </div>
+
+            <div class="cv-energy-factors-grid">
+
+                <!-- Factor 1 -->
+                <article class="cv-energy-factor-card">
+                    <div class="cv-energy-factor-image">
+                        <img src="images/energy-factor-glazing.jpg" alt="Close-up of a modern double-glazed window"
+                            loading="lazy">
+                        <span class="cv-energy-factor-number">01</span>
+                    </div>
+
+                    <div class="cv-energy-factor-content">
+                        <div class="cv-energy-factor-icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+
+                        <h3>Glazing Performance</h3>
+
+                        <p>
+                            Single, double, and triple glazing offer
+                            different levels of insulation. The right
+                            option depends on your climate and home.
+                        </p>
+
+                        <a href="products.html" class="cv-energy-factor-link">
+                            Explore Window Options
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Factor 2 -->
+                <article class="cv-energy-factor-card">
+                    <div class="cv-energy-factor-image">
+                        <img src="images/energy-factor-frame.jpg" alt="Contemporary insulated window frame detail"
+                            loading="lazy">
+                        <span class="cv-energy-factor-number">02</span>
+                    </div>
+
+                    <div class="cv-energy-factor-content">
+                        <div class="cv-energy-factor-icon">
+                            <i class="fa-solid fa-border-all"></i>
+                        </div>
+
+                        <h3>Frame Material</h3>
+
+                        <p>
+                            Frame material, thermal properties, and
+                            construction influence how effectively a
+                            window helps manage heat transfer.
+                        </p>
+
+                        <a href="products.html" class="cv-energy-factor-link">
+                            Compare Frame Materials
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Factor 3 -->
+                <article class="cv-energy-factor-card">
+                    <div class="cv-energy-factor-image">
+                        <img src="images/energy-factor-climate.jpg"
+                            alt="Sunlight entering a modern residential interior" loading="lazy">
+                        <span class="cv-energy-factor-number">03</span>
+                    </div>
+
+                    <div class="cv-energy-factor-content">
+                        <div class="cv-energy-factor-icon">
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+
+                        <h3>Local Climate</h3>
+
+                        <p>
+                            Outdoor temperatures, direct sunlight, and
+                            seasonal conditions affect your home's
+                            heating and cooling requirements.
+                        </p>
+
+                        <a href="#cv-energy-estimator" class="cv-energy-factor-link">
+                            Estimate Your Savings
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Factor 4 -->
+                <article class="cv-energy-factor-card">
+                    <div class="cv-energy-factor-image">
+                        <img src="images/energy-factor-installation.jpg"
+                            alt="Professional installation of a modern window frame" loading="lazy">
+                        <span class="cv-energy-factor-number">04</span>
+                    </div>
+
+                    <div class="cv-energy-factor-content">
+                        <div class="cv-energy-factor-icon">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+
+                        <h3>Installation & Sealing</h3>
+
+                        <p>
+                            Correct fitting and effective sealing help
+                            reduce unwanted air leakage around window
+                            frames and openings.
+                        </p>
+
+                        <a href="contact.html" class="cv-energy-factor-link">
+                            Discuss Your Requirements
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="cv-energy-factors-note">
+                <i class="fa-solid fa-circle-info"></i>
+                <p>
+                    Actual energy performance varies with product
+                    specifications, installation quality, climate,
+                    shading, and the home's existing construction.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: ENERGY-EFFICIENT WINDOW SOLUTIONS -->
+    <section class="cv-energy-solutions" id="cv-energy-solutions">
+        <div class="cv-energy-solutions-container">
+
+            <!-- Heading -->
+            <div class="cv-energy-solutions-heading">
+                <span class="cv-energy-solutions-label">
+                    SMARTER WINDOW CHOICES
+                </span>
+
+                <h2>Explore Solutions for a More Efficient Home</h2>
+
+                <p>
+                    From advanced glazing to well-sealed frames, explore
+                    window features that may help improve indoor comfort
+                    and manage heat transfer.
+                </p>
+            </div>
+
+            <!-- Featured Solution -->
+            <div class="cv-energy-solutions-featured">
+
+                <div class="cv-energy-solutions-featured-image">
+                    <img src="images/solution-double-glazing.jpg" alt="Modern double-glazed windows in a bright home"
+                        loading="lazy">
+                    <span class="cv-energy-solutions-image-tag">
+                        FEATURED SOLUTION
+                    </span>
+                </div>
+
+                <div class="cv-energy-solutions-featured-content">
+                    <span class="cv-energy-solutions-step">
+                        01 / INSULATION
+                    </span>
+
+                    <h3>Double & Triple Glazing</h3>
+
+                    <p>
+                        Multiple panes with sealed insulating spaces can
+                        reduce heat transfer compared with basic single-pane
+                        glazing. The most suitable option depends on your
+                        climate, frame design, and budget.
+                    </p>
+
+                    <ul class="cv-energy-solutions-checklist">
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Improved thermal insulation potential
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Options for different climate conditions
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Can help improve indoor comfort
+                        </li>
+                    </ul>
+
+                    <a href="products.html" class="cv-energy-solutions-primary">
+                        Explore Glazing Options
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Solution Cards -->
+            <div class="cv-energy-solutions-grid">
+
+                <article class="cv-energy-solution-card">
+                    <div class="cv-energy-solution-card-top">
+                        <div class="cv-energy-solution-icon">
+                            <i class="fa-solid fa-border-all"></i>
+                        </div>
+                        <span>02</span>
+                    </div>
+
+                    <h3>Thermally Efficient Frames</h3>
+
+                    <p>
+                        Explore frame materials and designs that help
+                        limit unwanted heat transfer through the window.
+                    </p>
+
+                    <a href="products.html" class="cv-energy-solution-link">
+                        Compare Frame Materials
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="cv-energy-solution-card">
+                    <div class="cv-energy-solution-card-top">
+                        <div class="cv-energy-solution-icon">
+                            <i class="fa-solid fa-wind"></i>
+                        </div>
+                        <span>03</span>
+                    </div>
+
+                    <h3>Effective Sealing</h3>
+
+                    <p>
+                        Proper installation, weatherstripping, and sealing
+                        help minimise unwanted air leakage around frames.
+                    </p>
+
+                    <a href="contact.html" class="cv-energy-solution-link">
+                        Discuss Installation
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="cv-energy-solution-card">
+                    <div class="cv-energy-solution-card-top">
+                        <div class="cv-energy-solution-icon">
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <span>04</span>
+                    </div>
+
+                    <h3>Solar Control & Shading</h3>
+
+                    <p>
+                        Suitable glazing, blinds, and exterior shading
+                        can help manage direct sunlight and solar heat gain.
+                    </p>
+
+                    <a href="products.html" class="cv-energy-solution-link">
+                        Explore Window Options
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="cv-energy-solutions-bottom">
+                <div>
+                    <span>YOUR NEXT STEP</span>
+                    <h3>Find the right solution for your home.</h3>
+                    <p>
+                        Compare window options or calculate your potential
+                        savings using your home details.
+                    </p>
+                </div>
+
+                <a href="#cv-energy-estimator" class="cv-energy-solutions-bottom-btn">
+                    Calculate My Savings
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 5: ENERGY SAVINGS FAQ -->
+    <section class="cv-energy-faq" id="cv-energy-faq">
+        <div class="cv-energy-faq-container">
+
+            <div class="cv-energy-faq-heading">
+                <span class="cv-energy-faq-label">
+                    HAVE QUESTIONS?
+                </span>
+
+                <h2>Energy Savings, Explained.</h2>
+
+                <p>
+                    Find answers to common questions about window efficiency,
+                    glazing options, replacement, and estimated energy savings.
+                </p>
+            </div>
+
+            <div class="cv-energy-faq-layout">
+
+                <!-- Left Information Panel -->
+                <div class="cv-energy-faq-intro">
+                    <div class="cv-energy-faq-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+
+                    <h3>Still have questions about your windows?</h3>
+
+                    <p>
+                        Every home is different. Our team can help you
+                        understand your options and identify suitable
+                        window solutions for your requirements.
+                    </p>
+
+                    <a href="contact.html" class="cv-energy-faq-contact">
+                        Talk to Our Team
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <div class="cv-energy-faq-note">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span>
+                            Savings estimates are indicative and depend
+                            on your home, climate, products, and installation.
+                        </span>
+                    </div>
+                </div>
+
+                <!-- FAQ Accordion -->
+                <div class="cv-energy-faq-list">
+
+                    <article class="cv-energy-faq-item">
+                        <button class="cv-energy-faq-question" type="button" aria-expanded="true">
+                            <span>How can energy-efficient windows help?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                        <div class="cv-energy-faq-answer">
+                            <p>
+                                Suitable glazing, frame design, and proper
+                                sealing can help manage heat transfer and
+                                unwanted air leakage. The impact depends
+                                on your existing windows and home conditions.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="cv-energy-faq-item">
+                        <button class="cv-energy-faq-question" type="button" aria-expanded="false">
+                            <span>What is the difference between double and triple glazing?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                        <div class="cv-energy-faq-answer">
+                            <p>
+                                Double glazing uses two panes of glass,
+                                while triple glazing uses three. Triple glazing
+                                can offer improved insulation in suitable
+                                systems, but the best choice depends on
+                                climate, frame construction, and budget.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="cv-energy-faq-item">
+                        <button class="cv-energy-faq-question" type="button" aria-expanded="false">
+                            <span>Are the calculator results guaranteed savings?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                        <div class="cv-energy-faq-answer">
+                            <p>
+                                No. The calculator provides an illustrative
+                                estimate using the details entered. Actual
+                                savings vary with energy tariffs, weather,
+                                window performance, installation, and usage.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="cv-energy-faq-item">
+                        <button class="cv-energy-faq-question" type="button" aria-expanded="false">
+                            <span>Do I need to replace every window?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                        <div class="cv-energy-faq-answer">
+                            <p>
+                                Not necessarily. The condition of existing
+                                windows, air leakage, comfort issues, and
+                                your budget can help determine which windows
+                                should be prioritised.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="cv-energy-faq-item">
+                        <button class="cv-energy-faq-question" type="button" aria-expanded="false">
+                            <span>How do I choose the right windows for my home?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                        <div class="cv-energy-faq-answer">
+                            <p>
+                                Consider your climate, ventilation needs,
+                                sunlight exposure, glazing, frame material,
+                                and installation requirements. Comparing
+                                product specifications can help you make
+                                an informed decision.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="cv-energy-faq-item">
+                        <button class="cv-energy-faq-question" type="button" aria-expanded="false">
+                            <span>Will new windows reduce outside noise?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                        <div class="cv-energy-faq-answer">
+                            <p>
+                                Properly selected window systems may help
+                                reduce outside noise. The result depends on
+                                the glazing specification, frame, seals,
+                                installation, and the type of noise.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Energy Savings Final CTA Section -->
+    <section class="cv-energy-final-cta">
+        <div class="cv-energy-final-overlay"></div>
+
+        <div class="cv-energy-final-content">
+            <span class="cv-energy-final-eyebrow">
+                A MORE EFFICIENT HOME STARTS HERE
+            </span>
+
+            <h2>
+                Ready to Make Your Home
+                <span>More Energy Efficient?</span>
+            </h2>
+
+            <p>
+                Discover the right window solutions for your home.
+                Take the next step towards improved comfort,
+                better insulation, and smarter energy use.
+            </p>
+
+            <div class="cv-energy-final-actions">
+                <a href="contact.html" class="cv-energy-final-btn-primary">
+                    Request a Quote
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <a href="#cv-energy-estimator" class="cv-energy-final-btn-secondary">
+                    Recalculate Savings
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="cv-footer">
+
+        <div class="cv-footer-main">
+            <div class="cv-footer-container">
+
+                <!-- Brand -->
+                <div class="cv-footer-brand">
+                    <a href="index.html" class="cv-footer-logo">
+                        <img src="images/logo-white.png" alt="ClearView Windows">
+                    </a>
+
+                    <p class="cv-footer-description">
+                        Discover energy-efficient window solutions
+                        designed to improve indoor comfort and help
+                        reduce your home's energy consumption.
+                    </p>
+
+                    <div class="cv-footer-socials">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="cv-footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Our Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div class="cv-footer-column">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li>
+                            <a href="energy-savings-calculator.html">
+                                Energy Savings Calculator
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pricing-guide.html">Pricing Guide</a>
+                        </li>
+                        <li>
+                            <a href="dashboard.html">Client Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Client Login</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="cv-footer-column cv-footer-contact">
+                    <h3>Get in Touch</h3>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+10000000000">+91 9876543210</a>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:info@example.com">
+                            clearview12@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Contact us for appointment availability.</span>
+                    </p>
+
+                    <a href="contact.html" class="cv-footer-cta">
+                        Get a Quote
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="cv-footer-bottom">
+            <div class="cv-footer-bottom-container">
+
+                <p>
+                    &copy; <span id="cvCopyrightYear"></span>
+                    ClearView Windows. All rights reserved.
+                </p>
+
+                <div class="cv-footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+    <!-- =============== END FOOTER =============== -->
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

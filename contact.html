@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ClearView Windows</title>
+
+    <meta name="description"
+        content="Explore energy-efficient window replacement solutions, window styles, energy savings and pricing with ClearView Windows.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Fonts: Manrope + DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+    <header class="cv-header" id="cvHeader">
+        <div class="cv-header-container">
+
+            <!-- Logo - Left Edge -->
+            <a href="index.html" class="cv-logo" aria-label="ClearView Windows Home">
+                <img src="images/logo.png" alt="ClearView Windows">
+            </a>
+
+            <!-- Desktop Navigation - Center -->
+            <nav class="cv-desktop-nav" aria-label="Main navigation">
+                <ul class="cv-nav-list">
+
+                    <li class="cv-nav-item cv-home-dropdown">
+                        <a href="index.html" class="cv-nav-link">
+                            <span class="cv-nav-label">Home</span>
+                            <i class="fa-solid fa-chevron-down cv-dropdown-icon"></i>
+                        </a>
+
+                        <ul class="cv-dropdown-menu">
+                            <li><a href="index.html"><span class="cv-nav-label">Home 1</span></a></li>
+                            <li><a href="home-2.html"><span class="cv-nav-label">Home 2</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="about.html" class="cv-nav-link"><span class="cv-nav-label">About</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="products.html" class="cv-nav-link"><span class="cv-nav-label">Products</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="energy-savings-calculator.html" class="cv-nav-link"><span class="cv-nav-label">Energy
+                                Savings</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="pricing-guide.html" class="cv-nav-link">
+                            <span class="cv-nav-label">Pricing Guide</span>
+                        </a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="contact.html" class="cv-nav-link"><span class="cv-nav-label">Contact</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="dashboard.html" class="cv-nav-link"><span class="cv-nav-label">Dashboard</span></a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- Desktop Controls - Right Edge -->
+            <div class="cv-desktop-controls">
+
+                <button class="cv-icon-toggle" id="cvDesktopTheme" type="button" aria-label="Enable dark mode"
+                    aria-pressed="false" title="Dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button class="cv-icon-toggle" id="cvDesktopRTL" type="button" aria-label="Enable RTL mode"
+                    aria-pressed="false" title="RTL mode">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <a href="login.html" class="cv-login-btn">Login</a>
+
+            </div>
+
+            <!-- Mobile / Tablet Menu Toggle -->
+            <button class="cv-menu-toggle" id="cvMenuToggle" type="button" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="cvMobilePanel">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <!-- Mobile / Tablet Navigation Panel -->
+        <div class="cv-mobile-panel" id="cvMobilePanel">
+
+            <nav class="cv-mobile-nav" aria-label="Mobile navigation">
+                <ul class="cv-mobile-nav-list">
+
+                    <li class="cv-mobile-home">
+                        <div class="cv-mobile-home-row">
+                            <a href="index.html"><span class="cv-nav-label">Home</span></a>
+
+                            <button class="cv-submenu-toggle" id="cvSubmenuToggle" type="button"
+                                aria-label="Toggle Home submenu" aria-expanded="false">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <ul class="cv-mobile-submenu" id="cvHomeSubmenu">
+                            <li><a href="index.html"><span class="cv-nav-label">Home 1</span></a></li>
+                            <li><a href="home-2.html"><span class="cv-nav-label">Home 2</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="about.html"><span class="cv-nav-label">About</span></a></li>
+                    <li><a href="products.html"><span class="cv-nav-label">Products</span></a></li>
+                    <li>
+                        <a href="energy-savings-calculator.html">
+                            <span class="cv-nav-label">Energy Savings Calculator</span>
+                        </a>
+                    </li>
+                    <li><a href="pricing-guide.html"><span class="cv-nav-label">Pricing Guide</span></a></li>
+                    <li><a href="contact.html"><span class="cv-nav-label">Contact</span></a></li>
+                    <li><a href="dashboard.html"><span class="cv-nav-label">Dashboard</span></a></li>
+
+                </ul>
+            </nav>
+
+            <!-- Mobile Controls Inside Menu -->
+            <div class="cv-mobile-controls">
+
+                <button class="cv-mobile-control-btn" id="cvMobileTheme" type="button" aria-pressed="false">
+                    <i class="fa-solid fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+
+                <button class="cv-mobile-control-btn" id="cvMobileRTL" type="button" aria-pressed="false">
+                    <i class="fa-solid fa-right-left"></i>
+                    <span>RTL Mode</span>
+                </button>
+
+                <a href="login.html" class="cv-mobile-login-btn">
+                    <i class="fa-solid fa-user"></i>
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- ==========================
+     ABOUT PAGE HERO
+=========================== -->
+    <section class="cv-inner-hero cv-contact-hero">
+        <div class="cv-inner-hero-overlay"></div>
+
+        <div class="cv-inner-hero-content">
+            <span class="cv-inner-hero-label">
+                GET IN TOUCH
+            </span>
+
+            <h1>Let's Talk About<br> Your Windows</h1>
+
+            <p>
+                Have questions about window styles, energy efficiency or pricing? Our team is here to help you find the
+                right solution for your home.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="cv-contact-info" id="contact-information">
+        <div class="cv-contact-info-container">
+
+            <div class="cv-contact-info-heading">
+                <span class="cv-contact-info-eyebrow">
+                    WE'RE HERE TO HELP
+                </span>
+
+                <h2>Get in Touch With Our Team</h2>
+
+                <p>
+                    Whether you're planning a window replacement or
+                    exploring your options, we're happy to help you
+                    take the next step.
+                </p>
+            </div>
+
+            <div class="cv-contact-info-grid">
+
+                <!-- Phone Card -->
+                <article class="cv-contact-info-card">
+                    <div class="cv-contact-info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+
+                    <span class="cv-contact-info-label">
+                        CALL OUR TEAM
+                    </span>
+
+                    <h3>Phone Support</h3>
+
+                    <p>
+                        Speak with our team about your window requirements
+                        and project enquiries.
+                    </p>
+
+                    <a href="tel:+910000000000" class="cv-contact-info-link">
+                        +91 9876543210
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- Email Card -->
+                <article class="cv-contact-info-card">
+                    <div class="cv-contact-info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+
+                    <span class="cv-contact-info-label">
+                        SEND AN ENQUIRY
+                    </span>
+
+                    <h3>Email Us</h3>
+
+                    <p>
+                        Send your questions or project details and
+                        get in touch with our team.
+                    </p>
+
+                    <a href="mailto:info@example.com" class="cv-contact-info-link">
+                        clearview12@gmail.com
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- Address Card -->
+                <article class="cv-contact-info-card">
+                    <div class="cv-contact-info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+
+                    <span class="cv-contact-info-label">
+                        VISIT OUR OFFICE
+                    </span>
+
+                    <h3>Office Address</h3>
+
+                    <p>
+                        Visit our office to discuss your window options
+                        and project requirements.
+                    </p>
+
+                    <a href="#cv-contact-location" class="cv-contact-info-link">
+                        View Our Location
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- Business Hours Card -->
+                <article class="cv-contact-info-card">
+                    <div class="cv-contact-info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+
+                    <span class="cv-contact-info-label">
+                        WHEN TO REACH US
+                    </span>
+
+                    <h3>Business Hours</h3>
+
+                    <p>
+                        Contact our team during business hours for
+                        product enquiries and quotation requests.
+                    </p>
+
+                    <div class="cv-contact-info-hours">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Monday – Friday<br>9:00 AM – 5:00 PM</span>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="cv-contact-info-bottom">
+                <i class="fas fa-info-circle"></i>
+                <p>
+                    Need help choosing the right windows? Share your
+                    requirements with us, and we'll help you explore
+                    suitable options for your home.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="cv-contact-form-section" id="contact-form">
+        <div class="cv-contact-form-container">
+
+            <div class="cv-contact-form-heading">
+                <span class="cv-contact-form-eyebrow">
+                    LET'S START A CONVERSATION
+                </span>
+
+                <h2>Tell Us About Your Project</h2>
+
+                <p>
+                    Have a question or planning a window upgrade?
+                    Share your requirements and our team will be ready
+                    to help you explore your options.
+                </p>
+            </div>
+
+            <div class="cv-contact-form-layout">
+
+                <!-- Left Information Panel -->
+                <div class="cv-contact-form-info">
+
+                    <span class="cv-contact-form-info-label">
+                        HOW CAN WE HELP?
+                    </span>
+
+                    <h3>Let's Find the Right Windows for Your Home.</h3>
+
+                    <p>
+                        From choosing window styles to understanding
+                        installation requirements, tell us what you need
+                        and we'll help you take the next step.
+                    </p>
+
+                    <div class="cv-contact-form-benefits">
+
+                        <div class="cv-contact-form-benefit">
+                            <span class="cv-contact-form-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </span>
+
+                            <div>
+                                <h4>Personalised Guidance</h4>
+                                <p>Explore options that suit your requirements.</p>
+                            </div>
+                        </div>
+
+                        <div class="cv-contact-form-benefit">
+                            <span class="cv-contact-form-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </span>
+
+                            <div>
+                                <h4>Clear Project Information</h4>
+                                <p>Understand product and installation options.</p>
+                            </div>
+                        </div>
+
+                        <div class="cv-contact-form-benefit">
+                            <span class="cv-contact-form-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </span>
+
+                            <div>
+                                <h4>Quote Assistance</h4>
+                                <p>Discuss your project and request a quotation.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="cv-contact-form-info-bottom">
+                        <i class="fas fa-comment-dots"></i>
+                        <p>
+                            The more details you share about your project,
+                            the easier it is for us to understand your needs.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Right Contact Form -->
+                <div class="cv-contact-form-card">
+
+                    <div class="cv-contact-form-card-heading">
+                        <h3>Send an Enquiry</h3>
+                        <p>Fill in the details below to get started.</p>
+                    </div>
+
+                    <form id="cvContactEnquiryForm" class="cv-contact-enquiry-form">
+
+                        <div class="cv-contact-form-row">
+
+                            <div class="cv-contact-form-field">
+                                <label for="cvContactName">
+                                    Full Name <span>*</span>
+                                </label>
+
+                                <input type="text" id="cvContactName" name="name" placeholder="Enter your full name"
+                                    autocomplete="name" required>
+                            </div>
+
+                            <div class="cv-contact-form-field">
+                                <label for="cvContactEmail">
+                                    Email Address <span>*</span>
+                                </label>
+
+                                <input type="email" id="cvContactEmail" name="email" placeholder="you@example.com"
+                                    autocomplete="email" required>
+                            </div>
+
+                        </div>
+
+                        <div class="cv-contact-form-row">
+
+                            <div class="cv-contact-form-field">
+                                <label for="cvContactPhone">
+                                    Phone Number
+                                </label>
+
+                                <input type="tel" id="cvContactPhone" name="phone" placeholder="Enter your phone number"
+                                    autocomplete="tel">
+                            </div>
+
+                            <div class="cv-contact-form-field">
+                                <label for="cvContactSubject">
+                                    Enquiry Type <span>*</span>
+                                </label>
+
+                                <select id="cvContactSubject" name="enquiry_type" required>
+
+                                    <option value="" disabled selected>
+                                        Select an enquiry
+                                    </option>
+
+                                    <option value="Window Replacement">
+                                        Window Replacement
+                                    </option>
+
+                                    <option value="New Window Installation">
+                                        New Window Installation
+                                    </option>
+
+                                    <option value="Product Information">
+                                        Product Information
+                                    </option>
+
+                                    <option value="Pricing and Quotation">
+                                        Pricing & Quotation
+                                    </option>
+
+                                    <option value="Energy Efficiency">
+                                        Energy Efficiency
+                                    </option>
+
+                                    <option value="Other">
+                                        Other Enquiry
+                                    </option>
+
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="cv-contact-form-field">
+                            <label for="cvContactLocation">
+                                Project Location
+                            </label>
+
+                            <input type="text" id="cvContactLocation" name="location" placeholder="City or area">
+                        </div>
+
+                        <div class="cv-contact-form-field">
+                            <label for="cvContactMessage">
+                                Your Message <span>*</span>
+                            </label>
+
+                            <textarea id="cvContactMessage" name="message" rows="5"
+                                placeholder="Tell us about your window requirements..." required></textarea>
+                        </div>
+
+                        <label class="cv-contact-form-consent">
+                            <input type="checkbox" name="consent" required>
+
+                            <span>
+                                I agree to be contacted regarding this enquiry.
+                                <span class="cv-contact-required">*</span>
+                            </span>
+                        </label>
+
+                        <button type="submit" class="cv-contact-form-submit">
+                            Send My Enquiry
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+
+                        <p class="cv-contact-form-disclaimer">
+                            Your information should only be used to respond
+                            to your enquiry, in accordance with your privacy policy.
+                        </p>
+
+                        <div class="cv-contact-form-message" id="cvContactFormMessage" role="status" aria-live="polite">
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Location Section -->
+    <section class="cv-contact-location" id="cv-contact-location">
+        <div class="cv-contact-location-container">
+
+            <div class="cv-contact-location-heading">
+                <span class="cv-contact-location-eyebrow">
+                    COME SAY HELLO
+                </span>
+
+                <h2>Find Our Location</h2>
+
+                <p>
+                    Have questions about your window project?
+                    Get in touch with our team and plan your next step
+                    towards a more comfortable home.
+                </p>
+            </div>
+
+            <div class="cv-contact-location-layout">
+
+                <!-- Location Information -->
+                <div class="cv-contact-location-info">
+
+                    <span class="cv-contact-location-label">
+                        CLEARVIEW WINDOWS
+                    </span>
+
+                    <h3>We'd Love to Hear From You</h3>
+
+                    <p class="cv-contact-location-description">
+                        Contact our team to discuss window styles,
+                        product specifications, pricing and installation
+                        requirements.
+                    </p>
+
+                    <div class="cv-contact-location-detail">
+                        <div class="cv-contact-location-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+
+                        <div>
+                            <h4>Our Office</h4>
+                            <p>
+                                Add your actual office address here.
+                                <br>
+                                City, State, Postal Code
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cv-contact-location-detail">
+                        <div class="cv-contact-location-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>
+                                Monday – Friday<br>
+                                9:00 AM – 5:00 PM
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cv-contact-location-detail">
+                        <div class="cv-contact-location-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+
+                        <div>
+                            <h4>Email Enquiries</h4>
+                            <p>
+                                <a href="mailto:info@example.com">
+                                    info@example.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <a href="contact.html#contact-form" class="cv-contact-location-btn">
+                        Send an Enquiry
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <!-- Google Maps -->
+                <div class="cv-contact-location-map">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d592697.0579587726!2d79.94195024400962!3d12.965979275081834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1791951217541!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+
+                    <div class="cv-contact-location-map-caption">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>Visit us or contact our team for assistance.</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="cv-footer">
+
+        <div class="cv-footer-main">
+            <div class="cv-footer-container">
+
+                <!-- Brand -->
+                <div class="cv-footer-brand">
+                    <a href="index.html" class="cv-footer-logo">
+                        <img src="images/logo-white.png" alt="ClearView Windows">
+                    </a>
+
+                    <p class="cv-footer-description">
+                        Discover energy-efficient window solutions
+                        designed to improve indoor comfort and help
+                        reduce your home's energy consumption.
+                    </p>
+
+                    <div class="cv-footer-socials">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="cv-footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Our Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div class="cv-footer-column">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li>
+                            <a href="energy-savings-calculator.html">
+                                Energy Savings Calculator
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pricing-guide.html">Pricing Guide</a>
+                        </li>
+                        <li>
+                            <a href="dashboard.html">Client Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Client Login</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="cv-footer-column cv-footer-contact">
+                    <h3>Get in Touch</h3>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+10000000000">+91 9876543210</a>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:info@example.com">
+                            clearview12@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Contact us for appointment availability.</span>
+                    </p>
+
+                    <a href="contact.html" class="cv-footer-cta">
+                        Get a Quote
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="cv-footer-bottom">
+            <div class="cv-footer-bottom-container">
+
+                <p>
+                    &copy; <span id="cvCopyrightYear"></span>
+                    ClearView Windows. All rights reserved.
+                </p>
+
+                <div class="cv-footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+    <!-- =============== END FOOTER =============== -->
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

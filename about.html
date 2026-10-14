@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ClearView Windows</title>
+
+    <meta name="description"
+        content="Explore energy-efficient window replacement solutions, window styles, energy savings and pricing with ClearView Windows.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Fonts: Manrope + DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+    <header class="cv-header" id="cvHeader">
+        <div class="cv-header-container">
+
+            <!-- Logo - Left Edge -->
+            <a href="index.html" class="cv-logo" aria-label="ClearView Windows Home">
+                <img src="images/logo.png" alt="ClearView Windows">
+            </a>
+
+            <!-- Desktop Navigation - Center -->
+            <nav class="cv-desktop-nav" aria-label="Main navigation">
+                <ul class="cv-nav-list">
+
+                    <li class="cv-nav-item cv-home-dropdown">
+                        <a href="index.html" class="cv-nav-link">
+                            <span class="cv-nav-label">Home</span>
+                            <i class="fa-solid fa-chevron-down cv-dropdown-icon"></i>
+                        </a>
+
+                        <ul class="cv-dropdown-menu">
+                            <li><a href="index.html"><span class="cv-nav-label">Home 1</span></a></li>
+                            <li><a href="home-2.html"><span class="cv-nav-label">Home 2</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="about.html" class="cv-nav-link"><span class="cv-nav-label">About</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="products.html" class="cv-nav-link"><span class="cv-nav-label">Products</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="energy-savings-calculator.html" class="cv-nav-link"><span class="cv-nav-label">Energy
+                                Savings</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="pricing-guide.html" class="cv-nav-link">
+                            <span class="cv-nav-label">Pricing Guide</span>
+                        </a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="contact.html" class="cv-nav-link"><span class="cv-nav-label">Contact</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="dashboard.html" class="cv-nav-link"><span class="cv-nav-label">Dashboard</span></a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- Desktop Controls - Right Edge -->
+            <div class="cv-desktop-controls">
+
+                <button class="cv-icon-toggle" id="cvDesktopTheme" type="button" aria-label="Enable dark mode"
+                    aria-pressed="false" title="Dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button class="cv-icon-toggle" id="cvDesktopRTL" type="button" aria-label="Enable RTL mode"
+                    aria-pressed="false" title="RTL mode">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <a href="login.html" class="cv-login-btn">Login</a>
+
+            </div>
+
+            <!-- Mobile / Tablet Menu Toggle -->
+            <button class="cv-menu-toggle" id="cvMenuToggle" type="button" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="cvMobilePanel">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <!-- Mobile / Tablet Navigation Panel -->
+        <div class="cv-mobile-panel" id="cvMobilePanel">
+
+            <nav class="cv-mobile-nav" aria-label="Mobile navigation">
+                <ul class="cv-mobile-nav-list">
+
+                    <li class="cv-mobile-home">
+                        <div class="cv-mobile-home-row">
+                            <a href="index.html"><span class="cv-nav-label">Home</span></a>
+
+                            <button class="cv-submenu-toggle" id="cvSubmenuToggle" type="button"
+                                aria-label="Toggle Home submenu" aria-expanded="false">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <ul class="cv-mobile-submenu" id="cvHomeSubmenu">
+                            <li><a href="index.html"><span class="cv-nav-label">Home 1</span></a></li>
+                            <li><a href="home-2.html"><span class="cv-nav-label">Home 2</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="about.html"><span class="cv-nav-label">About</span></a></li>
+                    <li><a href="products.html"><span class="cv-nav-label">Products</span></a></li>
+                    <li>
+                        <a href="energy-savings-calculator.html">
+                            <span class="cv-nav-label">Energy Savings Calculator</span>
+                        </a>
+                    </li>
+                    <li><a href="pricing-guide.html"><span class="cv-nav-label">Pricing Guide</span></a></li>
+                    <li><a href="contact.html"><span class="cv-nav-label">Contact</span></a></li>
+                    <li><a href="dashboard.html"><span class="cv-nav-label">Dashboard</span></a></li>
+
+                </ul>
+            </nav>
+
+            <!-- Mobile Controls Inside Menu -->
+            <div class="cv-mobile-controls">
+
+                <button class="cv-mobile-control-btn" id="cvMobileTheme" type="button" aria-pressed="false">
+                    <i class="fa-solid fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+
+                <button class="cv-mobile-control-btn" id="cvMobileRTL" type="button" aria-pressed="false">
+                    <i class="fa-solid fa-right-left"></i>
+                    <span>RTL Mode</span>
+                </button>
+
+                <a href="login.html" class="cv-mobile-login-btn">
+                    <i class="fa-solid fa-user"></i>
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- ==========================
+     ABOUT PAGE HERO
+=========================== -->
+    <section class="cv-inner-hero cv-about-hero">
+        <div class="cv-inner-hero-overlay"></div>
+
+        <div class="cv-inner-hero-content">
+            <span class="cv-inner-hero-label">
+                THE CLEARVIEW STORY
+            </span>
+
+            <h1>More Than Windows.<br> A Clearer Vision.</h1>
+
+            <p>
+                We believe the right windows do more than frame a view.
+                They bring natural light, lasting comfort, and a new
+                perspective to the place you call home.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==========================
+     SECTION 2: OUR STORY
+=========================== -->
+    <section class="cv-about-story" id="our-story">
+        <div class="cv-about-story-inner">
+
+            <!-- Left Image -->
+            <div class="cv-about-story-visual">
+
+                <div class="cv-about-story-image">
+                    <img src="images/about-our-story.jpg"
+                        alt="Beautiful modern home with large energy-efficient windows" loading="lazy">
+                </div>
+
+                <div class="cv-about-story-image-caption">
+                    <span class="cv-about-story-caption-number">01</span>
+                    <span>OUR JOURNEY, BUILT ON TRUST</span>
+                </div>
+
+                <div class="cv-about-story-outline"></div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="cv-about-story-content">
+
+                <span class="cv-about-story-label">
+                    <span></span>
+                    OUR STORY
+                </span>
+
+                <h2>
+                    A simple idea.
+                    <span>A lasting difference.</span>
+                </h2>
+
+                <p class="cv-about-story-intro">
+                    Every great home deserves windows that work beautifully
+                    and look right at home.
+                </p>
+
+                <p class="cv-about-story-description">
+                    ClearView Windows was built around a simple belief:
+                    choosing windows should feel clear, considered, and
+                    straightforward. From exploring styles to selecting
+                    finishes, we focus on helping homeowners make choices
+                    that suit their spaces and everyday lives.
+                </p>
+
+                <p class="cv-about-story-description">
+                    We bring together thoughtful design, dependable
+                    materials, and careful attention to detail to help
+                    create brighter, more comfortable living spaces.
+                </p>
+
+                <div class="cv-about-story-divider"></div>
+
+                <div class="cv-about-story-signature">
+                    <div class="cv-about-story-signature-mark">C.</div>
+
+                    <div class="cv-about-story-signature-text">
+                        <h3>The ClearView Promise</h3>
+                        <p>Clarity in every choice. Quality in every detail.</p>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="cv-about-story-link">
+                    Let's Talk About Your Project
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================
+     SECTION 3: OUR VALUES
+=========================== -->
+    <section class="cv-about-values" id="our-values">
+        <div class="cv-about-values-inner">
+
+            <div class="cv-about-values-header">
+                <div class="cv-about-values-heading">
+                    <span class="cv-about-values-label">
+                        WHAT GUIDES US
+                    </span>
+
+                    <h2>
+                        Good work starts
+                        <span>with good values.</span>
+                    </h2>
+                </div>
+
+                <p class="cv-about-values-intro">
+                    The way we work matters just as much as the windows
+                    we help you choose. These principles guide every
+                    decision, detail, and customer interaction.
+                </p>
+            </div>
+
+            <div class="cv-about-values-grid">
+
+                <!-- Value 1 -->
+                <article class="cv-about-value">
+                    <div class="cv-about-value-top">
+                        <span class="cv-about-value-number">01</span>
+                        <i class="fas fa-gem"></i>
+                    </div>
+
+                    <div class="cv-about-value-line"></div>
+
+                    <h3>Quality Without Compromise</h3>
+
+                    <p>
+                        We value dependable materials, careful selection,
+                        and attention to the details that matter.
+                    </p>
+
+                    <span class="cv-about-value-word">QUALITY</span>
+                </article>
+
+                <!-- Value 2 -->
+                <article class="cv-about-value">
+                    <div class="cv-about-value-top">
+                        <span class="cv-about-value-number">02</span>
+                        <i class="fas fa-handshake"></i>
+                    </div>
+
+                    <div class="cv-about-value-line"></div>
+
+                    <h3>Honest Communication</h3>
+
+                    <p>
+                        Clear information and straightforward guidance
+                        help customers make confident decisions.
+                    </p>
+
+                    <span class="cv-about-value-word">TRUST</span>
+                </article>
+
+                <!-- Value 3 -->
+                <article class="cv-about-value">
+                    <div class="cv-about-value-top">
+                        <span class="cv-about-value-number">03</span>
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+
+                    <div class="cv-about-value-line"></div>
+
+                    <h3>Thoughtful Design</h3>
+
+                    <p>
+                        Every space is different. We believe window
+                        choices should complement each home's character.
+                    </p>
+
+                    <span class="cv-about-value-word">DESIGN</span>
+                </article>
+
+                <!-- Value 4 -->
+                <article class="cv-about-value">
+                    <div class="cv-about-value-top">
+                        <span class="cv-about-value-number">04</span>
+                        <i class="fas fa-heart"></i>
+                    </div>
+
+                    <div class="cv-about-value-line"></div>
+
+                    <h3>People Come First</h3>
+
+                    <p>
+                        We put customer needs at the heart of the
+                        experience, from the first question onward.
+                    </p>
+
+                    <span class="cv-about-value-word">PEOPLE</span>
+                </article>
+
+            </div>
+
+            <div class="cv-about-values-footer">
+
+                <p>
+                    A thoughtful approach to every window,
+                    every space, and every choice.
+                </p>
+
+                <span class="cv-about-values-footer-line"></span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================
+     SECTION 4: STATS
+=========================== -->
+    <section class="cv-about-stats" id="our-impact">
+        <div class="cv-about-stats-inner">
+
+            <div class="cv-about-stats-header">
+                <span class="cv-about-stats-label">OUR IMPACT</span>
+
+                <h2>
+                    Built on trust.
+                    <span>Measured in details.</span>
+                </h2>
+
+                <p>
+                    Every project is an opportunity to create better
+                    spaces through thoughtful window solutions and
+                    a commitment to quality.
+                </p>
+            </div>
+
+            <div class="cv-about-stats-grid">
+
+                <div class="cv-about-stat">
+                    <span class="cv-about-stat-index">01</span>
+
+                    <div class="cv-about-stat-number">
+                        <span data-count="10">0</span><sup>+</sup>
+                    </div>
+
+                    <h3>Years of Experience</h3>
+
+                    <p>
+                        A sample value for the company's experience.
+                    </p>
+                </div>
+
+                <div class="cv-about-stat">
+                    <span class="cv-about-stat-index">02</span>
+
+                    <div class="cv-about-stat-number">
+                        <span data-count="500">0</span><sup>+</sup>
+                    </div>
+
+                    <h3>Projects Completed</h3>
+
+                    <p>
+                        A sample value for completed window projects.
+                    </p>
+                </div>
+
+                <div class="cv-about-stat">
+                    <span class="cv-about-stat-index">03</span>
+
+                    <div class="cv-about-stat-number">
+                        <span data-count="98">0</span><sup>%</sup>
+                    </div>
+
+                    <h3>Customer Satisfaction</h3>
+
+                    <p>
+                        Replace this with a verified customer satisfaction figure.
+                    </p>
+                </div>
+
+                <div class="cv-about-stat">
+                    <span class="cv-about-stat-index">04</span>
+
+                    <div class="cv-about-stat-number">
+                        <span data-count="250">0</span><sup>+</sup>
+                    </div>
+
+                    <h3>Homes Transformed</h3>
+
+                    <p>
+                        A sample value for homes served by the company.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="cv-about-stats-footer">
+                <span class="cv-about-stats-footer-line"></span>
+
+                <p>
+                    Every number represents a commitment to doing
+                    thoughtful work, one project at a time.
+                </p>
+
+                <span class="cv-about-stats-footer-label">
+                    CLEARVIEW WINDOWS
+                </span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================
+     SECTION 5: WHY CLEARVIEW
+=========================== -->
+    <section class="cv-about-unique" id="why-clearview">
+        <div class="cv-about-unique-inner">
+
+            <!-- Left Introduction -->
+            <div class="cv-about-unique-intro">
+
+                <span class="cv-about-unique-label">
+                    THE CLEARVIEW DIFFERENCE
+                </span>
+
+                <h2>
+                    It's the details
+                    <span>that change everything.</span>
+                </h2>
+
+                <p>
+                    Choosing windows is about more than appearance.
+                    It's about finding the right balance of design,
+                    comfort, practicality, and lasting value.
+                </p>
+
+                <a href="contact.html" class="cv-about-unique-link">
+                    Discover the ClearView Approach
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <div class="cv-about-unique-note">
+                    <span class="cv-about-unique-note-icon">
+                        <i class="fas fa-check"></i>
+                    </span>
+                    <span>Thoughtful choices. Clear guidance.</span>
+                </div>
+
+            </div>
+
+            <!-- Right Feature List -->
+            <div class="cv-about-unique-list">
+
+                <article class="cv-about-unique-item">
+                    <span class="cv-about-unique-number">01</span>
+
+                    <div class="cv-about-unique-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+
+                    <div class="cv-about-unique-text">
+                        <h3>Light That Changes a Space</h3>
+                        <p>
+                            Explore window styles that welcome daylight
+                            and create a more open, inviting atmosphere.
+                        </p>
+                    </div>
+
+                    <span class="cv-about-unique-arrow">
+                        <i class="fas fa-arrow-up"></i>
+                    </span>
+                </article>
+
+                <article class="cv-about-unique-item">
+                    <span class="cv-about-unique-number">02</span>
+
+                    <div class="cv-about-unique-icon">
+                        <i class="fas fa-house"></i>
+                    </div>
+
+                    <div class="cv-about-unique-text">
+                        <h3>Designed for Your Home</h3>
+                        <p>
+                            Find styles, materials, and finishes that
+                            complement your home's character.
+                        </p>
+                    </div>
+
+                    <span class="cv-about-unique-arrow">
+                        <i class="fas fa-arrow-up"></i>
+                    </span>
+                </article>
+
+                <article class="cv-about-unique-item">
+                    <span class="cv-about-unique-number">03</span>
+
+                    <div class="cv-about-unique-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+
+                    <div class="cv-about-unique-text">
+                        <h3>Quality in Every Detail</h3>
+                        <p>
+                            Make informed choices with attention to
+                            materials, construction, and everyday use.
+                        </p>
+                    </div>
+
+                    <span class="cv-about-unique-arrow">
+                        <i class="fas fa-arrow-up"></i>
+                    </span>
+                </article>
+
+                <article class="cv-about-unique-item">
+                    <span class="cv-about-unique-number">04</span>
+
+                    <div class="cv-about-unique-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+
+                    <div class="cv-about-unique-text">
+                        <h3>A Clearer Customer Experience</h3>
+                        <p>
+                            Get straightforward information to help you
+                            move from initial ideas to confident choices.
+                        </p>
+                    </div>
+
+                    <span class="cv-about-unique-arrow">
+                        <i class="fas fa-arrow-up"></i>
+                    </span>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================
+     SECTION 6: OUR PROCESS
+=========================== -->
+    <section class="cv-about-process" id="our-process">
+        <div class="cv-about-process-inner">
+
+            <!-- Section Header -->
+            <div class="cv-about-process-header">
+                <div>
+                    <span class="cv-about-process-label">
+                        HOW WE WORK
+                    </span>
+
+                    <h2>
+                        From first idea
+                        <span>to the right fit.</span>
+                    </h2>
+                </div>
+
+                <p>
+                    A straightforward approach to exploring window options,
+                    understanding your needs, and planning the next steps
+                    with clarity.
+                </p>
+            </div>
+
+            <!-- Process Steps -->
+            <div class="cv-about-process-track">
+
+                <!-- Step 1 -->
+                <article class="cv-about-process-step">
+                    <div class="cv-about-process-step-top">
+                        <span class="cv-about-process-number">01</span>
+
+                        <span class="cv-about-process-icon">
+                            <i class="fas fa-comments"></i>
+                        </span>
+                    </div>
+
+                    <h3>Start a Conversation</h3>
+
+                    <p>
+                        Tell us about your home, your preferences,
+                        and what you want your new windows to achieve.
+                    </p>
+
+                    <span class="cv-about-process-duration">
+                        STEP ONE
+                    </span>
+                </article>
+
+                <!-- Step 2 -->
+                <article class="cv-about-process-step">
+                    <div class="cv-about-process-step-top">
+                        <span class="cv-about-process-number">02</span>
+
+                        <span class="cv-about-process-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </span>
+                    </div>
+
+                    <h3>Explore Your Options</h3>
+
+                    <p>
+                        Compare suitable styles, materials, finishes,
+                        and features for your space.
+                    </p>
+
+                    <span class="cv-about-process-duration">
+                        STEP TWO
+                    </span>
+                </article>
+
+                <!-- Step 3 -->
+                <article class="cv-about-process-step">
+                    <div class="cv-about-process-step-top">
+                        <span class="cv-about-process-number">03</span>
+
+                        <span class="cv-about-process-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </span>
+                    </div>
+
+                    <h3>Plan the Details</h3>
+
+                    <p>
+                        Discuss measurements, requirements, and the
+                        practical details needed for your project.
+                    </p>
+
+                    <span class="cv-about-process-duration">
+                        STEP THREE
+                    </span>
+                </article>
+
+                <!-- Step 4 -->
+                <article class="cv-about-process-step">
+                    <div class="cv-about-process-step-top">
+                        <span class="cv-about-process-number">04</span>
+
+                        <span class="cv-about-process-icon">
+                            <i class="fas fa-house-chimney-window"></i>
+                        </span>
+                    </div>
+
+                    <h3>Move Forward with Confidence</h3>
+
+                    <p>
+                        Understand the next steps and move ahead
+                        with a clear plan for your window project.
+                    </p>
+
+                    <span class="cv-about-process-duration">
+                        STEP FOUR
+                    </span>
+                </article>
+
+            </div>
+
+            <!-- Bottom Information -->
+            <div class="cv-about-process-footer">
+                <div class="cv-about-process-footer-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+
+                <p>
+                    <strong>Every project is different.</strong>
+                    We focus on helping you understand your options
+                    before making a decision.
+                </p>
+
+                <a href="contact.html" class="cv-about-process-cta">
+                    Let's Get Started
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================
+     SECTION 7: OUR TEAM
+=========================== -->
+    <section class="cv-about-team" id="our-team">
+        <div class="cv-about-team-inner">
+
+            <!-- Header -->
+            <div class="cv-about-team-header">
+                <div class="cv-about-team-heading">
+                    <span class="cv-about-team-label">
+                        THE PEOPLE BEHIND CLEARVIEW
+                    </span>
+
+                    <h2>
+                        Good people.
+                        <span>Thoughtful work.</span>
+                    </h2>
+                </div>
+
+                <div class="cv-about-team-intro">
+                    <p>
+                        Behind every thoughtful window solution is a team
+                        that cares about the details. Get to know the people
+                        who help bring the ClearView experience to life.
+                    </p>
+
+                    <a href="contact.html" class="cv-about-team-contact">
+                        Connect With Us
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Team Profiles -->
+            <div class="cv-about-team-grid">
+
+                <!-- Team Member 1 -->
+                <article class="cv-about-team-card">
+                    <div class="cv-about-team-photo">
+                        <img src="images/about-team-member-1.jpg" alt="ClearView Windows leadership team member"
+                            loading="lazy">
+
+                    </div>
+
+                    <div class="cv-about-team-info">
+                        <div class="cv-about-team-name-row">
+                            <div>
+                                <h3>Alex Morgan</h3>
+                                <span class="cv-about-team-role">
+                                    Founder & Director
+                                </span>
+                            </div>
+
+                            <span class="cv-about-team-member-icon">
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                            </span>
+                        </div>
+
+                        <p>
+                            Guiding the vision behind thoughtful window
+                            solutions and a customer-focused experience.
+                        </p>
+
+                        <div class="cv-about-team-socials">
+                            <a href="#" aria-label="LinkedIn profile">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+
+                            <a href="#" aria-label="Email team member">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Team Member 2 -->
+                <article class="cv-about-team-card">
+                    <div class="cv-about-team-photo">
+                        <img src="images/about-team-member-2.jpg" alt="ClearView Windows design team member"
+                            loading="lazy">
+                    </div>
+
+                    <div class="cv-about-team-info">
+                        <div class="cv-about-team-name-row">
+                            <div>
+                                <h3>Jamie Parker</h3>
+                                <span class="cv-about-team-role">
+                                    Design Consultant
+                                </span>
+                            </div>
+
+                            <span class="cv-about-team-member-icon">
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                            </span>
+                        </div>
+
+                        <p>
+                            Helping homeowners explore styles, finishes,
+                            and window options that suit their spaces.
+                        </p>
+
+                        <div class="cv-about-team-socials">
+                            <a href="#" aria-label="LinkedIn profile">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+
+                            <a href="#" aria-label="Email team member">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Team Member 3 -->
+                <article class="cv-about-team-card">
+                    <div class="cv-about-team-photo">
+                        <img src="images/about-team-member-3.jpg" alt="ClearView Windows project team member"
+                            loading="lazy">
+                    </div>
+
+                    <div class="cv-about-team-info">
+                        <div class="cv-about-team-name-row">
+                            <div>
+                                <h3>Taylor Bennett</h3>
+                                <span class="cv-about-team-role">
+                                    Project Coordinator
+                                </span>
+                            </div>
+
+                            <span class="cv-about-team-member-icon">
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                            </span>
+                        </div>
+
+                        <p>
+                            Keeping project details organized and helping
+                            customers understand the next steps.
+                        </p>
+
+                        <div class="cv-about-team-socials">
+                            <a href="#" aria-label="LinkedIn profile">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+
+                            <a href="#" aria-label="Email team member">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================
+     SECTION 8: FINAL CTA
+=========================== -->
+    <section class="cv-about-final" id="about-contact">
+        <div class="cv-about-final-inner">
+
+            <!-- Top label -->
+            <div class="cv-about-final-top">
+                <span class="cv-about-final-label">
+                    YOUR NEXT CHAPTER STARTS HERE
+                </span>
+            </div>
+
+            <!-- Main content -->
+            <div class="cv-about-final-main">
+
+                <div class="cv-about-final-heading">
+                    <h2>
+                        Let's make
+                        <span>room for better.</span>
+                    </h2>
+
+                    <p>
+                        Every great space starts with a thoughtful choice.
+                        Tell us about your home and let's explore the right
+                        window solutions for your needs.
+                    </p>
+
+                    <div class="cv-about-final-actions">
+                        <a href="contact.html" class="cv-about-final-primary">
+                            Talk to Our Team
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                        <a href="home-2.html#collections" class="cv-about-final-secondary">
+                            Explore Our Windows
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right information panel -->
+                <div class="cv-about-final-panel">
+
+                    <div class="cv-about-final-panel-heading">
+                        <span class="cv-about-final-panel-icon">
+                            <i class="fas fa-comments"></i>
+                        </span>
+
+                        <span>LET'S START A CONVERSATION</span>
+                    </div>
+
+                    <div class="cv-about-final-detail">
+                        <span class="cv-about-final-detail-number">01</span>
+
+                        <div>
+                            <h3>Share Your Ideas</h3>
+                            <p>
+                                Tell us about your space, style,
+                                and what you have in mind.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cv-about-final-detail">
+                        <span class="cv-about-final-detail-number">02</span>
+
+                        <div>
+                            <h3>Explore Possibilities</h3>
+                            <p>
+                                Discover window styles and options
+                                suited to your project.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cv-about-final-detail">
+                        <span class="cv-about-final-detail-number">03</span>
+
+                        <div>
+                            <h3>Plan Your Next Step</h3>
+                            <p>
+                                Get clear guidance to help you move forward.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cv-about-final-panel-footer">
+                        <span>CLARITY IN EVERY DETAIL</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Bottom statement -->
+            <div class="cv-about-final-bottom">
+                <span>THOUGHTFUL DESIGN</span>
+                <span class="cv-about-final-bottom-line"></span>
+                <span>A BETTER VIEW STARTS HERE</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="cv-footer">
+
+        <div class="cv-footer-main">
+            <div class="cv-footer-container">
+
+                <!-- Brand -->
+                <div class="cv-footer-brand">
+                    <a href="index.html" class="cv-footer-logo">
+                        <img src="images/logo-white.png" alt="ClearView Windows">
+                    </a>
+
+                    <p class="cv-footer-description">
+                        Discover energy-efficient window solutions
+                        designed to improve indoor comfort and help
+                        reduce your home's energy consumption.
+                    </p>
+
+                    <div class="cv-footer-socials">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="cv-footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Our Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div class="cv-footer-column">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li>
+                            <a href="energy-savings-calculator.html">
+                                Energy Savings Calculator
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pricing-guide.html">Pricing Guide</a>
+                        </li>
+                        <li>
+                            <a href="dashboard.html">Client Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Client Login</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="cv-footer-column cv-footer-contact">
+                    <h3>Get in Touch</h3>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+10000000000">+91 9876543210</a>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:info@example.com">
+                            clearview12@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Contact us for appointment availability.</span>
+                    </p>
+
+                    <a href="contact.html" class="cv-footer-cta">
+                        Get a Quote
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="cv-footer-bottom">
+            <div class="cv-footer-bottom-container">
+
+                <p>
+                    &copy; <span id="cvCopyrightYear"></span>
+                    ClearView Windows. All rights reserved.
+                </p>
+
+                <div class="cv-footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+    <!-- =============== END FOOTER =============== -->
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

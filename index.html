@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ClearView Windows</title>
+
+    <meta name="description"
+        content="Explore energy-efficient window replacement solutions, window styles, energy savings and pricing with ClearView Windows.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Fonts: Manrope + DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+    <header class="cv-header" id="cvHeader">
+        <div class="cv-header-container">
+
+            <!-- Logo - Left Edge -->
+            <a href="index.html" class="cv-logo" aria-label="ClearView Windows Home">
+                <img src="images/logo.png" alt="ClearView Windows">
+            </a>
+
+            <!-- Desktop Navigation - Center -->
+            <nav class="cv-desktop-nav" aria-label="Main navigation">
+                <ul class="cv-nav-list">
+
+                    <li class="cv-nav-item cv-home-dropdown">
+                        <a href="index.html" class="cv-nav-link">
+                            <span class="cv-nav-label">Home</span>
+                            <i class="fa-solid fa-chevron-down cv-dropdown-icon"></i>
+                        </a>
+
+                        <ul class="cv-dropdown-menu">
+                            <li><a href="index.html"><span class="cv-nav-label">Home 1</span></a></li>
+                            <li><a href="home-2.html"><span class="cv-nav-label">Home 2</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="about.html" class="cv-nav-link"><span class="cv-nav-label">About</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="products.html" class="cv-nav-link"><span class="cv-nav-label">Products</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="energy-savings-calculator.html" class="cv-nav-link"><span class="cv-nav-label">Energy
+                                Savings</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="pricing-guide.html" class="cv-nav-link">
+                            <span class="cv-nav-label">Pricing Guide</span>
+                        </a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="contact.html" class="cv-nav-link"><span class="cv-nav-label">Contact</span></a>
+                    </li>
+
+                    <li class="cv-nav-item">
+                        <a href="dashboard.html" class="cv-nav-link"><span class="cv-nav-label">Dashboard</span></a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- Desktop Controls - Right Edge -->
+            <div class="cv-desktop-controls">
+
+                <button class="cv-icon-toggle" id="cvDesktopTheme" type="button" aria-label="Enable dark mode"
+                    aria-pressed="false" title="Dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button class="cv-icon-toggle" id="cvDesktopRTL" type="button" aria-label="Enable RTL mode"
+                    aria-pressed="false" title="RTL mode">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <a href="login.html" class="cv-login-btn">Login</a>
+
+            </div>
+
+            <!-- Mobile / Tablet Menu Toggle -->
+            <button class="cv-menu-toggle" id="cvMenuToggle" type="button" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="cvMobilePanel">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <!-- Mobile / Tablet Navigation Panel -->
+        <div class="cv-mobile-panel" id="cvMobilePanel">
+
+            <nav class="cv-mobile-nav" aria-label="Mobile navigation">
+                <ul class="cv-mobile-nav-list">
+
+                    <li class="cv-mobile-home">
+                        <div class="cv-mobile-home-row">
+                            <a href="index.html"><span class="cv-nav-label">Home</span></a>
+
+                            <button class="cv-submenu-toggle" id="cvSubmenuToggle" type="button"
+                                aria-label="Toggle Home submenu" aria-expanded="false">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <ul class="cv-mobile-submenu" id="cvHomeSubmenu">
+                            <li><a href="index.html"><span class="cv-nav-label">Home 1</span></a></li>
+                            <li><a href="home-2.html"><span class="cv-nav-label">Home 2</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="about.html"><span class="cv-nav-label">About</span></a></li>
+                    <li><a href="products.html"><span class="cv-nav-label">Products</span></a></li>
+                    <li>
+                        <a href="energy-savings-calculator.html">
+                            <span class="cv-nav-label">Energy Savings Calculator</span>
+                        </a>
+                    </li>
+                    <li><a href="pricing-guide.html"><span class="cv-nav-label">Pricing Guide</span></a></li>
+                    <li><a href="contact.html"><span class="cv-nav-label">Contact</span></a></li>
+                    <li><a href="dashboard.html"><span class="cv-nav-label">Dashboard</span></a></li>
+
+                </ul>
+            </nav>
+
+            <!-- Mobile Controls Inside Menu -->
+            <div class="cv-mobile-controls">
+
+                <button class="cv-mobile-control-btn" id="cvMobileTheme" type="button" aria-pressed="false">
+                    <i class="fa-solid fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+
+                <button class="cv-mobile-control-btn" id="cvMobileRTL" type="button" aria-pressed="false">
+                    <i class="fa-solid fa-right-left"></i>
+                    <span>RTL Mode</span>
+                </button>
+
+                <a href="login.html" class="cv-mobile-login-btn">
+                    <i class="fa-solid fa-user"></i>
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+    </header>
+    <!-- =============== END HEADER =============== -->
+
+    <!-- CLEARVIEW WINDOWS - HERO SECTION -->
+    <section class="cv-home-hero" id="home">
+
+        <!-- Background Image Slider -->
+        <div class="cv-hero-slider" aria-hidden="true">
+
+            <div class="cv-hero-slide active">
+                <img src="images/h-1.jpg" alt="" fetchpriority="high">
+            </div>
+
+            <div class="cv-hero-slide">
+                <img src="images/h-2.jpg" alt="">
+            </div>
+
+            <div class="cv-hero-slide">
+                <img src="images/h-3.jpg" alt="">
+            </div>
+
+        </div>
+
+        <!-- Dark Overlay -->
+        <div class="cv-hero-overlay"></div>
+
+        <!-- Center Content -->
+        <div class="cv-hero-container">
+            <div class="cv-hero-content">
+
+                <span class="cv-hero-eyebrow">
+                    BEAUTIFUL WINDOWS. BRIGHTER LIVING.
+                </span>
+
+                <h1>
+                    Comfortable Homes<br>
+                    Start with Better Windows
+                </h1>
+
+                <p>
+                    Energy-efficient. Stylish. Built to last.
+                    Enhance your home with windows designed
+                    for beauty, comfort, and performance.
+                </p>
+
+                <div class="cv-hero-actions">
+                    <a href="contact.html" class="cv-hero-primary">
+                        Get a Free Estimate
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="#products" class="cv-hero-secondary">
+                        Explore Our Windows
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Slider Indicators -->
+        <div class="cv-hero-pagination" aria-label="Hero slides">
+            <button class="active" type="button" aria-label="Show slide 1" aria-pressed="true"></button>
+
+            <button type="button" aria-label="Show slide 2" aria-pressed="false"></button>
+
+            <button type="button" aria-label="Show slide 3" aria-pressed="false"></button>
+        </div>
+
+        <!-- Previous / Next Controls -->
+        <button class="cv-hero-arrow cv-hero-prev" type="button" aria-label="Previous slide">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <button class="cv-hero-arrow cv-hero-next" type="button" aria-label="Next slide">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </section>
+
+    <!-- WHY CHOOSE CLEARVIEW -->
+    <section class="cv-why-section" id="why-choose-us">
+
+        <div class="cv-why-container">
+
+            <!-- Section Heading -->
+            <div class="cv-why-heading">
+                <span class="cv-why-eyebrow">THE CLEARVIEW DIFFERENCE</span>
+
+                <h2>
+                    Better Windows.<br>
+                    <span>Better Living.</span>
+                </h2>
+
+                <p>
+                    Discover the difference thoughtful design,
+                    dependable quality, and professional installation
+                    can make in your home.
+                </p>
+            </div>
+
+            <!-- Feature Cards -->
+            <div class="cv-why-grid">
+
+                <article class="cv-why-card">
+                    <div class="cv-why-icon">
+                        <i class="fa-solid fa-house-circle-check"></i>
+                    </div>
+                    <span class="cv-why-number">01</span>
+                    <h3>Energy Efficiency</h3>
+                    <p>
+                        Designed to help reduce unwanted heat transfer
+                        and keep your home comfortable throughout the year.
+                    </p>
+                    <a href="contact.html" class="cv-why-link">
+                        Learn More
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="cv-why-card">
+                    <div class="cv-why-icon">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <span class="cv-why-number">02</span>
+                    <h3>Quality Materials</h3>
+                    <p>
+                        Explore carefully selected window styles and
+                        materials made for everyday residential use.
+                    </p>
+                    <a href="#products" class="cv-why-link">
+                        Explore Products
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="cv-why-card">
+                    <div class="cv-why-icon">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <span class="cv-why-number">03</span>
+                    <h3>Professional Installation</h3>
+                    <p>
+                        Give your window project the attention it deserves
+                        with a carefully planned installation process.
+                    </p>
+                    <a href="contact.html" class="cv-why-link">
+                        Get Started
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="cv-why-card">
+                    <div class="cv-why-icon">
+                        <i class="fa-solid fa-window-maximize"></i>
+                    </div>
+                    <span class="cv-why-number">04</span>
+                    <h3>Styles for Every Home</h3>
+                    <p>
+                        Find window designs that complement your home's
+                        architecture, interior, and personal style.
+                    </p>
+                    <a href="#products" class="cv-why-link">
+                        Find Your Style
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="cv-why-bottom">
+                <p>Ready to improve your home's windows?</p>
+                <a href="contact.html" class="cv-why-cta">
+                    Request a Free Estimate
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 3: WINDOW COLLECTIONS -->
+    <section class="cv-products-section" id="products">
+
+        <div class="cv-products-container">
+
+            <div class="cv-products-heading">
+                <span class="cv-products-eyebrow">
+                    FIND YOUR PERFECT FIT
+                </span>
+
+                <h2>
+                    Windows That Match<br>
+                    <span>Your Lifestyle.</span>
+                </h2>
+
+                <p>
+                    Discover thoughtfully designed window styles
+                    that bring natural light, comfort, and character
+                    into your home.
+                </p>
+            </div>
+
+            <!-- Product Cards -->
+            <div class="cv-products-grid">
+
+                <!-- Product 1 -->
+                <article class="cv-product-card">
+
+                    <div class="cv-product-image">
+                        <img src="images/window-casement.jpg" alt="Modern casement windows" loading="lazy">
+
+                        <span class="cv-product-tag">POPULAR CHOICE</span>
+
+                        <a href="contact.html" class="cv-product-image-link"
+                            aria-label="Enquire about casement windows">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <div class="cv-product-info">
+                        <span class="cv-product-category">CLASSIC COLLECTION</span>
+
+                        <h3>Casement Windows</h3>
+
+                        <p>
+                            Enjoy fresh air, clear views, and a timeless
+                            design that complements modern living spaces.
+                        </p>
+
+                        <div class="cv-product-features">
+                            <span>
+                                <i class="fa-solid fa-check"></i>
+                                Easy Operation
+                            </span>
+                            <span>
+                                <i class="fa-solid fa-check"></i>
+                                Clean Design
+                            </span>
+                        </div>
+
+                        <a href="contact.html" class="cv-product-link">
+                            Request a Quote
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </article>
+
+                <!-- Product 2 -->
+                <article class="cv-product-card">
+
+                    <div class="cv-product-image">
+                        <img src="images/window-sliding.jpg" alt="Contemporary sliding windows" loading="lazy">
+
+                        <span class="cv-product-tag">MODERN DESIGN</span>
+
+                        <a href="contact.html" class="cv-product-image-link" aria-label="Enquire about sliding windows">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <div class="cv-product-info">
+                        <span class="cv-product-category">CONTEMPORARY COLLECTION</span>
+
+                        <h3>Sliding Windows</h3>
+
+                        <p>
+                            Create a spacious feel with smooth operation,
+                            generous daylight, and an uncluttered appearance.
+                        </p>
+
+                        <div class="cv-product-features">
+                            <span>
+                                <i class="fa-solid fa-check"></i>
+                                Space Saving
+                            </span>
+                            <span>
+                                <i class="fa-solid fa-check"></i>
+                                Wide Views
+                            </span>
+                        </div>
+
+                        <a href="contact.html" class="cv-product-link">
+                            Request a Quote
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </article>
+
+                <!-- Product 3 -->
+                <article class="cv-product-card">
+
+                    <div class="cv-product-image">
+                        <img src="images/window-double-hung.jpg" alt="Traditional double hung windows" loading="lazy">
+
+                        <span class="cv-product-tag">TIMELESS STYLE</span>
+
+                        <a href="contact.html" class="cv-product-image-link"
+                            aria-label="Enquire about double hung windows">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <div class="cv-product-info">
+                        <span class="cv-product-category">HERITAGE COLLECTION</span>
+
+                        <h3>Double-Hung Windows</h3>
+
+                        <p>
+                            Bring traditional charm and versatile ventilation
+                            to homes with a classic architectural style.
+                        </p>
+
+                        <div class="cv-product-features">
+                            <span>
+                                <i class="fa-solid fa-check"></i>
+                                Classic Appeal
+                            </span>
+                            <span>
+                                <i class="fa-solid fa-check"></i>
+                                Versatile Style
+                            </span>
+                        </div>
+
+                        <a href="contact.html" class="cv-product-link">
+                            Request a Quote
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </article>
+
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="cv-products-bottom">
+                <p>Not sure which window is right for your home?</p>
+
+                <a href="contact.html" class="cv-products-cta">
+                    Get Expert Guidance
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: OUR INSTALLATION JOURNEY -->
+    <section class="cv-journey-section" id="our-process">
+
+        <div class="cv-journey-container">
+
+            <!-- Left: Visual Panel -->
+            <div class="cv-journey-visual">
+
+                <img src="images/window-installation.jpg" alt="Professional installation of a modern residential window"
+                    loading="lazy">
+
+                <div class="cv-journey-image-overlay"></div>
+
+                <div class="cv-journey-image-caption">
+                    <span>THE CLEARVIEW APPROACH</span>
+                    <h3>Every Detail<br>Matters.</h3>
+                </div>
+
+                <div class="cv-journey-image-badge">
+                    <i class="fa-solid fa-house"></i>
+                    <div>
+                        <strong>Your Home.</strong>
+                        <span>Your Vision.</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right: Process Timeline -->
+            <div class="cv-journey-content">
+
+                <span class="cv-journey-eyebrow">
+                    A SMOOTHER WINDOW PROJECT
+                </span>
+
+                <h2>
+                    From First Step<br>
+                    <span>To Fresh New Views.</span>
+                </h2>
+
+                <p class="cv-journey-intro">
+                    A well-planned window project starts with
+                    understanding your home and ends with a finish
+                    that feels right for your space.
+                </p>
+
+                <div class="cv-journey-timeline">
+
+                    <article class="cv-journey-step">
+                        <div class="cv-journey-step-number">01</div>
+                        <div class="cv-journey-step-content">
+                            <h3>Let's Talk</h3>
+                            <p>
+                                Tell us about your home, your goals,
+                                and the window styles you have in mind.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="cv-journey-step">
+                        <div class="cv-journey-step-number">02</div>
+                        <div class="cv-journey-step-content">
+                            <h3>Plan Your Windows</h3>
+                            <p>
+                                Explore suitable options and arrange
+                                the measurements needed for your project.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="cv-journey-step">
+                        <div class="cv-journey-step-number">03</div>
+                        <div class="cv-journey-step-content">
+                            <h3>Installation Day</h3>
+                            <p>
+                                Your selected windows are fitted with
+                                attention to alignment, finish, and detail.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="cv-journey-step">
+                        <div class="cv-journey-step-number">04</div>
+                        <div class="cv-journey-step-content">
+                            <h3>Enjoy the Difference</h3>
+                            <p>
+                                Welcome a refreshed look and enjoy
+                                windows chosen for your living space.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <a href="contact.html" class="cv-journey-cta">
+                    Discuss Your Project
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SECTION 5: ENERGY EFFICIENCY -->
+    <section class="cv-energy-section" id="energy-savings">
+
+        <div class="cv-energy-container">
+
+            <!-- Left Content -->
+            <div class="cv-energy-content">
+
+                <span class="cv-energy-eyebrow">
+                    COMFORT THAT STARTS AT YOUR WINDOWS
+                </span>
+
+                <h2>
+                    A More Comfortable Home.
+                    <span>A Smarter Choice.</span>
+                </h2>
+
+                <p class="cv-energy-description">
+                    The right windows can help manage heat transfer,
+                    improve indoor comfort, and make your home feel
+                    more inviting throughout the year.
+                </p>
+
+                <div class="cv-energy-benefits">
+
+                    <div class="cv-energy-benefit">
+                        <div class="cv-energy-check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div>
+                            <h3>Temperature Control</h3>
+                            <p>
+                                Choose suitable glazing and window designs
+                                to help manage indoor temperatures.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cv-energy-benefit">
+                        <div class="cv-energy-check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div>
+                            <h3>Natural Daylight</h3>
+                            <p>
+                                Bring more daylight into your rooms
+                                with window styles suited to your space.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cv-energy-benefit">
+                        <div class="cv-energy-check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div>
+                            <h3>Thoughtful Window Selection</h3>
+                            <p>
+                                Explore glazing, frame materials, and
+                                configurations for your home's needs.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="contact.html" class="cv-energy-cta">
+                    Explore Energy-Efficient Options
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+            <!-- Right Image -->
+            <div class="cv-energy-visual">
+
+                <img src="images/energy-efficient-windows.jpg"
+                    alt="Large energy-efficient windows in a bright modern home" loading="lazy">
+
+                <div class="cv-energy-image-label">
+                    <i class="fa-solid fa-leaf"></i>
+                    <div>
+                        <strong>Designed Around Comfort</strong>
+                        <span>Thoughtful choices for your home</span>
+                    </div>
+                </div>
+
+                <div class="cv-energy-image-decoration"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SECTION 6: CUSTOMER TESTIMONIALS -->
+    <section class="cv-reviews-section" id="testimonials">
+
+        <div class="cv-reviews-container">
+
+            <!-- Left Introduction -->
+            <div class="cv-reviews-intro">
+
+                <span class="cv-reviews-eyebrow">
+                    CUSTOMER EXPERIENCES
+                </span>
+
+                <h2>
+                    Good Windows.<br>
+                    <span>Good Experiences.</span>
+                </h2>
+
+                <p>
+                    Every home is different. We believe choosing new
+                    windows should feel clear, comfortable, and
+                    straightforward from the beginning.
+                </p>
+
+                <div class="cv-reviews-rating">
+                    <div class="cv-reviews-stars" aria-label="Five stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <span>What homeowners value most</span>
+                </div>
+
+                <a href="contact.html" class="cv-reviews-cta">
+                    Start Your Project
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+            <!-- Right Testimonial Slider -->
+            <div class="cv-reviews-slider">
+
+                <div class="cv-reviews-quote-mark">
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+
+                <div class="cv-review-slide active" aria-hidden="false">
+
+                    <span class="cv-review-label">
+                        HOMEOWNER EXPERIENCE
+                    </span>
+
+                    <blockquote>
+                        “We wanted windows that suited our home and
+                        brought in more natural light. The planning
+                        process helped us understand the options
+                        before making our decision.”
+                    </blockquote>
+
+                    <div class="cv-review-author">
+                        <div class="cv-review-avatar">
+                            <img src="images/customer-1.jpg" alt="Customer profile">
+                        </div>
+                        <div>
+                            <h3>Homeowner Review</h3>
+                            <p>Window Replacement Project</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="cv-review-slide" aria-hidden="true">
+
+                    <span class="cv-review-label">
+                        HOMEOWNER EXPERIENCE
+                    </span>
+
+                    <blockquote>
+                        “We were looking for a style that worked with
+                        our interior. Comparing the available designs
+                        made it easier to choose windows for our space.”
+                    </blockquote>
+
+                    <div class="cv-review-author">
+                        <div class="cv-review-avatar">
+                            <img src="images/customer-2.jpg" alt="Customer profile">
+                        </div>
+                        <div>
+                            <h3>Homeowner Review</h3>
+                            <p>Window Design Project</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="cv-review-slide" aria-hidden="true">
+
+                    <span class="cv-review-label">
+                        HOMEOWNER EXPERIENCE
+                    </span>
+
+                    <blockquote>
+                        “Having our project requirements clearly
+                        discussed helped us feel more confident about
+                        selecting the right windows for our home.”
+                    </blockquote>
+
+                    <div class="cv-review-author">
+                        <div class="cv-review-avatar">
+                            <img src="images/customer-3.jpg" alt="Customer profile">
+                        </div>
+                        <div>
+                            <h3>Homeowner Review</h3>
+                            <p>Residential Window Project</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Slider Controls -->
+                <div class="cv-reviews-controls">
+
+                    <div class="cv-reviews-pagination">
+                        <button class="active" type="button" aria-label="Show review 1" aria-pressed="true"></button>
+
+                        <button type="button" aria-label="Show review 2" aria-pressed="false"></button>
+
+                        <button type="button" aria-label="Show review 3" aria-pressed="false"></button>
+                    </div>
+
+                    <div class="cv-reviews-arrows">
+                        <button class="cv-review-prev" type="button" aria-label="Previous review">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+
+                        <button class="cv-review-next" type="button" aria-label="Next review">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SECTION 7: WINDOW TRANSFORMATION -->
+    <section class="cv-transform-section" id="transform">
+
+        <div class="cv-transform-container">
+
+            <!-- Section Heading -->
+            <div class="cv-transform-heading">
+                <span class="cv-transform-eyebrow">
+                    A FRESH PERSPECTIVE
+                </span>
+
+                <h2>
+                    Transform Your Windows.<br>
+                    <span>Transform Your Space.</span>
+                </h2>
+
+                <p>
+                    The right windows can change how your home looks,
+                    feels, and welcomes natural light.
+                </p>
+            </div>
+
+            <!-- Before and After Images -->
+            <div class="cv-transform-gallery">
+
+                <div class="cv-transform-item">
+
+                    <div class="cv-transform-image">
+                        <img src="images/windows-before.jpg" alt="Home exterior before window replacement"
+                            loading="lazy">
+
+                        <span class="cv-transform-label">
+                            BEFORE
+                        </span>
+                    </div>
+
+                    <div class="cv-transform-caption">
+                        <span>01</span>
+                        <div>
+                            <h3>Room for Improvement</h3>
+                            <p>
+                                Outdated window styles can make a home
+                                feel less connected to its surroundings.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="cv-transform-divider">
+                    <i class="fa-solid fa-arrow-down"></i>
+                </div>
+
+                <div class="cv-transform-item">
+
+                    <div class="cv-transform-image">
+                        <img src="images/windows-after.jpg" alt="Updated home exterior with modern windows"
+                            loading="lazy">
+
+                        <span class="cv-transform-label">
+                            AFTER
+                        </span>
+                    </div>
+
+                    <div class="cv-transform-caption">
+                        <span>02</span>
+                        <div>
+                            <h3>A Brighter Perspective</h3>
+                            <p>
+                                Thoughtfully selected windows create
+                                a refreshed look and invite natural light.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="cv-transform-bottom">
+
+                <p>
+                    Ready to give your home a fresh perspective?
+                </p>
+
+                <a href="contact.html" class="cv-transform-button">
+                    Explore Your Options
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SECTION 8: FAQ -->
+    <section class="cv-faq-section" id="faq">
+
+        <div class="cv-faq-container">
+
+            <!-- Left Content -->
+            <div class="cv-faq-intro">
+
+                <span class="cv-faq-eyebrow">NEED TO KNOW</span>
+
+                <h2>
+                    Questions About<br>
+                    <span>Your Windows?</span>
+                </h2>
+
+                <p>
+                    Choosing new windows can bring up a few questions.
+                    Find answers to common questions before starting
+                    your home improvement project.
+                </p>
+
+                <div class="cv-faq-contact-card">
+                    <div class="cv-faq-contact-icon">
+                        <i class="fa-regular fa-comments"></i>
+                    </div>
+
+                    <div>
+                        <h3>Still have questions?</h3>
+                        <p>We're here to help you explore your options.</p>
+                    </div>
+
+                    <a href="contact.html" aria-label="Contact ClearView">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- FAQ Accordion -->
+            <div class="cv-faq-list">
+
+                <div class="cv-faq-item">
+                    <button class="cv-faq-question" type="button" aria-expanded="true">
+                        <span>How do I choose the right windows for my home?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+
+                    <div class="cv-faq-answer">
+                        <p>
+                            Consider your home's architectural style,
+                            ventilation needs, natural light, privacy,
+                            and energy-efficiency goals. Comparing window
+                            materials and designs can help you find a
+                            suitable option.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cv-faq-item">
+                    <button class="cv-faq-question" type="button" aria-expanded="false">
+                        <span>What types of windows are available?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+
+                    <div class="cv-faq-answer">
+                        <p>
+                            Popular options include casement, sliding,
+                            double-hung, and picture windows. Each type
+                            offers different benefits depending on your
+                            space, ventilation preferences, and design.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cv-faq-item">
+                    <button class="cv-faq-question" type="button" aria-expanded="false">
+                        <span>When should I consider replacing my windows?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+
+                    <div class="cv-faq-answer">
+                        <p>
+                            Difficulty opening or closing windows, visible
+                            frame damage, persistent drafts, and unwanted
+                            moisture may indicate that an inspection or
+                            replacement is worth considering.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cv-faq-item">
+                    <button class="cv-faq-question" type="button" aria-expanded="false">
+                        <span>Can new windows improve energy efficiency?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+
+                    <div class="cv-faq-answer">
+                        <p>
+                            Well-selected windows with suitable glazing,
+                            effective seals, and proper installation can
+                            help reduce unwanted heat transfer. Results
+                            depend on the window specification and your home.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cv-faq-item">
+                    <button class="cv-faq-question" type="button" aria-expanded="false">
+                        <span>How can I get started with a window project?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+
+                    <div class="cv-faq-answer">
+                        <p>
+                            Contact our team with your requirements,
+                            preferred window styles, and project details.
+                            This helps establish the next steps for
+                            exploring suitable options.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="cv-faq-bottom">
+
+            <div class="cv-faq-bottom-content">
+                <span>YOUR HOME, YOUR VISION</span>
+                <h3>Let's Find the Right Windows for You.</h3>
+                <p>
+                    Explore window styles and take the next step
+                    towards refreshing your home.
+                </p>
+            </div>
+
+            <a href="contact.html" class="cv-faq-bottom-button">
+                Contact Our Team
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="cv-footer">
+
+        <div class="cv-footer-main">
+            <div class="cv-footer-container">
+
+                <!-- Brand -->
+                <div class="cv-footer-brand">
+                    <a href="index.html" class="cv-footer-logo">
+                        <img src="images/logo-white.png" alt="ClearView Windows">
+                    </a>
+
+                    <p class="cv-footer-description">
+                        Discover energy-efficient window solutions
+                        designed to improve indoor comfort and help
+                        reduce your home's energy consumption.
+                    </p>
+
+                    <div class="cv-footer-socials">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="cv-footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Our Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div class="cv-footer-column">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li>
+                            <a href="energy-savings-calculator.html">
+                                Energy Savings Calculator
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pricing-guide.html">Pricing Guide</a>
+                        </li>
+                        <li>
+                            <a href="dashboard.html">Client Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Client Login</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="cv-footer-column cv-footer-contact">
+                    <h3>Get in Touch</h3>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+10000000000">+91 9876543210</a>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:info@example.com">
+                            clearview12@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Contact us for appointment availability.</span>
+                    </p>
+
+                    <a href="contact.html" class="cv-footer-cta">
+                        Get a Quote
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="cv-footer-bottom">
+            <div class="cv-footer-bottom-container">
+
+                <p>
+                    &copy; <span id="cvCopyrightYear"></span>
+                    ClearView Windows. All rights reserved.
+                </p>
+
+                <div class="cv-footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+    <!-- =============== END FOOTER =============== -->
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
