@@ -562,6 +562,8 @@ html[dir="rtl"] .auth-input-wrap input {
 
 html[dir="rtl"] .auth-heading,
 html[dir="rtl"] .auth-switch {
+    direction: ltr;
+    unicode-bidi: isolate;
     text-align: center;
 }
 
@@ -1107,12 +1109,13 @@ html[dir="rtl"] .auth-switch {
    RTL RESPONSIVE SUPPORT
 ========================================= */
 html[dir="rtl"] .auth-input-wrap input {
+    direction: ltr;
     text-align: right;
 }
 
 html[dir="rtl"] .auth-field-icon {
-    inset-inline-start: auto;
-    inset-inline-end: 14px;
+    inset-inline-start: 15px;
+    inset-inline-end: auto;
 }
 
 html[dir="rtl"] .auth-input-wrap input {
@@ -1120,8 +1123,8 @@ html[dir="rtl"] .auth-input-wrap input {
 }
 
 html[dir="rtl"] .auth-eye-btn {
-    inset-inline-end: auto;
-    inset-inline-start: 8px;
+    inset-inline-end: 12px;
+    inset-inline-start: auto;
 }
 
 html[dir="rtl"] .auth-form-options {
@@ -1131,6 +1134,23 @@ html[dir="rtl"] .auth-form-options {
 html[dir="rtl"] .auth-heading,
 html[dir="rtl"] .auth-switch {
     text-align: center;
+}
+
+html[dir="rtl"] .auth-heading h1,
+html[dir="rtl"] .auth-heading p,
+html[dir="rtl"] .auth-field>label,
+html[dir="rtl"] .auth-text-link,
+html[dir="rtl"] .auth-terms>span {
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+html[dir="rtl"] .auth-field>label {
+    text-align: right;
+}
+
+html[dir="rtl"] .auth-submit-btn i {
+    transform: rotate(180deg);
 }
 
 /* Dark Mode Logo - Login, Register & Dashboard Pages */

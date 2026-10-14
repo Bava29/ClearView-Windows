@@ -2320,10 +2320,6 @@ html.dark-mode .cv-why-cta:hover {
     .cv-product-image {
         height: 235px;
     }
-
-    .cv-product-info>p {
-        min-height: auto;
-    }
 }
 
 /* Mobile */
@@ -8890,20 +8886,6 @@ html.dark-mode .cv-about-final-secondary:hover {
     font: 12px/1.6 "DM Sans", sans-serif
 }
 
-.cv-products-specs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin-bottom: 12px
-}
-
-.cv-products-specs span {
-    padding: 5px 6px;
-    background: #F5F5F3;
-    color: #62686D;
-    font: 10px "DM Sans", sans-serif
-}
-
 .cv-products-card-bottom {
     display: flex;
     align-items: center;
@@ -9047,13 +9029,6 @@ html.dark-mode .cv-products-empty,
 html.dark-mode .cv-products-modal-card,
 html.dark-mode .cv-products-search,
 html.dark-mode .cv-products-sort select,
-html.dark-mode .cv-products-chip,
-html.dark-mode .cv-products-active button {
-    background: #2C3034;
-    border-color: #41464B;
-    color: #F3F3F1
-}
-
 html.dark-mode .cv-products-catalog-heading>p,
 html.dark-mode .cv-products-option,
 html.dark-mode .cv-products-card p,
@@ -9083,9 +9058,11 @@ html.dark-mode .cv-products-view button.is-active {
     color: #202326
 }
 
-html.dark-mode .cv-products-specs span {
-    background: #343A40;
-    color: #B6BABD
+html.dark-mode .cv-products-chip,
+html.dark-mode .cv-products-active button {
+    background: #2C3034;
+    border-color: #41464B;
+    color: #F3F3F1
 }
 
 html.dark-mode .cv-products-card-bottom button {
@@ -10040,6 +10017,18 @@ html.dark-mode .cv-products-materials-cta:hover {
     font-family: "Manrope", sans-serif;
     font-size: 12px;
     font-weight: 600;
+}
+
+html[dir="rtl"] .cv-products-benefit-card-number {
+    right: auto;
+    left: 23px;
+}
+
+html[dir="rtl"] .cv-products-benefit-card h3,
+html[dir="rtl"] .cv-products-benefit-card p {
+    direction: ltr;
+    unicode-bidi: isolate;
+    text-align: center;
 }
 
 .cv-products-benefit-card h3 {
@@ -13558,6 +13547,11 @@ html.dark-mode .cv-contact-info-bottom p {
     opacity: 1;
 }
 
+html[dir="rtl"] .cv-contact-form-field input[name="phone"] {
+    direction: ltr;
+    text-align: right;
+}
+
 .cv-contact-form-field input:focus,
 .cv-contact-form-field select:focus,
 .cv-contact-form-field textarea:focus {
@@ -14309,12 +14303,7 @@ img {
     .cv-product-info h3 {
         font-size: 21px;
     }
-
-    .cv-product-info>p {
-        min-height: 0;
-    }
-
-    .cv-product-image-link {
+.cv-product-image-link {
         opacity: 1;
         transform: none;
     }
@@ -14601,12 +14590,7 @@ img {
         letter-spacing: 1px;
         overflow-wrap: anywhere;
     }
-
-    .cv-product-info>p {
-        min-height: 0;
-    }
-
-    .cv-product-image-link {
+.cv-product-image-link {
         opacity: 1;
         transform: none;
     }
@@ -18318,14 +18302,6 @@ body {
         font-size: 13px;
     }
 
-    .cv-products-specs {
-        gap: 7px;
-    }
-
-    .cv-products-specs span {
-        font-size: 10px;
-    }
-
     .cv-products-card-bottom {
         flex-wrap: wrap;
         gap: 12px;
@@ -21343,13 +21319,7 @@ body {
     .cv-about-process-number {
         font-size: 34px;
     }
-
-    .cv-about-process-step h3,
-    .cv-about-process-step p {
-        min-height: 0;
-    }
-
-    .cv-about-process-step h3 {
+.cv-about-process-step h3 {
         margin-bottom: 10px;
         font-size: 17px;
     }
@@ -21921,6 +21891,11 @@ body {
         border-top: 0;
     }
 
+    .cv-about-process-step h3,
+    .cv-about-process-step p {
+        min-height: 0;
+    }
+
     .cv-about-process-track .cv-about-process-step {
         display: flex;
         flex-direction: column;
@@ -21928,13 +21903,7 @@ body {
         padding: 24px;
         border: 1px solid #D9DAD7;
     }
-
-    .cv-about-process-step h3,
-    .cv-about-process-step p {
-        min-height: 0;
-    }
-
-    .cv-about-process-duration {
+.cv-about-process-duration {
         margin-top: auto;
         align-self: flex-start;
     }
@@ -22204,4 +22173,78 @@ html.dark-mode [class*="filter"] span {
     color: #D0D4D8 !important;
     -webkit-text-fill-color: #D0D4D8 !important;
     opacity: 1 !important;
+}
+
+/* About page: preserve readable English copy within RTL section layouts */
+html[dir="rtl"] .cv-about-values-heading h2,
+html[dir="rtl"] .cv-about-values-intro,
+html[dir="rtl"] .cv-about-value h3,
+html[dir="rtl"] .cv-about-value p,
+html[dir="rtl"] .cv-about-values-footer p,
+html[dir="rtl"] .cv-about-process-header h2,
+html[dir="rtl"] .cv-about-process-header>p,
+html[dir="rtl"] .cv-about-process-step h3,
+html[dir="rtl"] .cv-about-process-step p,
+html[dir="rtl"] .cv-about-process-footer>p {
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+html[dir="rtl"] .cv-about-value h3,
+html[dir="rtl"] .cv-about-value p,
+html[dir="rtl"] .cv-about-process-step h3,
+html[dir="rtl"] .cv-about-process-step p {
+    text-align: center;
+}
+
+html[dir="rtl"] .cv-about-values-heading h2,
+html[dir="rtl"] .cv-about-values-intro,
+html[dir="rtl"] .cv-about-process-header h2,
+html[dir="rtl"] .cv-about-process-header>p,
+html[dir="rtl"] .cv-about-values-footer p,
+html[dir="rtl"] .cv-about-process-footer>p {
+    text-align: right;
+}
+
+@media (min-width: 1025px) {
+    html[dir="rtl"] .cv-about-value {
+        padding-right: 25px;
+        padding-left: 25px;
+        border-right: 0;
+        border-left: 1px solid #555B60;
+    }
+
+    html[dir="rtl"] .cv-about-value:first-child {
+        padding-right: 0;
+    }
+
+    html[dir="rtl"] .cv-about-value:last-child {
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    html[dir="rtl"] .cv-about-process-step {
+        padding-right: 24px;
+        padding-left: 24px;
+        border-right: 0;
+        border-left: 1px solid #D9DAD7;
+    }
+
+    html[dir="rtl"] .cv-about-process-step:first-child {
+        padding-right: 0;
+    }
+
+    html[dir="rtl"] .cv-about-process-step:last-child {
+        padding-left: 0;
+        border-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    html[dir="rtl"] .cv-about-process-step,
+    html[dir="rtl"] .cv-about-process-step:first-child,
+    html[dir="rtl"] .cv-about-process-step:last-child {
+        border-right: 0;
+        border-left: 0;
+    }
 }

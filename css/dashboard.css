@@ -8617,16 +8617,18 @@ html[dir="rtl"] .cv-war-heading {
     }
 
     .cv-pay-summary-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-auto-rows: 1fr;
         gap: 15px;
     }
 
     .cv-pay-summary-card {
+        grid-column: span 2;
         padding: 19px;
     }
 
     .cv-pay-summary-card:last-child {
-        grid-column: 1 / -1;
+        grid-column: 2 / span 2;
     }
 
     .cv-pay-summary-card>strong {
@@ -8743,17 +8745,19 @@ html[dir="rtl"] .cv-war-heading {
     }
 
     .cv-pay-summary-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-auto-rows: 1fr;
         gap: 13px;
         margin-top: 17px;
     }
 
     .cv-pay-summary-card {
+        grid-column: span 2;
         padding: 17px;
     }
 
     .cv-pay-summary-card:last-child {
-        grid-column: 1 / -1;
+        grid-column: 2 / span 2;
     }
 
     .cv-pay-summary-icon {
@@ -9386,4 +9390,13 @@ body.dark-mode .cv-dashboard .section-description {
     color: #C8CDD1 !important;
     -webkit-text-fill-color: #C8CDD1 !important;
     opacity: 1 !important;
+}
+
+/* Keep primary action labels visible over the dark button surface in light mode. */
+html:not(.dark-mode) body.cv-dashboard a.cv-measure-review-link,
+html:not(.dark-mode) body.cv-dashboard a.cv-appt-support-btn,
+html:not(.dark-mode) body.cv-dashboard a.cv-war-primary-btn,
+html:not(.dark-mode) body.cv-dashboard a.cv-pay-contact-btn {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
 }
