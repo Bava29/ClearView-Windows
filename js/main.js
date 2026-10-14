@@ -388,7 +388,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
     function renderCards(list) {
-        grid.innerHTML = list.map(p => `<article class="cv-products-card"><div class="cv-products-image"><img src="${p.image}" data-fallback="${p.fallback}" alt="${p.name}" loading="lazy"></div><div class="cv-products-card-content"><span class="cv-products-category">${p.type}</span><h3>${p.name}</h3><p>${p.description}</p><div class="cv-products-specs"><span>${p.material}</span><span>${p.glazing}</span><span>${p.style}</span><span>${p.finish}</span>${p.features.map(f => `<span>${f}</span>`).join("")}</div><div class="cv-products-card-bottom"><strong>${money(p.price)} <small>sample</small></strong><button type="button" data-details="${p.id}">View details</button></div></div></article>`).join("");
+        grid.innerHTML = list.map(p => `<article class="cv-products-card"><div class="cv-products-image"><img src="${p.image}" data-fallback="${p.fallback}" alt="${p.name}" loading="lazy"></div><div class="cv-products-card-content"><span class="cv-products-category">${p.type}</span><h3>${p.name}</h3><p>${p.description}</p><div class="cv-products-card-bottom"><strong>${money(p.price)} <small>sample</small></strong><button type="button" data-details="${p.id}">View details</button></div></div></article>`).join("");
         grid.querySelectorAll("img").forEach(img => img.addEventListener("error", () => { if (!img.dataset.fallbackUsed) { img.dataset.fallbackUsed = "true"; img.src = img.dataset.fallback; } }));
     }
     function render() {
