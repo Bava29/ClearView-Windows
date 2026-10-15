@@ -2115,8 +2115,13 @@ html.dark-mode .cv-meta-icon,
 html.dark-mode .cv-appointment-note>i,
 html.dark-mode .cv-financial-icon,
 html.dark-mode .cv-installment-reminder>i,
-html.dark-mode .cv-warranty-note i {
+html.dark-mode .cv-warranty-note i,
+html.dark-mode .cv-document-icon {
     color: var(--db-secondary) !important;
+}
+
+html.dark-mode .cv-document-icon {
+    color: #FFFFFF !important;
 }
 
 html.dark-mode .cv-text-action:hover {
@@ -2779,7 +2784,9 @@ html.dark-mode .cv-install-next-milestone p,
 html.dark-mode .cv-install-schedule-tag,
 html.dark-mode .cv-install-detail-row,
 html.dark-mode .cv-install-detail-row i,
-html.dark-mode .cv-install-schedule-note {
+html.dark-mode .cv-install-schedule-note,
+html.dark-mode .cv-install-prep-list li i,
+html.dark-mode .cv-install-update-note i {
     color: #FFFFFF;
 }
 
@@ -3269,6 +3276,10 @@ html.dark-mode .cv-measure-help {
     border-color: var(--db-border);
 }
 
+html.dark-mode .cv-measure-table-note>i {
+    color: #FFFFFF !important;
+}
+
 html.dark-mode .cv-measure-status,
 html.dark-mode .cv-measure-visit-badge,
 html.dark-mode .cv-measure-review-badge,
@@ -3704,9 +3715,12 @@ html.dark-mode .cv-measure-review-step i {
 }
 
 .cv-appt-support-info>i {
+    flex: 0 0 20px;
+    width: 20px;
     margin-top: 3px;
     color: var(--db-primary);
     font-size: 17px;
+    text-align: center;
 }
 
 .cv-appt-support-info strong,
@@ -3792,6 +3806,8 @@ html.dark-mode .cv-appt-timeline-meta i,
 html.dark-mode .cv-appt-prep-card>p,
 html.dark-mode .cv-appt-prep-card li,
 html.dark-mode .cv-appt-prep-card li i,
+html.dark-mode .cv-appt-reminder>i,
+html.dark-mode .cv-appt-schedule-note>i,
 html.dark-mode .cv-appt-support-info>i,
 html.dark-mode .cv-appt-support-info strong,
 html.dark-mode .cv-appt-support-info span {
@@ -4311,6 +4327,11 @@ html.dark-mode .cv-war-terms-note,
 html.dark-mode .cv-war-help-card {
     background: var(--db-page);
     border-color: var(--db-border);
+}
+
+html.dark-mode .cv-war-notice>i,
+html.dark-mode .cv-war-help-detail>i {
+    color: #FFFFFF !important;
 }
 
 html.dark-mode .cv-war-status,
@@ -4970,6 +4991,10 @@ html.dark-mode .cv-pay-instructions,
 html.dark-mode .cv-pay-history-note {
     background: var(--db-page);
     border-color: var(--db-border);
+}
+
+html.dark-mode .cv-pay-instructions>i {
+    color: #FFFFFF !important;
 }
 
 html.dark-mode .cv-pay-status,
@@ -6769,6 +6794,12 @@ html[dir="rtl"] .cv-install-quality-card {
     .cv-measure-stats {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 14px;
+    }
+
+    .cv-measure-stat-card:nth-child(3) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc((100% - 14px) / 2);
     }
 
     .cv-measure-stat-card {
@@ -9399,4 +9430,112 @@ html:not(.dark-mode) body.cv-dashboard a.cv-war-primary-btn,
 html:not(.dark-mode) body.cv-dashboard a.cv-pay-contact-btn {
     color: #FFFFFF !important;
     -webkit-text-fill-color: #FFFFFF !important;
+}
+
+@media screen and (max-width: 600px) {
+
+    /* Window Measurements - horizontal scrolling */
+    .cv-measure-table-wrap {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
+        box-sizing: border-box !important;
+        scrollbar-width: thin;
+    }
+
+    .cv-measure-table {
+        width: 650px !important;
+        min-width: 650px !important;
+        max-width: none !important;
+        table-layout: fixed !important;
+        border-collapse: collapse;
+    }
+
+    /* Column 1: Window ID */
+    .cv-measure-table th:nth-child(1),
+    .cv-measure-table td:nth-child(1) {
+        width: 90px !important;
+        min-width: 90px !important;
+    }
+
+    /* Column 2: Room / Location */
+    .cv-measure-table th:nth-child(2),
+    .cv-measure-table td:nth-child(2) {
+        width: 130px !important;
+        min-width: 130px !important;
+    }
+
+    /* Column 3: Width */
+    .cv-measure-table th:nth-child(3),
+    .cv-measure-table td:nth-child(3) {
+        width: 81px !important;
+        min-width: 81px !important;
+    }
+
+    /* Remaining columns appear on horizontal scroll */
+    .cv-measure-table th:nth-child(n+4),
+    .cv-measure-table td:nth-child(n+4) {
+        width: 110px !important;
+        min-width: 110px !important;
+    }
+
+    .cv-measure-table th,
+    .cv-measure-table td {
+        box-sizing: border-box;
+        white-space: nowrap;
+    }
+}
+
+/* Mobile - Payment Table Horizontal Scroll */
+@media screen and (max-width: 600px) {
+
+    .cv-pay-table-wrap {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box !important;
+    }
+
+    .cv-pay-table-wrap table {
+        width: 600px !important;
+        min-width: 600px !important;
+        max-width: none !important;
+        table-layout: fixed !important;
+    }
+
+    /* First column - Transaction ID */
+    .cv-pay-table-wrap th:nth-child(1),
+    .cv-pay-table-wrap td:nth-child(1) {
+        width: 105px !important;
+        min-width: 105px !important;
+    }
+
+    /* Second column - Payment Date */
+    .cv-pay-table-wrap th:nth-child(2),
+    .cv-pay-table-wrap td:nth-child(2) {
+        width: 100px !important;
+        min-width: 100px !important;
+    }
+
+    /* Third and remaining columns */
+    .cv-pay-table-wrap th:nth-child(n+3),
+    .cv-pay-table-wrap td:nth-child(n+3) {
+        width: 130px !important;
+        min-width: 130px !important;
+    }
+
+    .cv-pay-table-wrap th,
+    .cv-pay-table-wrap td {
+        white-space: nowrap !important;
+        box-sizing: border-box !important;
+    }
 }

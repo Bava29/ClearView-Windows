@@ -3385,6 +3385,7 @@ html.dark-mode .cv-energy-cta:hover {
     font-weight: 500;
     line-height: 1.8;
 }
+
 html[dir="rtl"] .cv-reviews-quote-mark {
     right: auto;
     left: 32px;
@@ -8612,7 +8613,7 @@ html.dark-mode .cv-about-final-secondary:hover {
 
 .cv-products-filter-title h3 {
     margin: 0;
-    font: 600 16px Manrope, sans-serif
+    font: 600 17px Manrope, sans-serif
 }
 
 .cv-products-filter-title button,
@@ -8622,6 +8623,10 @@ html.dark-mode .cv-about-final-secondary:hover {
     color: #A66E4C;
     font: 600 12px "DM Sans", sans-serif;
     cursor: pointer
+}
+
+.cv-products-filter-title button {
+    font-size: 13px
 }
 
 .cv-products-facet {
@@ -8636,7 +8641,7 @@ html.dark-mode .cv-about-final-secondary:hover {
     gap: 8px;
     list-style: none;
     cursor: pointer;
-    font: 600 13px Manrope, sans-serif
+    font: 600 14px Manrope, sans-serif
 }
 
 .cv-products-facet summary::-webkit-details-marker {
@@ -8663,7 +8668,7 @@ html.dark-mode .cv-about-final-secondary:hover {
     column-gap: 8px;
     margin: 10px 0;
     color: #72777C;
-    font: 12px "DM Sans", sans-serif;
+    font: 13px "DM Sans", sans-serif;
     text-align: left;
     cursor: pointer
 }
@@ -8685,7 +8690,8 @@ html.dark-mode .cv-about-final-secondary:hover {
     grid-column: 3;
     margin-left: 0;
     text-align: right;
-    color: #92979B
+    color: #92979B;
+    font-size: 11px
 }
 
 .cv-products-price h3 {
@@ -8697,7 +8703,7 @@ html.dark-mode .cv-about-final-secondary:hover {
     justify-content: space-between;
     margin-bottom: 8px;
     color: #72777C;
-    font: 11px "DM Sans", sans-serif
+    font: 12px "DM Sans", sans-serif
 }
 
 .cv-products-price input {
@@ -8883,7 +8889,7 @@ html.dark-mode .cv-about-final-secondary:hover {
     min-height: 40px;
     margin: 0 0 11px;
     color: #72777C;
-    font: 12px/1.6 "DM Sans", sans-serif
+    font: 13px/1.6 "DM Sans", sans-serif
 }
 
 .cv-products-card-bottom {
@@ -9023,6 +9029,18 @@ html.dark-mode .cv-products-catalog-section {
     color: #F3F3F1
 }
 
+html.dark-mode .cv-products-sidebar {
+    background: #2C3034;
+    border-color: #41464B;
+    color: #F3F3F1
+}
+
+html.dark-mode .cv-products-search,
+html.dark-mode .cv-products-card {
+    background: #2C3034;
+    border-color: #41464B
+}
+
 html.dark-mode .cv-products-sidebar,
 html.dark-mode .cv-products-card,
 html.dark-mode .cv-products-empty,
@@ -9044,7 +9062,17 @@ html.dark-mode .cv-products-card-bottom {
     border-color: #41464B
 }
 
+html.dark-mode .cv-products-option small,
+html.dark-mode .cv-products-range {
+    color: #B6BABD
+}
+
 html.dark-mode .cv-products-search input {
+    padding: 13px 15px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
     color: #F3F3F1
 }
 
@@ -10028,7 +10056,14 @@ html[dir="rtl"] .cv-products-benefit-card h3,
 html[dir="rtl"] .cv-products-benefit-card p {
     direction: ltr;
     unicode-bidi: isolate;
+}
+
+html[dir="rtl"] .cv-products-benefit-card h3 {
     text-align: center;
+}
+
+html[dir="rtl"] .cv-products-benefit-card p {
+    text-align: right;
 }
 
 .cv-products-benefit-card h3 {
@@ -14156,6 +14191,16 @@ img {
         grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
         gap: 40px;
     }
+
+    .cv-reviews-slider {
+        padding-top: 50px;
+    }
+
+    .cv-reviews-quote-mark {
+        top: 18px;
+        right: 24px;
+        font-size: 40px;
+    }
 }
 
 
@@ -14303,7 +14348,8 @@ img {
     .cv-product-info h3 {
         font-size: 21px;
     }
-.cv-product-image-link {
+
+    .cv-product-image-link {
         opacity: 1;
         transform: none;
     }
@@ -14394,7 +14440,13 @@ img {
     }
 
     .cv-reviews-slider {
-        padding: 30px 25px;
+        padding: 50px 25px 30px;
+    }
+
+    .cv-reviews-quote-mark {
+        top: 18px;
+        right: 22px;
+        font-size: 36px;
     }
 
     .cv-review-slide blockquote {
@@ -14590,7 +14642,8 @@ img {
         letter-spacing: 1px;
         overflow-wrap: anywhere;
     }
-.cv-product-image-link {
+
+    .cv-product-image-link {
         opacity: 1;
         transform: none;
     }
@@ -17738,6 +17791,12 @@ body {
         gap: 22px;
     }
 
+    .cv-products-filter-title {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
     .cv-products-catalog-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 12px;
@@ -17825,6 +17884,12 @@ body {
 
     .cv-products-sidebar {
         padding: 16px;
+    }
+
+    .cv-products-filter-title {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
     }
 
     .cv-products-toolbar {
@@ -18299,7 +18364,7 @@ body {
 
     .cv-products-card p {
         min-height: 0;
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .cv-products-card-bottom {
@@ -18473,7 +18538,7 @@ body {
         flex-direction: column;
         gap: 16px;
         margin-top: 24px;
-        padding: 20px 0 0;
+        padding: 20px;
     }
 
     /* Benefits */
@@ -19013,6 +19078,49 @@ body {
         grid-template-columns: minmax(0, 1fr);
         gap: 20px;
     }
+
+    /* Final CTA */
+    .cv-energy-final-cta {
+        min-height: 0;
+        padding: 64px 20px;
+        background-position: center;
+    }
+
+    .cv-energy-final-content {
+        max-width: 480px;
+    }
+
+    .cv-energy-final-eyebrow {
+        margin-bottom: 14px;
+        font-size: 10px;
+        letter-spacing: 1.4px;
+        line-height: 1.5;
+    }
+
+    .cv-energy-final-content h2 {
+        margin-bottom: 17px;
+        font-size: clamp(28px, 8vw, 34px);
+        line-height: 1.22;
+    }
+
+    .cv-energy-final-content p {
+        margin-bottom: 24px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .cv-energy-final-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .cv-energy-final-btn-primary,
+    .cv-energy-final-btn-secondary {
+        width: min(100%, 280px);
+        min-height: 50px;
+        padding: 13px 18px;
+        font-size: 14px;
+    }
 }
 
 /* ==========================================
@@ -19509,6 +19617,10 @@ body {
         padding: 21px 18px;
     }
 
+    .cv-pricing-compare-card:nth-child(3) .cv-pricing-compare-footer {
+        margin-top: 0;
+    }
+
     .cv-pricing-compare-body h3 {
         font-size: 19px;
     }
@@ -19966,6 +20078,10 @@ body {
         padding-top: 15px;
     }
 
+    .cv-pricing-compare-card:nth-child(3) .cv-pricing-compare-footer {
+        margin-top: 24px;
+    }
+
     .cv-pricing-compare-note {
         gap: 10px;
         margin-top: 22px;
@@ -20104,9 +20220,23 @@ body {
     }
 
     .cv-pricing-final-note {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        align-items: flex-start;
         gap: 8px;
         margin-top: 20px;
         font-size: 11px;
+        text-align: left;
+    }
+
+    .cv-pricing-final-note i {
+        flex: 0 0 auto;
+        margin-top: 3px;
+    }
+
+    .cv-pricing-final-note span {
+        flex: 1 1 auto;
+        min-width: 0;
     }
 }
 
@@ -21319,7 +21449,8 @@ body {
     .cv-about-process-number {
         font-size: 34px;
     }
-.cv-about-process-step h3 {
+
+    .cv-about-process-step h3 {
         margin-bottom: 10px;
         font-size: 17px;
     }
@@ -21903,7 +22034,8 @@ body {
         padding: 24px;
         border: 1px solid #D9DAD7;
     }
-.cv-about-process-duration {
+
+    .cv-about-process-duration {
         margin-top: auto;
         align-self: flex-start;
     }
@@ -22241,10 +22373,16 @@ html[dir="rtl"] .cv-about-process-footer>p {
 }
 
 @media (max-width: 600px) {
+
     html[dir="rtl"] .cv-about-process-step,
     html[dir="rtl"] .cv-about-process-step:first-child,
     html[dir="rtl"] .cv-about-process-step:last-child {
         border-right: 0;
         border-left: 0;
     }
+}
+
+/* Home 1 - FAQ to Footer spacing */
+.cv-faq-section {
+    margin-bottom: 80px !important;
 }
