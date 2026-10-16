@@ -5408,7 +5408,7 @@ html.dark-mode .cv-pay-table td strong {
 @media screen and (max-width: 600px) {
 
     .cv-dashboard-content {
-        padding: 20px 14px;
+        padding: 20px 18px;
     }
 
     .cv-dashboard-intro {
@@ -5787,7 +5787,7 @@ html.dark-mode .cv-pay-table td strong {
 @media screen and (max-width: 360px) {
 
     .cv-dashboard-content {
-        padding: 17px 10px;
+        padding: 17px 14px;
     }
 
     .cv-dashboard-intro h2 {

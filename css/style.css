@@ -1229,7 +1229,7 @@ html[dir="rtl"] .cv-footer-legal {
     }
 
     .cv-footer-logo img {
-        width: 200px;
+        width: 150px;
     }
 
     .cv-footer-column h3 {
@@ -22385,4 +22385,10 @@ html[dir="rtl"] .cv-about-process-footer>p {
 /* Home 1 - FAQ to Footer spacing */
 .cv-faq-section {
     margin-bottom: 80px !important;
+}
+
+@media (max-width: 600px) {
+    .cv-faq-section {
+        margin-bottom: 20px !important;
+    }
 }
