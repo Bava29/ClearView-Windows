@@ -4161,6 +4161,446 @@ html.dark-mode .cv-faq-bottom-button {
     color: #202326;
 }
 
+
+/* ============================================
+   CLEARVIEW WINDOWS - INSTALLATION PROCESS
+============================================ */
+
+.cv-install-process {
+    padding: 85px 5%;
+    background: var(--secondary-color, #f4f6f8);
+    overflow: hidden;
+}
+
+.cv-install-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+/* Section Heading */
+
+.cv-install-heading {
+    max-width: 720px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.cv-install-eyebrow {
+    display: inline-block;
+    margin-bottom: 13px;
+    color: var(--primary-color, #174a70);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.cv-install-heading h2 {
+    margin: 0 0 16px;
+    color: var(--primary-color, #174a70);
+    font-size: clamp(30px, 3.2vw, 40px);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.cv-install-heading p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #626b75;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* Four-Column Card Layout */
+
+.cv-install-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+/* Individual Card */
+
+.cv-install-card {
+    min-width: 0;
+    padding: 12px;
+    background: #ffffff;
+    border: 1px solid rgba(23, 74, 112, 0.10);
+    border-radius: 13px;
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.cv-install-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(23, 74, 112, 0.10);
+}
+
+/* Card Image */
+
+.cv-install-image {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #e7edf2;
+}
+
+.cv-install-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.cv-install-card:hover .cv-install-image img {
+    transform: scale(1.05);
+}
+
+/* Number on Image */
+
+.cv-install-image-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 32px;
+    background: var(--primary-color, #174a70);
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Card Text */
+
+.cv-install-card-content {
+    padding: 0 8px 12px;
+}
+
+.cv-install-step {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: var(--primary-color, #174a70);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+}
+
+.cv-install-card h3 {
+    margin: 0 0 10px;
+    color: var(--primary-color, #174a70);
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.cv-install-card p {
+    margin: 0;
+    color: #626b75;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* Bottom CTA */
+
+.cv-install-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 30px;
+    padding: 27px 32px;
+    background: var(--primary-color, #174a70);
+    border-radius: 12px;
+}
+
+.cv-install-cta-content {
+    min-width: 0;
+}
+
+.cv-install-cta-content h3 {
+    margin: 0 0 7px;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.cv-install-cta-content p {
+    margin: 0;
+    color: #ffffff;
+    opacity: 0.85;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.cv-install-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    flex-shrink: 0;
+    padding: 14px 21px;
+    background: var(--secondary-color, #f4f6f8);
+    color: var(--primary-color, #174a70);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.cv-install-cta-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   DARK MODE
+============================================ */
+
+html.dark-mode .cv-install-process {
+    background: #111820;
+}
+
+html.dark-mode .cv-install-heading h2 {
+    color: #ffffff;
+}
+
+html.dark-mode .cv-install-heading p {
+    color: #c0c8d1;
+}
+
+html.dark-mode .cv-install-card {
+    background: #1b2632;
+    border-color: rgba(255, 255, 255, 0.10);
+}
+
+html.dark-mode .cv-install-card h3 {
+    color: #ffffff;
+}
+
+html.dark-mode .cv-install-card p {
+    color: #c0c8d1;
+}
+
+html.dark-mode .cv-install-step,
+html.dark-mode .cv-install-eyebrow {
+    color: #a8c6df;
+}
+
+html.dark-mode .cv-install-image {
+    background: #263746;
+}
+
+html.dark-mode .cv-install-cta-btn {
+    background: #ffffff;
+    color: var(--primary-color, #174a70);
+}
+
+/* ============================================
+   IPAD PRO & TABLET
+============================================ */
+
+@media (max-width: 1024px) {
+    .cv-install-process {
+        padding: 70px 4%;
+    }
+
+    .cv-install-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .cv-install-image {
+        height: 175px;
+    }
+
+    .cv-install-card-content {
+        padding: 0 9px 12px;
+    }
+
+    .cv-install-card h3 {
+        font-size: 20px;
+    }
+
+    .cv-install-card p {
+        font-size: 14px;
+    }
+
+    .cv-install-cta {
+        padding: 25px;
+    }
+}
+
+/* ============================================
+   IPAD MINI / SMALL TABLETS
+============================================ */
+
+@media (max-width: 768px) {
+    .cv-install-process {
+        padding: 60px 24px;
+    }
+
+    .cv-install-heading {
+        margin-bottom: 35px;
+    }
+
+    .cv-install-heading h2 {
+        font-size: 32px;
+    }
+
+    .cv-install-grid {
+        gap: 18px;
+    }
+
+    .cv-install-image {
+        height: 155px;
+    }
+
+    .cv-install-card h3 {
+        font-size: 18px;
+    }
+
+    .cv-install-cta {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+
+/* ============================================
+   MOBILE
+============================================ */
+
+@media (max-width: 576px) {
+    .cv-install-process {
+        padding: 50px 18px;
+    }
+
+    .cv-install-heading {
+        margin-bottom: 28px;
+    }
+
+    .cv-install-eyebrow {
+        font-size: 11px;
+        letter-spacing: 1.6px;
+    }
+
+    .cv-install-heading h2 {
+        font-size: 28px;
+        line-height: 1.35;
+    }
+
+    .cv-install-heading p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .cv-install-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .cv-install-card {
+        padding: 12px;
+    }
+
+    .cv-install-image {
+        height: 190px;
+        margin-bottom: 17px;
+    }
+
+    .cv-install-card-content {
+        padding: 0 7px 10px;
+    }
+
+    .cv-install-card h3 {
+        font-size: 19px;
+    }
+
+    .cv-install-card p {
+        font-size: 14px;
+    }
+
+    .cv-install-cta {
+        margin-top: 22px;
+        padding: 23px 20px;
+    }
+
+    .cv-install-cta-content h3 {
+        font-size: 20px;
+    }
+
+    .cv-install-cta-content p {
+        font-size: 14px;
+    }
+
+    .cv-install-cta-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* ============================================
+   RTL SUPPORT
+============================================ */
+
+html[dir="rtl"] .cv-install-card,
+html[dir="rtl"] .cv-install-card-content {
+    text-align: right;
+}
+
+html[dir="rtl"] .cv-install-image-number {
+    left: auto;
+    right: 10px;
+}
+
+html[dir="rtl"] .cv-install-cta {
+    direction: rtl;
+}
+
+html[dir="rtl"] .cv-install-cta-btn i {
+    transform: rotate(180deg);
+}
+
+/* Installation Section - Improve Text Contrast */
+
+.cv-install-heading h2 {
+    color: #202a33;
+    font-weight: 600;
+}
+
+.cv-install-heading p {
+    color: #34495a;
+    font-weight: 500;
+}
+
+/* Dark Mode */
+html.dark-mode .cv-install-heading h2 {
+    color: #ffffff;
+}
+
+html.dark-mode .cv-install-heading p {
+    color: #e0e6ec;
+}
+
 /*****************************************************Home page 2********************************************************/
 
 /* =========================================
@@ -7244,7 +7684,7 @@ html.dark-mode .cv-about-value-word {
     margin-bottom: 18px;
     color: #343A40;
     font-family: "Manrope", sans-serif;
-    font-size: 55px;
+    font-size: 52px;
     font-weight: 600;
     line-height: 1;
     letter-spacing: -2px;
@@ -7253,7 +7693,7 @@ html.dark-mode .cv-about-value-word {
 .cv-about-stat-number sup {
     margin-top: 3px;
     color: #B47C59;
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 600;
     letter-spacing: 0;
 }
@@ -9039,6 +9479,32 @@ html.dark-mode .cv-products-search,
 html.dark-mode .cv-products-card {
     background: #2C3034;
     border-color: #41464B
+}
+
+html.dark-mode .cv-products-modal-card {
+    background: #2C3034;
+    border: 1px solid #41464B;
+    color: #F3F3F1;
+}
+
+html.dark-mode .cv-products-modal-close {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #697177;
+    border-radius: 50%;
+    background: #202326;
+    color: #FFFFFF;
+    z-index: 2;
+}
+
+html.dark-mode .cv-products-modal-close i {
+    color: #FFFFFF;
+}
+
+html.dark-mode .cv-products-detail h2 {
+    color: #F3F3F1;
 }
 
 html.dark-mode .cv-products-sidebar,
@@ -21348,7 +21814,7 @@ body {
     }
 
     .cv-about-stat-number {
-        font-size: clamp(36px, 10vw, 48px);
+        font-size: clamp(36px, 10vw, 46px);
     }
 
     .cv-about-stats-footer {
